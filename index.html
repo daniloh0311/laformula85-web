@@ -675,6 +675,68 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
   .n-play{width:68px;height:68px;margin:-34px 0 0 -34px}
   .n-ph{grid-template-columns:1fr 1fr}
 }
+/* ===== Piel visual del diseño nuevo sobre la estructura original (oct-2026) ===== */
+.btn{border-radius:999px;padding-inline:26px}
+.btn.sun{box-shadow:0 10px 24px rgba(255,165,31,.32)}
+.band{padding-block:clamp(64px,8vw,112px)}
+.band.sun,.band.night:not(.end){background:var(--ice);color:var(--ink)}
+.night .lede{color:var(--soft)}
+.photo,.bizimg,.player,.yt,.vs>div{border-radius:26px}
+/* Tiquetes → tarjetas limpias (se siguen "imprimiendo" al entrar) */
+.tks{gap:20px}
+.tks .tk:nth-child(n){transform:none;margin-top:0}
+.tk{filter:none}
+.tk>div{-webkit-mask:none;mask:none;border-radius:22px;padding:26px;box-shadow:0 14px 30px rgba(12,34,51,.08);font-size:14px}
+.tk h3{font:700 13px/1.3 var(--body);color:var(--soft);border:0;padding:0;margin-bottom:14px}
+.tk .tot{border-top:1px dashed var(--rule)}
+.tks .tk:nth-child(3)>div{background:var(--ink);color:#fff;box-shadow:0 14px 30px rgba(12,34,51,.18)}
+.tks .tk:nth-child(3) h3,.tks .tk:nth-child(3) p{color:var(--on-dark-soft)}
+.tks .tk:nth-child(3) .tot{border-color:rgba(255,255,255,.3)}
+.tks .tk:nth-child(3) .tot dd{color:var(--mango)}
+/* Calculadora: tarjeta blanca con resultado oscuro */
+#calculadora .split{background:#fff;border-radius:26px;padding:clamp(22px,3.4vw,40px);box-shadow:0 14px 30px rgba(12,34,51,.08)}
+.seg{background:var(--ice);border-radius:999px}
+.seg button{border-radius:999px}
+.money{background:#fff;border:1px solid var(--rule);border-radius:12px}
+.money:focus-within{border-color:var(--ink)}
+.fld input[type=range]::-webkit-slider-runnable-track{background:var(--rule)}
+.fld input[type=range]::-webkit-slider-thumb{background:var(--mango);border-color:#fff;box-shadow:0 2px 8px rgba(12,34,51,.25)}
+.sun .tk{transform:none;justify-self:stretch;max-width:none}
+.sun .tk>div{background:var(--ink);color:#fff;box-shadow:none}
+.sun .tk h3{color:var(--on-dark-soft)}
+.sun .tk .tot{border-color:rgba(255,255,255,.3)}
+.sun .tk .tot dd{color:var(--mango)}
+/* Precio: cupón blanco con borde, sobre fondo claro */
+.night .stk{background:var(--berry);color:#fff}
+.coupon{border:2px solid var(--ink);border-radius:26px;box-shadow:0 24px 50px rgba(12,34,51,.12)}
+.coupon .stub::before,.coupon .stub::after{background:var(--ice);border:2px solid var(--ink)}
+.seats i{background:var(--ice);box-shadow:inset 0 0 0 1px var(--rule)}
+/* Preguntas */
+.faq details:first-child{border-top:2px solid var(--ink)}
+/* Cierre claro con fotos */
+.band.end{background:#fff;color:var(--ink)}
+.end .col .small{color:var(--soft)}
+.tn img{box-shadow:0 20px 40px rgba(12,34,51,.18)}
+/* Pie con silueta de puestos */
+.foot{background:var(--ink);border-top:0}
+.ft-art{display:block;width:100%;height:clamp(70px,9.7vw,140px);background:#fff;margin-bottom:-1px}
+/* Mapa a lo ancho */
+.n-mapsec .n-head{margin-bottom:24px}
+.n-mapsec .n-head.row>.n-tabs{flex:none;flex-wrap:nowrap;flex-direction:row;gap:4px}
+.n-mapwide .mp-in{display:flex;flex-direction:column;height:100%}
+.n-mapwide .mp-go{margin-top:auto}
+.n-mapsec .n-head .col{max-width:640px}
+.n-mapwide .n-mapbox{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);gap:20px;align-items:stretch}
+.n-mapwide .map{aspect-ratio:auto;height:clamp(420px,40vw,540px)}
+.n-mapwide .map-panel{padding:24px;border-radius:26px;box-shadow:0 24px 50px rgba(12,34,51,.10)}
+.n-mapwide .mp-in{grid-template-columns:1fr;gap:14px}
+.n-mapwide .mp-head h3{font-size:32px!important}
+.n-mapwide .mp-rows{font-size:14px;gap:8px}
+.n-mapwide .mp-b{padding:16px 18px;border-radius:18px}
+.n-mapwide .mp-k b{font-size:42px}
+.n-mapwide .mp-go{justify-self:stretch;text-align:center;text-decoration:none;min-height:50px;border-radius:999px;background:var(--mango);margin-top:4px}
+.n-mapwide .mp-go:hover{color:var(--ink);transform:translateY(-1px)}
+@media (max-width:900px){.n-mapwide .n-mapbox{grid-template-columns:1fr}.n-mapwide .map{height:min(70vw,420px);min-height:300px}}
 </style>
 
 <script>document.documentElement.classList.add('js')</script>
@@ -682,7 +744,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 <header class="hdr">
   <div class="wrap">
     <a class="logo" href="#escena">Fórmula<b>85</b></a>
-    <nav class="nav" aria-label="Secciones"><a href="#mapa">Mercados</a><a href="#como">Cómo funciona</a><a href="#numeros">Los números</a><a href="#precio">Precio</a></nav>
+    <nav class="nav" aria-label="Secciones"><a href="#numeros">Los números</a><a href="#mapa">Mercados</a><a href="#temario">Temario</a><a href="#precio">Precio</a></nav>
     <div class="right"><div class="lang" role="group" aria-label="Idioma"><button type="button" data-lang="es" aria-pressed="true">ES</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
     <a class="btn sun" href="#precio">Reservar cupo</a></div>
   </div>
@@ -769,123 +831,196 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
   </div>
 </section>
 
-<section class="n-hero" id="inicio">
-  <div class="wrap n-g2">
-    <div class="n-intro">
-      <span class="n-badge"><i></i><span>Preventa · 20 cupos de fundador</span></span>
-      <h1 class="disp n-h1">Tu punto de granizados, con los <span class="mk">números reales</span>.</h1>
-      <p class="n-sub">El método con el que abrí Paradise Cocktails en Colombia y que hoy se vende en tres países. Elige tu mercado y mira cuánto deja un vaso.</p>
-      <div class="n-ctas">
-        <a class="n-pill sun" href="#precio">Reservar mi cupo · USD 97</a>
-        <a class="n-pill ghost" href="#como"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span>Ver mi historia</span></a>
-      </div>
-      <div class="n-stats">
-        <div><b class="disp">7 años</b><span>con el punto abierto</span></div>
-        <div><b class="disp">3 países</b><span>ya venden el producto</span></div>
-        <div><b class="disp">80 %</b><span>queda en cada vaso</span></div>
-      </div>
+<section class="band vidsec" id="historia">
+  <div class="wrap">
+    <h2 class="disp h2">De un puesto en la calle a vivir de esto</h2>
+    <p class="lede">Te cuento en 6 minutos cómo empecé con una máquina alquilada, qué me costó años entender y qué vas a aprender en el curso.</p>
+    <button class="yt" type="button" data-yt="p9Em1C52uZY" aria-label="Ver el video de presentación de Danilo">
+      <img src="f/video-poster.webp" width="1280" height="720" loading="lazy" alt="Danilo hablando a la cámara">
+      <span class="play" aria-hidden="true"></span>
+      <span class="cap"><b>Mi historia y el método</b><span>6:26</span></span>
+    </button>
+    <div class="vidcta"><a class="btn sun" href="#precio">Reservar mi cupo por USD 97</a></div>
+  </div>
+</section>
+
+<section class="band who" id="quien">
+  <div class="wrap split top">
+    <img class="photo me" src="f/danilo.webp" width="960" height="1200" loading="lazy" alt="Danilo recostado en el mostrador, junto a dos máquinas de granizado">
+    <div class="col">
+      <p class="disp big">Llevo 7 años vendiendo granizados. En un día normal salen 40 a 50 vasos; en uno bueno, 150.</p>
+      <p class="lede">Abrí Paradise Cocktails en Colombia y sigue abierto. Hoy lo dirijo a distancia. Mi error más caro fue no medir desde el inicio cuánto vendía de verdad. En el curso te muestro el sistema tal como lo uso, para que no lo pagues tú.</p>
+      <p class="sign">Danilo<span>Fundador de Paradise Cocktails</span></p>
+    </div>
+    <figure class="biz">
+        <img class="bizimg" src="f/paradise.webp" width="1536" height="1024" loading="lazy" alt="Paradise Cocktails: insumos, granizados y los países donde está la marca">
+        <figcaption><img class="bizlogo" src="f/paradise-logo.webp" width="240" height="240" alt="Logo de The Paradise Cocktails"><span><b>The Paradise Cocktails</b>Mi marca: el punto que abrí en Colombia y la materia prima que hoy distribuyo desde Medellín</span></figcaption>
+      </figure>
+  </div>
+</section>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="f85cup" viewBox="0 0 24 34"><rect x="13.4" y="0" width="1.9" height="10" rx=".9" transform="rotate(12 14.3 5)"/><path d="M4.4 13a7.6 6.6 0 0 1 15.2 0z"/><path d="M5 14.4h14L17.2 33H6.8z"/></symbol></svg>
+
+<section class="band ice" id="numeros">
+  <div class="wrap">
+    <div class="col" style="max-width:780px">
+      <h2 class="disp h2">Cuánto deja un vaso, según dónde vendas</h2>
+      <p class="lede">Tres tiquetes, uno por mercado. Son precios de referencia: el costo cambia en cada país, pero suele quedarse en ese rango. Falta restar arriendo, personal y servicios.</p>
+    </div>
+    <p class="swipe">Desliza para ver los tres mercados</p>
+    <div class="tks">
+      <div class="tk"><div>
+        <h3>Latinoamérica</h3>
+        <dl>
+          <div><dt>Vaso de 12 oz</dt><dd>USD 4,40</dd></div>
+          <div><dt>Vaso de 16 oz</dt><dd>USD 5,30</dd></div>
+          <div><dt>Te cuesta</dt><dd>USD 0,80–1,05</dd></div>
+          <div class="tot"><dt>Te queda</dt><dd>80 %</dd></div>
+        </dl>
+        <p>En Colombia: $14.000 y $17.000 pesos.</p>
+      </div></div>
+      <div class="tk"><div>
+        <h3>Asia</h3>
+        <dl>
+          <div><dt>Vaso de 12 oz</dt><dd>USD 2,50</dd></div>
+          <div><dt>Vaso de 16 oz</dt><dd>USD 3,50</dd></div>
+          <div><dt>Te cuesta</dt><dd>USD 0,50–0,80</dd></div>
+          <div class="tot"><dt>Te queda</dt><dd>75 %</dd></div>
+        </dl>
+        <p>Zonas turísticas y centros comerciales.</p>
+      </div></div>
+      <div class="tk"><div>
+        <h3>EE. UU. y Australia</h3>
+        <dl>
+          <div><dt>Vaso de 12 oz</dt><dd>USD 12</dd></div>
+          <div><dt>Vaso de 16 oz</dt><dd>USD 15</dd></div>
+          <div><dt>Te cuesta</dt><dd>USD 1–1,75</dd></div>
+          <div class="tot"><dt>Te queda</dt><dd>85 %</dd></div>
+        </dl>
+        <p>Bares, eventos y ciudades grandes.</p>
+      </div></div>
     </div>
 
-    <div class="n-mapmod" id="mapa">
+    <div class="split bagrow">
+      <div class="bagph">
+        <img class="photo" src="f/bolsa.webp" width="640" height="768" loading="lazy" alt="Bolsa transparente de 6 litros llena de mezcla de granizado">
+        <div class="stk"><span>6 litros<small>16 vasos</small></span></div>
+      </div>
+      <div class="col">
+        <h3 class="disp h3">Con <span class="mk">3 vasos</span> cubres el costo de toda la bolsa</h3>
+        <div class="cups" role="img" aria-label="De 16 vasos, 3 pagan la bolsa y 13 quedan"><svg aria-hidden="true" class="c" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" class="c" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" class="c" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg></div>
+        <div class="key"><span><i style="background:var(--ink)"></i>3 vasos cubren el costo</span><span><i style="background:var(--mango)"></i>13 vasos quedan</span></div>
+        <p class="lede">El costo incluye mezcla, vaso y toppings. De cada bolsa de 6 litros salen 16 vasos de 12 onzas. Te quedan unos USD 58 por bolsa en Latinoamérica, USD 30 en Asia y USD 164 en Estados Unidos y Australia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band mapsec n-mapsec" id="mapa">
+  <div class="wrap">
+    <div class="n-head row">
+      <div class="col">
+        <h2 class="disp h2">¿Dónde puede funcionar <span class="mk">tu punto</span>?</h2>
+        <p class="lede">El producto ya llegó a tres países y el modelo sirve en muchos más. Toca un país y mira cuánto deja un vaso allí.</p>
+      </div>
       <div class="n-tabs" role="group" aria-label="Región">
         <button type="button" data-reg="todos" aria-pressed="true">Todos</button>
         <button type="button" data-reg="lat" aria-pressed="false">Latinoamérica</button>
         <button type="button" data-reg="asia" aria-pressed="false">Asia</button>
         <button type="button" data-reg="alta" aria-pressed="false">EE. UU. y Australia</button>
       </div>
+    </div>
+    <div class="n-mapmod n-mapwide">
       <div class="n-mapbox">
         <div class="map" data-map>
           <div class="map-svg" role="img" aria-label="Mapa mundial con los países donde ya llegó el producto y los mercados con potencial"></div>
           <div class="map-pins"></div>
+          <div class="map-key"><span><i style="background:var(--mango)"></i>Ya llegó</span><span><i style="background:#F4B9C7"></i>Con potencial</span></div>
           <div class="map-ctl"><button type="button" data-z="in" aria-label="Acercar">+</button><button type="button" data-z="out" aria-label="Alejar">−</button></div>
           <div class="map-tip" aria-hidden="true"></div>
         </div>
         <aside class="map-panel" aria-live="polite"><div class="mp-in"></div></aside>
       </div>
       <div class="map-chips" role="group" aria-label="Países"></div>
-      <div class="n-key"><span><i style="background:var(--mango)"></i>Ya llegó</span><span><i style="background:#F4B9C7"></i>Con potencial</span><span class="n-key-r">Precios de referencia por región</span></div>
     </div>
   </div>
 </section>
 
-<section class="n-sec" id="como">
+<section class="band" id="porque">
   <div class="wrap">
-    <div class="n-head">
-      <h2 class="disp n-h2">De un puesto en la calle a vivir de esto</h2>
-      <p class="n-lede">Tres pasos para pasar de la idea al primer vaso vendido.</p>
+    <div class="col" style="max-width:780px">
+      <h2 class="disp h2">Empezar por tu cuenta <span class="mk">sale caro</span></h2>
+      <p class="lede">El mismo punto y la misma máquina. Lo que cambia es lo que sabes antes de gastar.</p>
     </div>
-    <div class="n-g2 n-stretch">
-      <ol class="n-steps">
-        <li><b class="disp">1</b><div><h3>Mira los números de tu ciudad</h3><p>Cuánto cuesta un vaso, a cuánto se vende y cuánto te queda, antes de gastar un peso.</p></div></li>
-        <li><b class="disp">2</b><div><h3>Aprende el método</h3><p>Máquina, insumos, menú, permisos y caja: diez módulos cortos.</p></div></li>
-        <li><b class="disp">3</b><div><h3>Abre tu punto</h3><p>Con la lista de montaje en la mano y el primer mes calculado.</p></div></li>
-      </ol>
-      <div class="n-vid">
-        <button class="yt" type="button" data-yt="p9Em1C52uZY" aria-label="Ver el video de presentación de Danilo">
-          <img src="f/video-poster.webp" width="1280" height="720" loading="lazy" alt="Danilo hablando a la cámara">
-          <span class="n-shade" aria-hidden="true"></span>
-          <span class="n-play" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="#011522"><path d="M8 5v14l11-7z"/></svg></span>
-          <span class="n-cap"><b class="disp">Mi historia y el método</b><span>6:26</span></span>
-        </button>
+    <div class="vs">
+      <div class="alone">
+        <h3>Por tu cuenta<span>Meses de prueba y error</span></h3>
+        <ul class="marks">
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D92F57" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Compras la máquina que te ofrecieron, no la que tu punto necesita.</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D92F57" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Pones el precio al ojo y no sabes cuánto te queda por vaso.</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D92F57" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Pasan meses antes de saber cuánto vendes de verdad.</span></li>
+        </ul>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="n-sec ice" id="numeros">
-  <div class="wrap">
-    <div class="n-head row">
-      <div>
-        <h2 class="disp n-h2">Cuánto deja <span class="mk">un vaso</span></h2>
-        <p class="n-lede">Precios de referencia por región. Falta restar arriendo, personal y servicios.</p>
-      </div>
-      <a class="n-link" href="#calculadora">Haz la cuenta con tus números →</a>
-    </div>
-    <div class="n-g3 n-cards">
-      <div class="n-card"><h3>Latinoamérica</h3><dl>
-        <div><dt>Vaso 12 oz</dt><dd>USD 4,40</dd></div>
-        <div><dt>Te cuesta</dt><dd>USD 0,80</dd></div>
-        <div class="tot"><dt>Te queda</dt><dd class="disp">80 %</dd></div></dl></div>
-      <div class="n-card"><h3>Asia</h3><dl>
-        <div><dt>Vaso 12 oz</dt><dd>USD 2,50</dd></div>
-        <div><dt>Te cuesta</dt><dd>USD 0,65</dd></div>
-        <div class="tot"><dt>Te queda</dt><dd class="disp">75 %</dd></div></dl></div>
-      <div class="n-card dark"><h3>EE. UU. y Australia</h3><dl>
-        <div><dt>Vaso 12 oz</dt><dd>USD 12</dd></div>
-        <div><dt>Te cuesta</dt><dd>USD 1,75</dd></div>
-        <div class="tot"><dt>Te queda</dt><dd class="disp">85 %</dd></div></dl></div>
-    </div>
-    <div class="n-calc n-g2" id="calculadora">
-      <div class="n-calc-in">
-        <h3 class="disp n-h3">Ahora con tus números</h3>
-        <div class="n-seg" role="group" aria-label="Mercado de partida"><button type="button" data-mk="lat" aria-pressed="true">Latinoamérica</button><button type="button" data-mk="asia" aria-pressed="false">Asia</button><button type="button" data-mk="usa" aria-pressed="false">EE. UU. y Australia</button></div>
-        <div class="n-fld"><label for="c-vasos"><span>Vasos vendidos al día</span> <output id="o-vasos" for="c-vasos">40</output></label><input id="c-vasos" type="range" min="20" max="200" step="5" value="40"></div>
-        <div class="n-pair">
-          <div class="n-fld"><label for="c-precio"><span>Precio por vaso</span></label><div class="n-money"><span>USD</span><input id="c-precio" type="text" inputmode="decimal" autocomplete="off" value="4,40"></div></div>
-          <div class="n-fld"><label for="c-costo"><span>Costo por vaso</span></label><div class="n-money"><span>USD</span><input id="c-costo" type="text" inputmode="decimal" autocomplete="off" value="0,80"></div></div>
-        </div>
-      </div>
-      <div class="n-res" aria-live="polite">
-        <span class="n-res-l">Te queda al mes (26 días abiertos)</span>
-        <b class="disp" id="r-margen">USD 3.744</b>
-        <dl>
-          <div><dt>Vasos al mes</dt><dd id="r-vasos">1.040</dd></div>
-          <div><dt>Ventas</dt><dd id="r-ventas">USD 4.576</dd></div>
-          <div><dt>Costo de los vasos</dt><dd id="r-costo">USD 832</dd></div>
-        </dl>
-        <span class="n-res-s">Antes de arriendo, personal e impuestos. No es una promesa de ingresos.</span>
+      <div class="with">
+        <h3>Con el curso<span>Claro desde antes de abrir</span></h3>
+        <ul class="marks">
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFA51F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Sabes qué máquina comprar, nueva o usada, y cómo importarla.</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFA51F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Sacas el costo y el precio de cada vaso antes de invertir.</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFA51F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Controlas caja e inventario desde el primer día.</span></li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="n-sec" id="temario">
-  <div class="wrap">
-    <div class="n-head">
-      <h2 class="disp n-h2">Del primer número a la apertura</h2>
-      <p class="n-lede">Diez módulos en lecciones cortas, de 5 a 10 minutos, con plantillas para aplicar el mismo día.</p>
+<section class="band sun" id="calculadora">
+  <div class="wrap split">
+    <div class="ctl">
+      <h2 class="disp h2">Ahora haz la cuenta con tus números</h2>
+      <div class="seg" role="group" aria-label="Mercado de partida"><button type="button" data-mk="lat" aria-pressed="true">Latinoamérica</button><button type="button" data-mk="asia" aria-pressed="false">Asia</button><button type="button" data-mk="usa" aria-pressed="false">EE. UU. y Australia</button></div>
+      <div class="fld"><label for="c-vasos"><span>Vasos vendidos al día</span> <output id="o-vasos" for="c-vasos">40</output></label><input id="c-vasos" type="range" min="20" max="200" step="5" value="40"></div>
+      <div class="pair">
+        <div class="fld"><label for="c-precio"><span>Precio por vaso</span></label><div class="money"><span>USD</span><input id="c-precio" type="text" inputmode="decimal" autocomplete="off" value="4,40"></div></div>
+        <div class="fld"><label for="c-costo"><span>Costo por vaso</span></label><div class="money"><span>USD</span><input id="c-costo" type="text" inputmode="decimal" autocomplete="off" value="0,80"></div></div>
+      </div>
+      <p class="small">Cuenta con 26 días abiertos al mes. No incluye arriendo, personal ni impuestos, y no es una promesa de ingresos.</p>
     </div>
-    <div class="n-g3 n-syl">
+    <div class="tk" aria-live="polite"><div>
+      <h3>Tu punto, un mes</h3>
+      <dl>
+        <div><dt>Vasos al mes</dt><dd id="r-vasos">1.040</dd></div>
+        <div><dt>Ventas</dt><dd id="r-ventas">USD 4.576</dd></div>
+        <div><dt>Costo de los vasos</dt><dd id="r-costo">USD 832</dd></div>
+        <div class="tot"><dt>Queda al mes</dt><dd id="r-margen">USD 3.744</dd></div>
+      </dl>
+    </div></div>
+  </div>
+</section>
+
+<section class="band" id="video">
+  <div class="wrap split">
+    <div class="col">
+      <h2 class="disp h2">Para quién es este curso</h2>
+      <p class="lede">Es para ti si:</p>
+      <ul class="marks">
+        <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Quieres un negocio propio, pero no sabes cuál deja plata de verdad.</span></li>
+        <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Te frena invertir sin conocer los números antes.</span></li>
+        <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Ya tienes un local o vendes comida y buscas un producto que deje más.</span></li>
+      </ul>
+    </div>
+    <div class="player">
+      <img src="f/servir.webp" width="1280" height="853" loading="lazy" alt="Un granizado de mango recién servido en la máquina">
+    </div>
+  </div>
+</section>
+
+<section class="band ice" id="temario">
+  <div class="wrap">
+    <div class="col" style="max-width:780px">
+      <h2 class="disp h2">Del primer número a la apertura</h2>
+      <p class="lede">Diez módulos en lecciones cortas, de 5 a 10 minutos, con plantillas para aplicar el mismo día.</p>
+    </div>
+    <div class="syl">
       <div>
         <h3>Antes de invertir</h3>
         <ol>
@@ -915,59 +1050,44 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
   </div>
 </section>
 
-<section class="n-sec ice" id="precio">
-  <div class="wrap">
-    <div class="n-head">
-      <h2 class="disp n-h2">20 cupos al precio más bajo que tendrá</h2>
-      <p class="n-lede">Los fundadores entran primero y reciben los módulos a medida que salen.</p>
+<section class="band night" id="precio">
+  <div class="wrap offer">
+    <div class="col">
+      <h2 class="disp h2">20 cupos al precio más bajo que tendrá el curso</h2>
+      <p class="lede">Los fundadores entran primero y reciben los módulos a medida que salen.</p>
+      <div class="stk"><span>Ahorras USD 200<small>frente al precio de lanzamiento</small></span></div>
     </div>
-    <div class="n-g2b">
-      <div class="n-plan main">
-        <div class="n-plan-top"><span class="n-eyebrow">Fundador</span><span class="n-ok"><i></i><span>Disponible ahora</span></span></div>
-        <div class="n-amt"><b class="disp">USD 97</b><s>USD 297</s></div>
-        <p class="n-save">Ahorras USD 200 · pago único</p>
-        <ul class="n-checks">
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Los 10 módulos en video</span></li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Calculadora de rentabilidad y lista de montaje</span></li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Guía de importación de máquinas</span></li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Acceso de por vida y garantía de 7 días</span></li>
-        </ul>
-        <a class="n-pill sun wide" href="https://pay.hotmart.com/M107996446Q?off=3aeqy27x" target="_blank" rel="noopener">Pagar mi cupo de fundador</a>
-        <p class="n-note">Pago seguro con Hotmart · tarjeta, PayPal y medios locales</p>
-        <a class="n-wa" href="https://wa.me/573244953100?text=Hola%20Danilo%2C%20vi%20la%20p%C3%A1gina%20de%20F%C3%B3rmula%2085%20y%20tengo%20una%20pregunta%20sobre%20el%20curso." target="_blank" rel="noopener"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg><span>¿Dudas antes de pagar? Escríbeme por WhatsApp</span></a>
-      </div>
-      <div class="n-plan soon">
-        <div class="n-plan-top"><span class="n-eyebrow">Lanzamiento</span><span class="n-chip">Próximamente</span></div>
-        <div class="n-amt"><b class="disp">USD 297</b></div>
-        <p class="n-txt">El mismo curso, cuando se cierren los cupos de fundador.</p>
-        <div class="n-seats-w">
-          <span class="n-seats-l">Cupos de fundador</span>
-          <div class="n-seats" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <span class="n-note">Son 20 y no se reabren.</span>
+    <div class="coupon">
+      <div class="main">
+        <div>
+          <p class="was"><s>USD 297</s> precio de lanzamiento</p><div class="amt"><small>USD</small>97</div>
+          <p class="small" style="margin-top:14px;color:var(--soft)">Pago único. Después del lanzamiento: USD 297.</p>
         </div>
+        <ul class="marks">
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Los 10 módulos en video</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Calculadora de rentabilidad y lista de montaje</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Guía de importación de máquinas</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Acceso de por vida</span></li>
+        </ul>
+        <a class="btn sun paybtn" href="https://pay.hotmart.com/M107996446Q?off=3aeqy27x" target="_blank" rel="noopener">Pagar mi cupo de fundador</a>
+        <p class="small" style="margin-top:12px">Pago seguro con Hotmart: tarjeta, PayPal y medios locales. Garantía de 7 días.</p>
+        <div class="altlead"><p style="font-weight:600;margin:0 0 12px">¿Tienes dudas antes de pagar?</p>
+        <a class="btn line wa" href="https://wa.me/573244953100?text=Hola%20Danilo%2C%20vi%20la%20p%C3%A1gina%20de%20F%C3%B3rmula%2085%20y%20tengo%20una%20pregunta%20sobre%20el%20curso." target="_blank" rel="noopener"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg><span>Escríbeme por WhatsApp</span></a>
+        <p class="small" style="margin-top:10px">Te respondo personalmente.</p></div>
+      </div>
+      <div class="stub">
+        <p style="font-weight:700">Cupos de fundador</p>
+        <div class="seats" aria-hidden="true"><i>01</i><i>02</i><i>03</i><i>04</i><i>05</i><i>06</i><i>07</i><i>08</i><i>09</i><i>10</i><i>11</i><i>12</i><i>13</i><i>14</i><i>15</i><i>16</i><i>17</i><i>18</i><i>19</i><i>20</i></div>
+        <p class="small" style="color:var(--soft)">Son 20 y no se reabren.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="n-sec" id="historia">
-  <div class="wrap n-g2">
-    <div class="n-ph">
-      <figure><img src="f/inicio2019.webp" width="660" height="880" loading="lazy" alt="El primer puesto de granizados en la calle, de noche, en 2019"><figcaption><b>2019</b> · El primer puesto</figcaption></figure>
-      <figure><img src="f/hoy.webp" width="1200" height="775" loading="lazy" alt="Danilo sonriendo junto a una máquina de granizados con toppings"><figcaption><b>Hoy</b> · Paradise Cocktails</figcaption></figure>
-    </div>
-    <div class="n-story">
-      <h2 class="disp n-h2">Empecé con un carrito alquilado</h2>
-      <p class="n-lede">Llevo 7 años vendiendo granizados. En un día normal salen 40 a 50 vasos; en uno bueno, 150. Mi error más caro fue no medir desde el inicio cuánto vendía de verdad. En el curso te muestro el sistema tal como lo uso hoy, para que no lo pagues tú.</p>
-      <div class="n-sign"><img src="f/danilo.webp" width="960" height="1200" loading="lazy" alt="Danilo"><div><b>Danilo</b><span>Fundador de Paradise Cocktails</span></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="n-sec ice" id="preguntas">
-  <div class="wrap n-g2 n-top">
-    <h2 class="disp n-h2">Lo que todos preguntan</h2>
-    <div class="faq n-faq">
+<section class="band" id="preguntas">
+  <div class="wrap split top">
+    <h2 class="disp h2">Lo que todos preguntan</h2>
+    <div class="faq">
       <details open><summary>¿El curso incluye la receta?<i aria-hidden="true">+</i></summary><p>No. El curso enseña a montar y operar el negocio. La receta Fórmula 85, con la que fabricas tu propia mezcla y bajas todavía más el costo, se entrega aparte y solo por solicitud.</p></details>
       <details><summary>¿Necesito experiencia?<i aria-hidden="true">+</i></summary><p>No. El curso empieza desde cero.</p></details>
       <details><summary>¿Sirve en mi país?<i aria-hidden="true">+</i></summary><p>Sí. El sistema funciona igual en Latinoamérica, Asia, Estados Unidos y Australia, y el módulo de máquinas explica cómo importarlas a tu país.</p></details>
@@ -977,23 +1097,42 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
   </div>
 </section>
 
-<footer class="n-foot">
-  <svg class="n-sky" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true"><path d="M0 140V96h60v-26h28v26h40V60h34v36h52V78h22v-30h30v48h60V66h46v30h44V40h20v-16h40v16h20v72h56V74h36v22h48V56h24v-22h34v62h70V70h40v26h52V48h30v48h46V62h24v34h60V30h18v-14h44v14h18v80h64V78h30v18h56V58h40v38h50V84h34v56z" fill="#0C2233"/><rect x="398" y="30" width="18" height="18" rx="3" fill="#FFA51F"/><rect x="424" y="30" width="18" height="18" rx="3" fill="#D92F57"/><rect x="1066" y="22" width="16" height="16" rx="3" fill="#FFA51F"/><rect x="1090" y="22" width="16" height="16" rx="3" fill="#D92F57"/></svg>
-  <div class="wrap n-foot-in">
-    <div class="n-foot-top">
-      <div><a class="disp n-flogo" href="#escena">Fórmula<b>85</b></a><p class="n-ftag">Tu negocio de granizados, con los números reales.</p></div>
-      <div class="n-ctas">
-        <a class="n-pill sun" href="#precio">Reservar mi cupo</a>
-        <a class="n-pill line" href="https://wa.me/573244953100?text=Hola%20Danilo%2C%20vi%20la%20p%C3%A1gina%20de%20F%C3%B3rmula%2085%20y%20tengo%20una%20pregunta%20sobre%20el%20curso." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
-      </div>
+<svg class="ft-art" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true"><path d="M0 140V96h60v-26h28v26h40V60h34v36h52V78h22v-30h30v48h60V66h46v30h44V40h20v-16h40v16h20v72h56V74h36v22h48V56h24v-22h34v62h70V70h40v26h52V48h30v48h46V62h24v34h60V30h18v-14h44v14h18v80h64V78h30v18h56V58h40v38h50V84h34v56z" fill="#0C2233"/><rect x="398" y="30" width="18" height="18" rx="3" fill="#FFA51F"/><rect x="424" y="30" width="18" height="18" rx="3" fill="#D92F57"/><rect x="1066" y="22" width="16" height="16" rx="3" fill="#FFA51F"/><rect x="1090" y="22" width="16" height="16" rx="3" fill="#D92F57"/></svg>
+<section class="band night end">
+  <div class="wrap split">
+    <div class="col">
+      <h2 class="disp">Empieza por los números</h2>
+      <p class="small">Así empecé: un carrito en la calle en 2019. Hoy, la marca y las máquinas que te enseño a elegir.</p>
+      <a class="btn sun" href="#precio">Reservar mi cupo por USD 97</a>
     </div>
-    <div class="n-foot-bot">
-      <span>© 2026 Fórmula 85 · Danilo Herrera</span>
-      <nav aria-label="Legal"><a href="terminos.html">Términos y condiciones</a><a href="privacidad.html">Política de privacidad</a><a href="terminos.html#garantia">Garantía de 7 días</a></nav>
-      <span>Pagos seguros procesados por Hotmart</span>
+    <div class="tn">
+      <figure><img src="f/inicio2019.webp" width="660" height="880" loading="lazy" alt="El primer puesto de granizados en la calle, de noche, en 2019"><figcaption><b>2019</b> · El primer puesto</figcaption></figure>
+      <figure><img src="f/hoy.webp" width="1200" height="775" loading="lazy" alt="Danilo sonriendo junto a una máquina de granizados con toppings"><figcaption><b>Hoy</b> · Paradise Cocktails</figcaption></figure>
     </div>
   </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a class="logo ft-logo" href="#escena">Fórmula<b>85</b></a>
+        <p class="ft-tag">Monta tu negocio de granizados con los números reales.</p>
+        <div class="ft-cta">
+          <a class="btn sun" href="#precio">Reservar mi cupo</a>
+          <a class="btn ghost" href="https://wa.me/573244953100?text=Hola%20Danilo%2C%20vi%20la%20p%C3%A1gina%20de%20F%C3%B3rmula%2085%20y%20tengo%20una%20pregunta%20sobre%20el%20curso." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+        </div>
+      </div>
+      <nav class="ft-cols" aria-label="Pie de página">
+        <div><h3>El curso</h3><a href="#historia">Mi historia</a><a href="#numeros">Los números</a><a href="#calculadora">Calculadora</a><a href="#temario">Temario</a><a href="#precio">Precio</a><a href="#preguntas">Preguntas</a></div>
+        <div><h3>Contacto</h3><a href="https://wa.me/573244953100?text=Hola%20Danilo%2C%20vi%20la%20p%C3%A1gina%20de%20F%C3%B3rmula%2085%20y%20tengo%20una%20pregunta%20sobre%20el%20curso." target="_blank" rel="noopener">WhatsApp</a><span>Respuesta personal de Danilo</span></div>
+        <div><h3>Legal</h3><a href="terminos.html">Términos y condiciones</a><a href="privacidad.html">Política de privacidad</a><a href="terminos.html#garantia">Garantía de 7 días</a></div>
+      </nav>
+    </div>
+    <div class="ft-bot"><span>© 2026 Fórmula 85 · Danilo Herrera. Todos los derechos reservados.</span><span>Pagos seguros procesados por Hotmart</span></div>
+  </div>
 </footer>
+
 
 <script>
 (function(){
@@ -1474,7 +1613,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
   }
 
   /* ---------- Entradas escalonadas y números que cuentan ---------- */
-  var groups=[['.n-head > *, .n-head.row > div > *, .n-story > *',1],['.n-intro > *',1],['.n-mapmod',0],['.n-steps li',1],['.n-vid',0],['.n-cards .n-card',1],['.n-calc > *',1],['.n-syl > div',1],['.n-plan',1],['.n-ph figure',1],['.faq details',1]];
+  var groups=[['.band .col > .h2, .band .col > .lede, .band .col > h2.disp',0],['.tks .tk',1],['.vs > div',1],['.bagrow > *',1],['.who .split > *',1],['.offer > *',1],['.faq details',1],['.mod li, #temario li',1],['.n-mapmod',0],['.tn figure',1],['.ctl, #calculadora .tk',1]];
   if(!reduce&&'IntersectionObserver' in window){
     var seen=new Set();
     groups.forEach(function(g){ all(document,g[0]).forEach(function(el){
@@ -1484,7 +1623,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
     })});
     var ro=new IntersectionObserver(function(es){ es.forEach(function(x){ if(x.isIntersecting){ x.target.classList.add('in'); ro.unobserve(x.target); count(x.target) } }) },{rootMargin:'0px 0px -8% 0px',threshold:.08});
     seen.forEach(function(el){ ro.observe(el) });
-  } else all(document,'.n-card').forEach(function(el){ el.classList.add('in') });
+  } else all(document,'.tks .tk').forEach(function(el){ el.classList.add('in') });
   function count(el){
     all(el,'.tot dd').forEach(function(dd){
       var txt=dd.textContent, m=txt.match(/\d+/); if(!m) return; var end=+m[0], t0=performance.now();

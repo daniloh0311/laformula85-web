@@ -377,6 +377,112 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 .paybtn{display:flex;justify-content:center;width:100%;margin-top:22px}
 .altlead{margin-top:26px;padding-top:22px;border-top:1px solid rgba(12,34,51,.14)}
 .altlead .wa{display:inline-flex;align-items:center;gap:10px;justify-content:center;width:100%}
+
+/* ===== v17: escenas 6-7, mapa, vida ===== */
+.vidsec{padding-bottom:clamp(36px,4.5vw,56px)}
+.vidsec+.who{padding-top:clamp(48px,6vw,88px)}
+.vidcta{margin-top:24px}
+.sale{position:relative;height:320vh;background:var(--scene);color:var(--on-dark)}
+.sale-stage{position:sticky;top:calc(var(--top) + var(--hdr));height:calc(100vh - var(--hdr));height:calc(100svh - var(--hdr) - var(--top));overflow:hidden}
+.sale-fr{position:absolute;left:0;top:0;width:1280px;height:854px;transform-origin:0 0}
+.sale-fr .bg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.cdy{position:absolute;left:0;top:0;width:46px;height:46px;opacity:0;will-change:transform,opacity;filter:drop-shadow(0 4px 4px rgba(0,0,0,.35))}
+.sticker{position:absolute;left:784px;top:478px;width:166px;height:166px;opacity:0;will-change:transform,opacity;filter:drop-shadow(0 8px 12px rgba(0,0,0,.45))}
+.sale-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(1,21,34,.92) 0%,rgba(1,21,34,.55) 42%,rgba(1,21,34,0) 70%);pointer-events:none}
+.sale-dim{position:absolute;inset:0;background:rgba(1,21,34,.62);opacity:0;pointer-events:none}
+.sale-txt{position:absolute;inset:0;display:flex;align-items:center;pointer-events:none}
+.sale-txt .wrap{width:100%}
+.sb{position:absolute;max-width:min(470px,40vw);display:flex;flex-direction:column;gap:18px;opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .6s cubic-bezier(.22,1,.36,1)}
+.sb.on{opacity:1;transform:none}
+.sb .big{font-size:clamp(38px,4.9vw,72px)}
+.sb .big em{font-style:normal;color:var(--mango)}
+.pay{position:absolute;right:clamp(16px,5vw,72px);top:16%;width:min(340px,82vw);background:#fff;color:var(--ink);border-radius:22px;padding:18px 18px 16px;box-shadow:0 30px 70px rgba(0,0,0,.45);opacity:0;transform:translateY(40px) scale(.96);will-change:transform,opacity}
+.pay-h{display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center}
+.pay-h .ok{width:42px;height:42px;border-radius:50%;background:#1F9D55;display:grid;place-items:center}
+.pay-h b{display:block;font-size:16px}
+.pay-h span{display:block;font-size:13px;color:var(--soft)}
+.pay-h strong{font:800 20px/1 var(--display);color:#1F9D55;white-space:nowrap}
+.pay-day{margin-top:14px;padding-top:14px;border-top:1px dashed var(--rule);display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.pay-day>span{font-size:13px;color:var(--soft)}
+.pay-day b{font:800 34px/1 var(--display);letter-spacing:-.02em}
+.pay-bar{height:8px;border-radius:8px;background:var(--ice);margin-top:12px;overflow:hidden}
+.pay-bar i{display:block;height:100%;width:0;background:var(--mango);border-radius:8px}
+.pay small{display:block;margin-top:8px;font-size:12.5px;color:var(--soft)}
+.chip{position:absolute;left:0;top:0;padding:7px 12px;border-radius:999px;background:var(--mango);color:var(--ink);font:800 15px/1 var(--display);opacity:0;white-space:nowrap;will-change:transform,opacity;box-shadow:0 8px 18px rgba(0,0,0,.3)}
+@media (max-aspect-ratio:1/1){
+  .sale-fr .bg{-webkit-mask-image:linear-gradient(180deg,transparent,#000 22%);mask-image:linear-gradient(180deg,transparent,#000 22%)}
+  .sale-shade{background:linear-gradient(180deg,rgba(1,21,34,.95) 0%,rgba(1,21,34,.75) 34%,rgba(1,21,34,0) 58%)}
+  .sale-txt{align-items:flex-start;padding-top:28px}
+  .sb{max-width:none;left:var(--gut);right:var(--gut)}
+  .sb .big{font-size:clamp(34px,9vw,54px)}
+  .pay{left:50%;right:auto;top:auto;bottom:6%;margin-left:min(-170px,-41vw)}
+}
+@media (prefers-reduced-motion:reduce){.sb{transition:none}}
+
+/* Mapa */
+.mapsec{background:var(--paper)}
+.map{position:relative;margin-top:clamp(28px,4vw,44px);border-radius:24px;background:#DCE8F0;overflow:hidden;aspect-ratio:2/1;min-height:300px;touch-action:none;box-shadow:inset 0 0 0 1px rgba(12,34,51,.06)}
+.map-svg,.map-svg svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.map-svg svg{cursor:grab}
+.map.drag .map-svg svg{cursor:grabbing}
+.map-svg path{fill:#F7FAFC;stroke:#BFD0DC;stroke-width:.5;vector-effect:non-scaling-stroke;transition:fill .25s}
+.map-svg path.real{fill:var(--mango);cursor:pointer}
+.map-svg path.pot{fill:#F6C9D4;cursor:pointer}
+.map-svg path.real:hover,.map-svg path.real.sel{fill:#F08C00}
+.map-svg path.pot:hover,.map-svg path.pot.sel{fill:var(--berry)}
+.map-svg circle.pt{fill:var(--berry);stroke:#fff;stroke-width:1.5;vector-effect:non-scaling-stroke;pointer-events:none}
+.map-svg circle.pulse{fill:none;stroke:var(--berry);stroke-width:2;vector-effect:non-scaling-stroke;pointer-events:none;animation:mp 2.2s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes mp{from{opacity:.9;transform:scale(1)}to{opacity:0;transform:scale(4)}}
+.map-ctl{position:absolute;right:14px;top:14px;display:flex;flex-direction:column;gap:8px;z-index:2}
+.map-ctl button{min-width:44px;height:44px;border:0;border-radius:12px;background:#fff;color:var(--ink);font:700 20px/1 var(--body);box-shadow:0 6px 16px rgba(12,34,51,.16);cursor:pointer}
+.map-ctl button.wide{font-size:13px;padding:0 12px}
+.map-key{position:absolute;left:14px;top:14px;display:flex;flex-wrap:wrap;gap:6px 14px;background:rgba(255,255,255,.92);padding:8px 12px;border-radius:12px;font-size:13px;font-weight:600;z-index:2}
+.map-key i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:6px;vertical-align:-1px}
+.map-card{position:absolute;left:14px;bottom:14px;width:min(360px,calc(100% - 28px));background:#fff;border-radius:18px;padding:18px 18px 16px;box-shadow:0 18px 40px rgba(12,34,51,.22);z-index:2;transition:opacity .25s,transform .3s cubic-bezier(.22,1,.36,1)}
+.map-card[hidden]{display:block;opacity:0;transform:translateY(12px);pointer-events:none}
+.mc[hidden]{display:none}
+.mc .tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:7px;background:var(--mango);color:var(--ink)}
+.mc .tag.pot{background:#F6C9D4}
+.mc h3{font:800 24px/1.05 var(--display);letter-spacing:-.02em;margin:10px 0 6px}
+.mc p{font-size:15px;color:var(--soft);line-height:1.45}
+.mc dl{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.mc dl div{background:var(--ice);border-radius:12px;padding:8px 10px}
+.mc dt{font-size:12px;color:var(--soft)}
+.mc dd{font:800 18px/1.1 var(--display)}
+.mc button{width:100%;min-height:44px;border:0;border-radius:12px;background:var(--ink);color:#fff;font:700 15px/1.2 var(--body);cursor:pointer}
+.map-card .x{border:0;position:absolute;right:10px;top:10px;width:36px;min-height:36px;height:36px;background:transparent;color:var(--soft);font-size:22px}
+.map-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.map-chips button{border:2px solid var(--rule);background:#fff;border-radius:999px;padding:8px 14px;font:600 14px/1 var(--body);color:var(--ink);cursor:pointer;min-height:40px}
+.map-chips button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.map-note{margin-top:12px;font-size:13px;color:var(--soft)}
+@media (max-width:640px){
+  .map{aspect-ratio:auto;height:420px}
+  .map-card{left:10px;right:10px;width:auto;bottom:10px}
+  .map-key{font-size:12px}
+}
+
+/* Cierre: así empecé */
+.tn{display:grid;grid-template-columns:.78fr 1fr;gap:16px;align-items:end;padding-block:clamp(40px,6vw,88px)}
+.tn figure{margin:0;position:relative}
+.tn img{display:block;width:100%;height:auto;border-radius:20px;box-shadow:0 24px 50px rgba(0,0,0,.4)}
+.tn figure:first-child img{aspect-ratio:3/4;object-fit:cover}
+.tn figure:last-child img{aspect-ratio:4/3;object-fit:cover;object-position:40% 50%}
+.tn figcaption{position:absolute;left:12px;bottom:12px;background:rgba(1,21,34,.82);color:#fff;font:600 13px/1.2 var(--body);padding:7px 11px;border-radius:9px}
+.tn figcaption b{color:var(--mango)}
+.end .col .small{color:var(--on-dark-soft);max-width:40ch}
+
+/* Vida: entradas con escalonado y tiquetes que flotan */
+.js .rv{opacity:0;translate:0 28px;transition:opacity .7s cubic-bezier(.22,1,.36,1),translate .8s cubic-bezier(.22,1,.36,1);transition-delay:calc(var(--i,0) * 90ms)}
+.js .rv.in{opacity:1;translate:none}
+.tks .tk.in>div{animation:flo 6s ease-in-out infinite}
+.tks .tk:nth-child(2).in>div{animation-delay:-2s}
+.tks .tk:nth-child(3).in>div{animation-delay:-4s}
+@keyframes flo{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.vs>div{box-shadow:0 18px 40px rgba(12,34,51,.10)}
+.coupon{box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.was{font-weight:600;color:var(--soft);margin-bottom:4px}.was s{color:var(--berry);text-decoration-thickness:2px}
+.ft-art{display:block;width:100%;height:auto;margin-bottom:-1px;background:var(--paper)}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;translate:none;transition:none}.tks .tk.in>div{animation:none}.map-svg circle.pulse{animation:none}}
 </style>
 
 <script>document.documentElement.classList.add('js')</script>
@@ -471,6 +577,44 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
   </div>
 </section>
 
+<section class="sale" id="venta" aria-label="Toppings, marca y cobro">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="cy-bear" viewBox="0 0 40 40"><circle cx="13" cy="7" r="4.5"/><circle cx="27" cy="7" r="4.5"/><circle cx="20" cy="13" r="9"/><ellipse cx="20" cy="27" rx="11" ry="11"/><circle cx="9" cy="21" r="4"/><circle cx="31" cy="21" r="4"/><circle cx="12" cy="36" r="4"/><circle cx="28" cy="36" r="4"/><ellipse cx="16" cy="11" rx="2.6" ry="1.6" fill="#fff" opacity=".45"/></symbol>
+<symbol id="cy-ring" viewBox="0 0 40 40"><path d="M20 4a16 16 0 1 0 0 32a16 16 0 1 0 0-32zm0 9a7 7 0 1 1 0 14a7 7 0 1 1 0-14z" fill-rule="evenodd"/><path d="M9 14a12 12 0 0 1 9-7" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".5"/></symbol>
+<symbol id="cy-len" viewBox="0 0 40 40"><ellipse cx="20" cy="20" rx="16" ry="12"/><ellipse cx="14" cy="15" rx="5" ry="2.6" fill="#fff" opacity=".5"/></symbol>
+<symbol id="cy-worm" viewBox="0 0 40 40"><path d="M5 28c6-14 12 6 18-8s10-4 12-10" stroke="currentColor" stroke-width="7" fill="none" stroke-linecap="round"/></symbol>
+</svg>
+  <div class="sale-stage">
+    <div class="sale-fr" aria-hidden="true">
+      <img class="bg" src="f/e49.webp" width="1280" height="854" alt="" decoding="async">
+      <svg class="cdy" viewBox="0 0 40 40" style="color:#E8455F;fill:#E8455F"><use href="#cy-bear"/></svg><svg class="cdy" viewBox="0 0 40 40" style="color:#FFC21F;fill:#FFC21F"><use href="#cy-len"/></svg><svg class="cdy" viewBox="0 0 40 40" style="color:#3BB273;fill:#3BB273"><use href="#cy-ring"/></svg><svg class="cdy" viewBox="0 0 40 40" style="color:#3D7DE0;fill:#3D7DE0"><use href="#cy-len"/></svg><svg class="cdy" viewBox="0 0 40 40" style="color:#FF8A1F;fill:#FF8A1F"><use href="#cy-bear"/></svg><svg class="cdy" viewBox="0 0 40 40" style="color:#D92F57;fill:#D92F57"><use href="#cy-worm"/></svg><svg class="cdy" viewBox="0 0 40 40" style="color:#E8455F;fill:#E8455F"><use href="#cy-len"/></svg><svg class="cdy" viewBox="0 0 40 40" style="color:#FFA51F;fill:#FFA51F"><use href="#cy-ring"/></svg><svg class="cdy" viewBox="0 0 40 40" style="color:#3BB273;fill:#3BB273"><use href="#cy-bear"/></svg><svg class="cdy" viewBox="0 0 40 40" style="color:#8A4FD8;fill:#8A4FD8"><use href="#cy-len"/></svg><svg class="cdy" viewBox="0 0 40 40" style="color:#3BB273;fill:#3BB273"><use href="#cy-worm"/></svg><svg class="cdy" viewBox="0 0 40 40" style="color:#FFC21F;fill:#FFC21F"><use href="#cy-bear"/></svg><svg class="cdy" viewBox="0 0 40 40" style="color:#FF8A1F;fill:#FF8A1F"><use href="#cy-len"/></svg><svg class="cdy" viewBox="0 0 40 40" style="color:#E8455F;fill:#E8455F"><use href="#cy-ring"/></svg>
+      <img class="sticker" src="f/paradise-logo.webp" width="240" height="240" alt="" decoding="async">
+    </div>
+    <div class="sale-shade"></div>
+    <div class="sale-dim"></div>
+    <span class="chip" aria-hidden="true">+USD 3,50</span><span class="chip" aria-hidden="true">+USD 3,50</span><span class="chip" aria-hidden="true">+USD 3,50</span><span class="chip" aria-hidden="true">+USD 3,50</span>
+    <div class="pay" aria-hidden="true">
+      <div class="pay-h"><span class="ok" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>Pago recibido</b><span>Granizado de mango · 16 oz</span></div><strong>+USD 3,50</strong></div>
+      <div class="pay-day"><span>Hoy en caja</span><b>USD <span id="sale-usd">0</span></b></div>
+      <div class="pay-bar"><i></i></div>
+      <small><span id="sale-n">0</span> <span>de 50 vasos de un día normal</span></small>
+    </div>
+    <div class="sale-txt"><div class="wrap">
+      <div class="sb" data-a="0.04" data-b="0.47">
+        <div class="step"><b>6</b>Los toppings</div>
+        <p class="big disp">Dulces arriba. <em>Tu marca</em> en el vaso.</p>
+        <p class="sub">Gomitas y chocolates suben el precio más que el costo, y un vaso con tu logo hace publicidad en cada mano.</p>
+      </div>
+      <div class="sb" data-a="0.52" data-b="1.1">
+        <div class="step"><b>7</b>El cobro</div>
+        <p class="big disp">La plata entra <em>al momento.</em></p>
+        <p class="sub">Efectivo, tarjeta o transferencia. Un día normal son 40 a 50 vasos.</p>
+        <a class="btn sun" href="#precio" style="pointer-events:auto;align-self:flex-start">Quiero aprender el negocio</a>
+      </div>
+    </div></div>
+  </div>
+</section>
+
 <section class="band vidsec" id="historia">
   <div class="wrap">
     <h2 class="disp h2">De un puesto en la calle a vivir de esto</h2>
@@ -547,12 +691,38 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
         <div class="stk"><span>6 litros<small>16 vasos</small></span></div>
       </div>
       <div class="col">
-        <h3 class="disp h3">Con <span class="mk">3 vasos</span> ya pagaste la bolsa entera</h3>
+        <h3 class="disp h3">Con <span class="mk">3 vasos</span> cubres el costo de toda la bolsa</h3>
         <div class="cups" role="img" aria-label="De 16 vasos, 3 pagan la bolsa y 13 quedan"><svg aria-hidden="true" class="c" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" class="c" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" class="c" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg></div>
-        <div class="key"><span><i style="background:var(--ink)"></i>3 vasos pagan la bolsa</span><span><i style="background:var(--mango)"></i>13 vasos quedan</span></div>
-        <p class="lede">De cada bolsa de 6 litros salen 16 vasos de 12 onzas. Te quedan unos USD 58 por bolsa en Latinoamérica, USD 30 en Asia y USD 164 en Estados Unidos y Australia.</p>
+        <div class="key"><span><i style="background:var(--ink)"></i>3 vasos cubren el costo</span><span><i style="background:var(--mango)"></i>13 vasos quedan</span></div>
+        <p class="lede">El costo incluye mezcla, vaso y toppings. De cada bolsa de 6 litros salen 16 vasos de 12 onzas. Te quedan unos USD 58 por bolsa en Latinoamérica, USD 30 en Asia y USD 164 en Estados Unidos y Australia.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="band mapsec" id="mapa">
+  <div class="wrap">
+    <div class="col" style="max-width:780px">
+      <h2 class="disp h2">De Colombia <span class="mk">al mundo</span></h2>
+      <p class="lede">La marca nació en un puesto de la calle en Colombia y ya vende en otros países. Toca un país para ver cuánto deja un vaso allí.</p>
+    </div>
+    <div class="map" data-map>
+      <div class="map-svg" role="img" aria-label="Mapa mundial con los países donde está la marca y los mercados posibles"></div>
+      <div class="map-key"><span><i style="background:var(--mango)"></i>Ya está la marca</span><span><i style="background:#F6C9D4"></i>Mercado posible</span></div>
+      <div class="map-ctl"><button type="button" data-z="in" aria-label="Acercar">+</button><button type="button" data-z="out" aria-label="Alejar">−</button><button type="button" class="wide" data-z="reset">Mundo</button></div>
+      <div class="map-card" hidden>
+        <article class="mc" data-for="CO" hidden><span class="tag">Aquí empezó</span><h3>Colombia</h3><p>El primer puesto de Paradise Cocktails abrió en 2019 y sigue abierto. Hoy distribuyo los insumos desde Medellín.</p><dl><div><dt>Vaso 12 oz</dt><dd>USD 4,40</dd></div><div><dt>Te cuesta</dt><dd>USD 0,80</dd></div><div><dt>Te queda</dt><dd>80 %</dd></div></dl><button type="button" data-use="lat">Hacer la cuenta con estos números</button></article>
+        <article class="mc" data-for="EC" hidden><span class="tag">Ya vende</span><h3>Ecuador</h3><p>Aquí ya se venden granizados con la receta Fórmula 85.</p><dl><div><dt>Vaso 12 oz</dt><dd>USD 4,40</dd></div><div><dt>Te cuesta</dt><dd>USD 0,80</dd></div><div><dt>Te queda</dt><dd>80 %</dd></div></dl><button type="button" data-use="lat">Hacer la cuenta con estos números</button></article>
+        <article class="mc" data-for="AU" hidden><span class="tag">Ya vende</span><h3>Australia</h3><p>La marca tiene un punto en Melbourne, con precios de bar y de evento.</p><dl><div><dt>Vaso 12 oz</dt><dd>USD 12</dd></div><div><dt>Te cuesta</dt><dd>USD 1,75</dd></div><div><dt>Te queda</dt><dd>85 %</dd></div></dl><button type="button" data-use="usa">Hacer la cuenta con estos números</button></article>
+        <article class="mc" data-for="US" hidden><span class="tag pot">Mercado posible</span><h3>Estados Unidos</h3><p>Bares, eventos y ciudades grandes pagan el vaso más caro.</p><dl><div><dt>Vaso 12 oz</dt><dd>USD 12</dd></div><div><dt>Te cuesta</dt><dd>USD 1,75</dd></div><div><dt>Te queda</dt><dd>85 %</dd></div></dl><button type="button" data-use="usa">Hacer la cuenta con estos números</button></article>
+        <article class="mc" data-for="MX" hidden><span class="tag pot">Mercado posible</span><h3>México</h3><p>Precios parecidos a los de Colombia, con un mercado mucho más grande.</p><dl><div><dt>Vaso 12 oz</dt><dd>USD 4,40</dd></div><div><dt>Te cuesta</dt><dd>USD 0,80</dd></div><div><dt>Te queda</dt><dd>80 %</dd></div></dl><button type="button" data-use="lat">Hacer la cuenta con estos números</button></article>
+        <article class="mc" data-for="PE" hidden><span class="tag pot">Mercado posible</span><h3>Perú</h3><p>Clima y precios de Latinoamérica: el mismo modelo funciona igual.</p><dl><div><dt>Vaso 12 oz</dt><dd>USD 4,40</dd></div><div><dt>Te cuesta</dt><dd>USD 0,80</dd></div><div><dt>Te queda</dt><dd>80 %</dd></div></dl><button type="button" data-use="lat">Hacer la cuenta con estos números</button></article>
+        <article class="mc" data-for="TH" hidden><span class="tag pot">Mercado posible</span><h3>Tailandia</h3><p>Zonas turísticas y centros comerciales: vaso más barato, mucho volumen.</p><dl><div><dt>Vaso 12 oz</dt><dd>USD 2,50</dd></div><div><dt>Te cuesta</dt><dd>USD 0,65</dd></div><div><dt>Te queda</dt><dd>75 %</dd></div></dl><button type="button" data-use="asia">Hacer la cuenta con estos números</button></article>
+        <button type="button" class="x" aria-label="Cerrar">×</button>
+      </div>
+    </div>
+    <div class="map-chips" role="group" aria-label="Países"><button type="button" data-c="CO" aria-pressed="false">Colombia</button><button type="button" data-c="EC" aria-pressed="false">Ecuador</button><button type="button" data-c="AU" aria-pressed="false">Australia</button><button type="button" data-c="US" aria-pressed="false">EE. UU.</button><button type="button" data-c="MX" aria-pressed="false">México</button><button type="button" data-c="PE" aria-pressed="false">Perú</button><button type="button" data-c="TH" aria-pressed="false">Tailandia</button></div>
+    <p class="map-note">Los mercados posibles son países donde el modelo funciona con estos precios de referencia; ahí todavía no hay un punto de la marca.</p>
   </div>
 </section>
 
@@ -665,12 +835,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
     <div class="col">
       <h2 class="disp h2">20 cupos al precio más bajo que tendrá el curso</h2>
       <p class="lede">Los fundadores entran primero y reciben los módulos a medida que salen.</p>
-      <div class="stk"><span>USD 200<small>menos que en el lanzamiento</small></span></div>
+      <div class="stk"><span>Ahorras USD 200<small>frente al precio de lanzamiento</small></span></div>
     </div>
     <div class="coupon">
       <div class="main">
         <div>
-          <div class="amt"><small>USD</small>97</div>
+          <p class="was"><s>USD 297</s> precio de lanzamiento</p><div class="amt"><small>USD</small>97</div>
           <p class="small" style="margin-top:14px;color:var(--soft)">Pago único. Después del lanzamiento: USD 297.</p>
         </div>
         <ul class="marks">
@@ -707,13 +877,18 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
   </div>
 </section>
 
+<svg class="ft-art" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 C 160 20, 320 90, 480 52 S 800 18, 960 50 S 1280 86, 1440 40 V90 H0z" fill="#011522"/><path d="M0 60 C 160 20, 320 90, 480 52 S 800 18, 960 50 S 1280 86, 1440 40" fill="none" stroke="#FFA51F" stroke-width="3" opacity=".7"/></svg>
 <section class="band night end">
   <div class="wrap split">
     <div class="col">
       <h2 class="disp">Empieza por los números</h2>
+      <p class="small">Así empecé: un carrito en la calle en 2019. Hoy, la marca y las máquinas que te enseño a elegir.</p>
       <a class="btn sun" href="#precio">Reservar mi cupo por USD 97</a>
     </div>
-    <img src="f/e49.webp" width="1280" height="853" loading="lazy" alt="Vaso de granizado de mango servido, con la máquina al fondo">
+    <div class="tn">
+      <figure><img src="f/inicio2019.webp" width="660" height="880" loading="lazy" alt="El primer puesto de granizados en la calle, de noche, en 2019"><figcaption><b>2019</b> · El primer puesto</figcaption></figure>
+      <figure><img src="f/hoy.webp" width="1200" height="775" loading="lazy" alt="Danilo sonriendo junto a una máquina de granizados con toppings"><figcaption><b>Hoy</b> · Paradise Cocktails</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -992,7 +1167,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
   ['c-vasos','c-precio','c-costo'].forEach(function(id){$(id).addEventListener('input',calc)});
 
   /* ---------- Idioma: español por defecto; inglés para quien lo elija o tenga el navegador en otro idioma ---------- */
-  var EN={"Monta tu negocio de granizados con los números reales.": "Start your slush business with the real numbers.", "Reservar mi cupo": "Reserve my spot", "El curso": "The course", "Mi historia": "My story", "Preguntas": "FAQ", "Contacto": "Contact", "Respuesta personal de Danilo": "Danilo replies personally", "Legal": "Legal", "Términos y condiciones": "Terms and conditions", "Política de privacidad": "Privacy policy", "Garantía de 7 días": "7-day guarantee", "© 2026 Fórmula 85 · Danilo Herrera. Todos los derechos reservados.": "© 2026 Fórmula 85 · Danilo Herrera. All rights reserved.", "Pagos seguros procesados por Hotmart": "Secure payments processed by Hotmart", "¿Tienes dudas antes de pagar?": "Questions before paying?", "Escríbeme por WhatsApp": "Message me on WhatsApp", "Te respondo personalmente.": "I reply personally.", "De un puesto en la calle a vivir de esto": "From a street stand to living off it", "Te cuento en 6 minutos cómo empecé con una máquina alquilada, qué me costó años entender y qué vas a aprender en el curso.": "In 6 minutes I tell you how I started with a rented machine, what took me years to figure out, and what you’ll learn in the course. (Video in Spanish.)", "Mi historia y el método": "My story and the method", "Pagar mi cupo de fundador": "Pay for my founder spot", "Pago seguro con Hotmart: tarjeta, PayPal y medios locales. Garantía de 7 días.": "Secure checkout with Hotmart: card, PayPal and local methods. 7-day guarantee.", "¿Tienes dudas antes de pagar? Déjame tu WhatsApp": "Questions before paying? Leave me your WhatsApp", "Quiero que me escribas": "Message me", "Te escribo personalmente por WhatsApp para resolver tus dudas.": "I’ll message you personally on WhatsApp to answer your questions.", "Tu nombre": "Your name", "WhatsApp, con el indicativo de tu país": "WhatsApp, with your country code", "Correo": "Email", "País": "Country", "Apartar mi cupo de fundador": "Save my founder spot", "Apartarlo no tiene costo. Cuando abra el pago te escribo primero por WhatsApp para que tomes tu cupo a USD 97, con garantía de 7 días.": "Saving it is free. When payment opens, I’ll message you first on WhatsApp so you can take your spot at USD 97, with a 7-day guarantee.", "¿Y si no es para mí?<i aria-hidden=\"true\">+</i>": "What if it’s not for me?<i aria-hidden=\"true\">+</i>", "Tienes 7 días de garantía. Si el curso no te sirve, pides el reembolso desde Hotmart y te devuelven el 100 %.": "You have a 7-day guarantee. If the course isn’t for you, request a refund through Hotmart and get 100% back.", "Desliza para ver los tres mercados": "Swipe to see all three markets", "Los números": "Numbers", "Calculadora": "Calculator", "Temario": "Curriculum", "Precio": "Pricing", "Reservar cupo": "Reserve a spot", "Curso online en preventa": "Online course, founders’ presale", "Monta un negocio que deja <span class=\"mk\">80 %</span> en cada vaso": "Start a business that keeps <span class=\"mk\">80%</span> of every cup", "Aprende a abrir tu punto de granizados paso a paso, con los números de uno que lleva 7 años abierto, sin pagar los errores de empezar solo.": "Learn to open your own slush stand step by step, with the real numbers of someone who has kept one open for 7 years, without paying for the mistakes of starting alone.", "Reservar mi cupo por USD 97": "Reserve my spot for USD 97", "Ver el temario": "See the curriculum", "<b>1</b>La mezcla": "<b>1</b>The mix", "Una bolsa.": "One bag.", "16 vasos.": "16 cups.", "Seis litros de mezcla entran líquidos a la máquina. De cada bolsa salen 16 vasos de 12 onzas.": "Six liters of mix go into the machine as liquid. Each bag makes sixteen 12 oz cups.", "<b>2</b>La máquina": "<b>2</b>The machine", "Ella hace": "It does", "el trabajo.": "the work.", "Bate, enfría y mantiene el granizado listo todo el día. Tú solo sirves.": "It churns, chills and keeps the slush ready all day. You just serve.", "<b>3</b>El servicio": "<b>3</b>Serving", "Servir toma": "Serving takes", "segundos.": "seconds.", "Sin cocina y sin preparar nada en el momento: vaso, palanca y listo.": "No kitchen and no prep on the spot: cup, lever, done.", "<b>4</b>El costo": "<b>4</b>The cost", "<span class=\"sm\">Servirlo te cuesta menos de</span>": "<span class=\"sm\">Each cup costs you less than</span>", "El vaso completo, en cualquier mercado.": "The full cup, in any market.", "<b>5</b>La venta": "<b>5</b>The sale", "<span class=\"sm\">Y lo vendes en</span>": "<span class=\"sm\">And you sell it for</span>", "<span class=\"num\">USD 2,50 a 15</span>": "<span class=\"num\">USD 2.50 to 15</span>", "Ese mismo vaso, según dónde estés.": "The same cup, depending on where you are.", "queda en cada vaso, en promedio": "stays in every cup, on average", "Antes de arriendo, personal y servicios. En el curso aprendes a hacer la cuenta completa.": "Before rent, staff and utilities. The course shows you how to run the full numbers.", "Quiero aprender el negocio": "I want to learn the business", "6 litros de mezcla lista": "6 liters of ready mix", "Los rodillos baten y enfrían": "The augers churn and chill", "12 onzas, recién servido": "12 oz, freshly served", "Desliza para ver cómo funciona ↓": "Scroll to see how it works ↓", "La mezcla": "The mix", "La máquina": "The machine", "El servicio": "Serving", "El costo": "The cost", "La venta": "The sale", "Llevo 7 años vendiendo granizados. En un día normal salen 40 a 50 vasos; en uno bueno, 150.": "I’ve been selling slush for 7 years. On a normal day we sell 40 to 50 cups; on a good one, 150.", "Abrí Paradise Cocktails en Colombia y sigue abierto. Hoy lo dirijo a distancia. Mi error más caro fue no medir desde el inicio cuánto vendía de verdad. En el curso te muestro el sistema tal como lo uso, para que no lo pagues tú.": "I opened Paradise Cocktails in Colombia and it’s still open. Today I run it remotely. My most expensive mistake was not tracking from day one how much I really sold. In the course I show you the system exactly as I use it, so you don’t pay for that mistake.", "Danilo<span>Fundador de Paradise Cocktails</span>": "Danilo<span>Founder of Paradise Cocktails</span>", "[Foto de Paradise Cocktails]": "[Paradise Cocktails photo]", "<b>The Paradise Cocktails</b>Mi marca: el punto que abrí en Colombia y la materia prima que hoy distribuyo desde Medellín": "<b>The Paradise Cocktails</b>My brand: the stand I opened in Colombia and the supplies I now distribute from Medellín", "Cuánto deja un vaso, según dónde vendas": "What one cup makes, depending on where you sell", "Tres tiquetes, uno por mercado. Son precios de referencia: el costo cambia en cada país, pero suele quedarse en ese rango. Falta restar arriendo, personal y servicios.": "Three receipts, one per market. These are reference prices: costs change by country but tend to stay in this range. Rent, staff and utilities aren’t subtracted yet.", "Latinoamérica": "Latin America", "Asia": "Asia", "EE. UU. y Australia": "US & Australia", "Vaso de 12 oz": "12 oz cup", "Vaso de 16 oz": "16 oz cup", "Te cuesta": "Your cost", "Te queda": "You keep", "USD 4,40": "USD 4.40", "USD 5,30": "USD 5.30", "USD 0,80–1,05": "USD 0.80–1.05", "80 %": "80%", "USD 2,50": "USD 2.50", "USD 3,50": "USD 3.50", "USD 0,50–0,80": "USD 0.50–0.80", "75 %": "75%", "USD 1–1,75": "USD 1–1.75", "85 %": "85%", "En Colombia: $14.000 y $17.000 pesos.": "In Colombia: COP 14,000 and 17,000.", "Zonas turísticas y centros comerciales.": "Tourist areas and shopping malls.", "Bares, eventos y ciudades grandes.": "Bars, events and big cities.", "6 litros<small>16 vasos</small>": "6 liters<small>16 cups</small>", "Con <span class=\"mk\">3 vasos</span> ya pagaste la bolsa entera": "<span class=\"mk\">3 cups</span> pay for the whole bag", "<i style=\"background:var(--ink)\"></i>3 vasos pagan la bolsa": "<i style=\"background:var(--ink)\"></i>3 cups pay for the bag", "<i style=\"background:var(--mango)\"></i>13 vasos quedan": "<i style=\"background:var(--mango)\"></i>13 cups are yours", "De cada bolsa de 6 litros salen 16 vasos de 12 onzas. Te quedan unos USD 58 por bolsa en Latinoamérica, USD 30 en Asia y USD 164 en Estados Unidos y Australia.": "Each 6-liter bag makes sixteen 12 oz cups. You keep about USD 58 per bag in Latin America, USD 30 in Asia and USD 164 in the US and Australia.", "Empezar por tu cuenta <span class=\"mk\">sale caro</span>": "Starting on your own <span class=\"mk\">costs you</span>", "El mismo punto y la misma máquina. Lo que cambia es lo que sabes antes de gastar.": "Same stand, same machine. What changes is what you know before you spend.", "Por tu cuenta<span>Meses de prueba y error</span>": "On your own<span>Months of trial and error</span>", "Compras la máquina que te ofrecieron, no la que tu punto necesita.": "You buy the machine you were offered, not the one your stand needs.", "Pones el precio al ojo y no sabes cuánto te queda por vaso.": "You guess your prices and don’t know what each cup leaves you.", "Pasan meses antes de saber cuánto vendes de verdad.": "Months go by before you know what you really sell.", "Con el curso<span>Claro desde antes de abrir</span>": "With the course<span>Clear before you open</span>", "Sabes qué máquina comprar, nueva o usada, y cómo importarla.": "You know which machine to buy, new or used, and how to import it.", "Sacas el costo y el precio de cada vaso antes de invertir.": "You work out the cost and price of every cup before you invest.", "Controlas caja e inventario desde el primer día.": "You track cash and inventory from day one.", "Ahora haz la cuenta con tus números": "Now run the numbers with yours", "Vasos vendidos al día": "Cups sold per day", "Precio por vaso": "Price per cup", "Costo por vaso": "Cost per cup", "Cuenta con 26 días abiertos al mes. No incluye arriendo, personal ni impuestos, y no es una promesa de ingresos.": "Based on 26 open days a month. Rent, staff and taxes aren’t included, and this isn’t an income promise.", "Tu punto, un mes": "Your stand, one month", "Vasos al mes": "Cups per month", "Ventas": "Sales", "Costo de los vasos": "Cost of the cups", "Queda al mes": "Left each month", "Para quién es este curso": "Who this course is for", "Es para ti si:": "It’s for you if:", "Quieres un negocio propio, pero no sabes cuál deja plata de verdad.": "You want your own business but don’t know which one really makes money.", "Te frena invertir sin conocer los números antes.": "Investing without seeing the numbers first holds you back.", "Ya tienes un local o vendes comida y buscas un producto que deje más.": "You already have a shop or sell food and want a product that earns more.", "[Video de venta: Danilo en el local]": "[Sales video: Danilo at the stand]", "[2 a 3 min]": "[2 to 3 min]", "Del primer número a la apertura": "From the first number to opening day", "Diez módulos en lecciones cortas, de 5 a 10 minutos, con plantillas para aplicar el mismo día.": "Ten modules in short lessons of 5 to 10 minutes, with templates you can apply the same day.", "Antes de invertir": "Before you invest", "Abrir y operar": "Open and run", "Crecer": "Grow", "Los números reales": "The real numbers", "Cuánto cuesta un vaso, cuánto deja y cómo calcularlo en tu ciudad.": "What a cup costs, what it makes and how to calculate it in your city.", "Formato y ubicación": "Format and location", "Local, carrito, isla en centro comercial o eventos: cuál te conviene.": "Shop, cart, mall kiosk or events: which one suits you.", "Máquinas": "Machines", "Cuál comprar, nueva o usada, y cómo importarla a tu país.": "Which one to buy, new or used, and how to import it to your country.", "Insumos": "Supplies", "Tipos de bases, proveedores y almacenamiento.": "Types of bases, suppliers and storage.", "Menú y precios": "Menu and prices", "Tamaños, combos, con y sin licor.": "Sizes, combos, with and without alcohol.", "Montaje y permisos": "Setup and permits", "Trámites, diseño del punto, vasos y marca.": "Paperwork, stand design, cups and branding.", "Operación y personal": "Operations and staff", "Apertura y cierre, inventario y control de caja.": "Opening and closing, inventory and cash control.", "Marketing local": "Local marketing", "Lanzamiento, redes, eventos y domicilios.": "Launch, social media, events and delivery.", "Manejarlo a distancia": "Running it remotely", "Cámaras, reportes y caja con OmniPOS.": "Cameras, reports and cash register with OmniPOS.", "Escalar": "Scaling", "Segundo punto, eventos y un operador con canon mensual.": "A second stand, events and an operator on a monthly fee.", "20 cupos al precio más bajo que tendrá el curso": "20 spots at the lowest price this course will ever have", "Los fundadores entran primero y reciben los módulos a medida que salen.": "Founders get in first and receive the modules as they’re released.", "USD 200<small>menos que en el lanzamiento</small>": "USD 200<small>less than at launch</small>", "Pago único. Después del lanzamiento: USD 297.": "One-time payment. After launch: USD 297.", "Los 10 módulos en video": "All 10 video modules", "Calculadora de rentabilidad y lista de montaje": "Profit calculator and setup checklist", "Guía de importación de máquinas": "Machine import guide", "Acceso de por vida": "Lifetime access", "[Promoción de OmniPOS para estudiantes: definir]": "[OmniPOS student offer: to be defined]", "Reservar mi cupo de fundador": "Reserve my founder spot", "[Enlace de pago de Hotmart] Garantía de 7 días": "[Hotmart payment link] 7-day guarantee", "Cupos de fundador": "Founder spots", "Son 20 y no se reabren.": "There are 20, and they won’t reopen.", "Lo que todos preguntan": "What everyone asks", "¿El curso incluye la receta?<i aria-hidden=\"true\">+</i>": "Does the course include the recipe?<i aria-hidden=\"true\">+</i>", "No. El curso enseña a montar y operar el negocio. La receta Fórmula 85, con la que fabricas tu propia mezcla y bajas todavía más el costo, se entrega aparte y solo por solicitud.": "No. The course teaches you to set up and run the business. The Fórmula 85 recipe, which lets you make your own mix and lower your cost even more, is delivered separately and only on request.", "¿Necesito experiencia?<i aria-hidden=\"true\">+</i>": "Do I need experience?<i aria-hidden=\"true\">+</i>", "No. El curso empieza desde cero.": "No. The course starts from zero.", "¿Sirve en mi país?<i aria-hidden=\"true\">+</i>": "Does it work in my country?<i aria-hidden=\"true\">+</i>", "Sí. El sistema funciona igual en Latinoamérica, Asia, Estados Unidos y Australia, y el módulo de máquinas explica cómo importarlas a tu país.": "Yes. The system works the same in Latin America, Asia, the US and Australia, and the machines module explains how to import them to your country.", "¿Cuándo recibo los módulos?<i aria-hidden=\"true\">+</i>": "When do I get the modules?<i aria-hidden=\"true\">+</i>", "El módulo 1 al comprar. Los demás, dos por semana.": "Module 1 right after you buy. The rest, two per week.", "Empieza por los números": "Start with the numbers", "Hecho en Colombia, vendido al mundo": "Made in Colombia, sold worldwide"}, ATTR={"Ver el video de presentación de Danilo": "Watch Danilo’s introduction video", "Danilo hablando a la cámara": "Danilo talking to the camera", "Paradise Cocktails: insumos, granizados y los países donde está la marca": "Paradise Cocktails: supplies, slushes and the countries where the brand is", "Logo de The Paradise Cocktails": "The Paradise Cocktails logo", "Idioma": "Language", "Secciones": "Sections", "El negocio, de la mezcla al vaso": "The business, from mix to cup", "Danilo recostado en el mostrador, junto a dos máquinas de granizado": "Danilo leaning on the counter next to two slush machines", "Bolsa transparente de 6 litros llena de mezcla de granizado": "Clear 6-liter bag full of slush mix", "De 16 vasos, 3 pagan la bolsa y 13 quedan": "Of 16 cups, 3 pay for the bag and 13 are yours", "Mercado de partida": "Starting market", "Reproducir el video de venta": "Play the sales video", "Vaso de granizado de mango servido, con la máquina al fondo": "A served cup of mango slush with the machine behind it"};
+  var EN={"+USD 3,50": "+USD 3.50", "Pago recibido": "Payment received", "Granizado de mango · 16 oz": "Mango slush · 16 oz", "Hoy en caja": "In the register today", "de 50 vasos de un día normal": "of 50 cups on a normal day", "<s>USD 297</s> precio de lanzamiento": "<s>USD 297</s> launch price", "<b>6</b>Los toppings": "<b>6</b>Toppings", "Dulces arriba. <em>Tu marca</em> en el vaso.": "Candy on top. <em>Your brand</em> on the cup.", "Gomitas y chocolates suben el precio más que el costo, y un vaso con tu logo hace publicidad en cada mano.": "Gummies and chocolate raise the price more than the cost, and a cup with your logo advertises in every hand.", "<b>7</b>El cobro": "<b>7</b>Getting paid", "La plata entra <em>al momento.</em>": "The money comes in <em>right away.</em>", "Efectivo, tarjeta o transferencia. Un día normal son 40 a 50 vasos.": "Cash, card or transfer. A normal day is 40 to 50 cups.", "Con <span class=\"mk\">3 vasos</span> cubres el costo de toda la bolsa": "<span class=\"mk\">3 cups</span> cover the cost of the whole bag", "<i style=\"background:var(--ink)\"></i>3 vasos cubren el costo": "<i style=\"background:var(--ink)\"></i>3 cups cover the cost", "El costo incluye mezcla, vaso y toppings. De cada bolsa de 6 litros salen 16 vasos de 12 onzas. Te quedan unos USD 58 por bolsa en Latinoamérica, USD 30 en Asia y USD 164 en Estados Unidos y Australia.": "The cost includes mix, cup and toppings. Each 6-liter bag makes sixteen 12 oz cups. You keep about USD 58 per bag in Latin America, USD 30 in Asia and USD 164 in the US and Australia.", "De Colombia <span class=\"mk\">al mundo</span>": "From Colombia <span class=\"mk\">to the world</span>", "La marca nació en un puesto de la calle en Colombia y ya vende en otros países. Toca un país para ver cuánto deja un vaso allí.": "The brand was born at a street stand in Colombia and already sells in other countries. Tap a country to see what one cup makes there.", "<i style=\"background:var(--mango)\"></i>Ya está la marca": "<i style=\"background:var(--mango)\"></i>Brand already there", "<i style=\"background:#F6C9D4\"></i>Mercado posible": "<i style=\"background:#F6C9D4\"></i>Possible market", "Mundo": "World", "Aquí empezó": "Where it started", "Ya vende": "Already selling", "Mercado posible": "Possible market", "Colombia": "Colombia", "Ecuador": "Ecuador", "Australia": "Australia", "Estados Unidos": "United States", "México": "Mexico", "Perú": "Peru", "Tailandia": "Thailand", "EE. UU.": "US", "El primer puesto de Paradise Cocktails abrió en 2019 y sigue abierto. Hoy distribuyo los insumos desde Medellín.": "The first Paradise Cocktails stand opened in 2019 and is still open. Today I distribute the supplies from Medellín.", "Aquí ya se venden granizados con la receta Fórmula 85.": "Slushes made with the Fórmula 85 recipe are already sold here.", "La marca tiene un punto en Melbourne, con precios de bar y de evento.": "The brand has a spot in Melbourne, with bar and event prices.", "Bares, eventos y ciudades grandes pagan el vaso más caro.": "Bars, events and big cities pay the most per cup.", "Precios parecidos a los de Colombia, con un mercado mucho más grande.": "Prices similar to Colombia, with a much bigger market.", "Clima y precios de Latinoamérica: el mismo modelo funciona igual.": "Latin American weather and prices: the same model works the same way.", "Zonas turísticas y centros comerciales: vaso más barato, mucho volumen.": "Tourist areas and malls: a cheaper cup, lots of volume.", "Vaso 12 oz": "12 oz cup", "USD 0,80": "USD 0.80", "USD 1,75": "USD 1.75", "USD 0,65": "USD 0.65", "Hacer la cuenta con estos números": "Run the numbers with these prices", "Los mercados posibles son países donde el modelo funciona con estos precios de referencia; ahí todavía no hay un punto de la marca.": "Possible markets are countries where the model works at these reference prices; the brand doesn’t have a spot there yet.", "Ahorras USD 200<small>frente al precio de lanzamiento</small>": "Save USD 200<small>vs. the launch price</small>", "Así empecé: un carrito en la calle en 2019. Hoy, la marca y las máquinas que te enseño a elegir.": "How I started: a street cart in 2019. Today, the brand and the machines I teach you to choose.", "<b>2019</b> · El primer puesto": "<b>2019</b> · The first stand", "<b>Hoy</b> · Paradise Cocktails": "<b>Today</b> · Paradise Cocktails", "Monta tu negocio de granizados con los números reales.": "Start your slush business with the real numbers.", "Reservar mi cupo": "Reserve my spot", "El curso": "The course", "Mi historia": "My story", "Preguntas": "FAQ", "Contacto": "Contact", "Respuesta personal de Danilo": "Danilo replies personally", "Legal": "Legal", "Términos y condiciones": "Terms and conditions", "Política de privacidad": "Privacy policy", "Garantía de 7 días": "7-day guarantee", "© 2026 Fórmula 85 · Danilo Herrera. Todos los derechos reservados.": "© 2026 Fórmula 85 · Danilo Herrera. All rights reserved.", "Pagos seguros procesados por Hotmart": "Secure payments processed by Hotmart", "¿Tienes dudas antes de pagar?": "Questions before paying?", "Escríbeme por WhatsApp": "Message me on WhatsApp", "Te respondo personalmente.": "I reply personally.", "De un puesto en la calle a vivir de esto": "From a street stand to living off it", "Te cuento en 6 minutos cómo empecé con una máquina alquilada, qué me costó años entender y qué vas a aprender en el curso.": "In 6 minutes I tell you how I started with a rented machine, what took me years to figure out, and what you’ll learn in the course. (Video in Spanish.)", "Mi historia y el método": "My story and the method", "Pagar mi cupo de fundador": "Pay for my founder spot", "Pago seguro con Hotmart: tarjeta, PayPal y medios locales. Garantía de 7 días.": "Secure checkout with Hotmart: card, PayPal and local methods. 7-day guarantee.", "¿Tienes dudas antes de pagar? Déjame tu WhatsApp": "Questions before paying? Leave me your WhatsApp", "Quiero que me escribas": "Message me", "Te escribo personalmente por WhatsApp para resolver tus dudas.": "I’ll message you personally on WhatsApp to answer your questions.", "Tu nombre": "Your name", "WhatsApp, con el indicativo de tu país": "WhatsApp, with your country code", "Correo": "Email", "País": "Country", "Apartar mi cupo de fundador": "Save my founder spot", "Apartarlo no tiene costo. Cuando abra el pago te escribo primero por WhatsApp para que tomes tu cupo a USD 97, con garantía de 7 días.": "Saving it is free. When payment opens, I’ll message you first on WhatsApp so you can take your spot at USD 97, with a 7-day guarantee.", "¿Y si no es para mí?<i aria-hidden=\"true\">+</i>": "What if it’s not for me?<i aria-hidden=\"true\">+</i>", "Tienes 7 días de garantía. Si el curso no te sirve, pides el reembolso desde Hotmart y te devuelven el 100 %.": "You have a 7-day guarantee. If the course isn’t for you, request a refund through Hotmart and get 100% back.", "Desliza para ver los tres mercados": "Swipe to see all three markets", "Los números": "Numbers", "Calculadora": "Calculator", "Temario": "Curriculum", "Precio": "Pricing", "Reservar cupo": "Reserve a spot", "Curso online en preventa": "Online course, founders’ presale", "Monta un negocio que deja <span class=\"mk\">80 %</span> en cada vaso": "Start a business that keeps <span class=\"mk\">80%</span> of every cup", "Aprende a abrir tu punto de granizados paso a paso, con los números de uno que lleva 7 años abierto, sin pagar los errores de empezar solo.": "Learn to open your own slush stand step by step, with the real numbers of someone who has kept one open for 7 years, without paying for the mistakes of starting alone.", "Reservar mi cupo por USD 97": "Reserve my spot for USD 97", "Ver el temario": "See the curriculum", "<b>1</b>La mezcla": "<b>1</b>The mix", "Una bolsa.": "One bag.", "16 vasos.": "16 cups.", "Seis litros de mezcla entran líquidos a la máquina. De cada bolsa salen 16 vasos de 12 onzas.": "Six liters of mix go into the machine as liquid. Each bag makes sixteen 12 oz cups.", "<b>2</b>La máquina": "<b>2</b>The machine", "Ella hace": "It does", "el trabajo.": "the work.", "Bate, enfría y mantiene el granizado listo todo el día. Tú solo sirves.": "It churns, chills and keeps the slush ready all day. You just serve.", "<b>3</b>El servicio": "<b>3</b>Serving", "Servir toma": "Serving takes", "segundos.": "seconds.", "Sin cocina y sin preparar nada en el momento: vaso, palanca y listo.": "No kitchen and no prep on the spot: cup, lever, done.", "<b>4</b>El costo": "<b>4</b>The cost", "<span class=\"sm\">Servirlo te cuesta menos de</span>": "<span class=\"sm\">Each cup costs you less than</span>", "El vaso completo, en cualquier mercado.": "The full cup, in any market.", "<b>5</b>La venta": "<b>5</b>The sale", "<span class=\"sm\">Y lo vendes en</span>": "<span class=\"sm\">And you sell it for</span>", "<span class=\"num\">USD 2,50 a 15</span>": "<span class=\"num\">USD 2.50 to 15</span>", "Ese mismo vaso, según dónde estés.": "The same cup, depending on where you are.", "queda en cada vaso, en promedio": "stays in every cup, on average", "Antes de arriendo, personal y servicios. En el curso aprendes a hacer la cuenta completa.": "Before rent, staff and utilities. The course shows you how to run the full numbers.", "Quiero aprender el negocio": "I want to learn the business", "6 litros de mezcla lista": "6 liters of ready mix", "Los rodillos baten y enfrían": "The augers churn and chill", "12 onzas, recién servido": "12 oz, freshly served", "Desliza para ver cómo funciona ↓": "Scroll to see how it works ↓", "La mezcla": "The mix", "La máquina": "The machine", "El servicio": "Serving", "El costo": "The cost", "La venta": "The sale", "Llevo 7 años vendiendo granizados. En un día normal salen 40 a 50 vasos; en uno bueno, 150.": "I’ve been selling slush for 7 years. On a normal day we sell 40 to 50 cups; on a good one, 150.", "Abrí Paradise Cocktails en Colombia y sigue abierto. Hoy lo dirijo a distancia. Mi error más caro fue no medir desde el inicio cuánto vendía de verdad. En el curso te muestro el sistema tal como lo uso, para que no lo pagues tú.": "I opened Paradise Cocktails in Colombia and it’s still open. Today I run it remotely. My most expensive mistake was not tracking from day one how much I really sold. In the course I show you the system exactly as I use it, so you don’t pay for that mistake.", "Danilo<span>Fundador de Paradise Cocktails</span>": "Danilo<span>Founder of Paradise Cocktails</span>", "[Foto de Paradise Cocktails]": "[Paradise Cocktails photo]", "<b>The Paradise Cocktails</b>Mi marca: el punto que abrí en Colombia y la materia prima que hoy distribuyo desde Medellín": "<b>The Paradise Cocktails</b>My brand: the stand I opened in Colombia and the supplies I now distribute from Medellín", "Cuánto deja un vaso, según dónde vendas": "What one cup makes, depending on where you sell", "Tres tiquetes, uno por mercado. Son precios de referencia: el costo cambia en cada país, pero suele quedarse en ese rango. Falta restar arriendo, personal y servicios.": "Three receipts, one per market. These are reference prices: costs change by country but tend to stay in this range. Rent, staff and utilities aren’t subtracted yet.", "Latinoamérica": "Latin America", "Asia": "Asia", "EE. UU. y Australia": "US & Australia", "Vaso de 12 oz": "12 oz cup", "Vaso de 16 oz": "16 oz cup", "Te cuesta": "Your cost", "Te queda": "You keep", "USD 4,40": "USD 4.40", "USD 5,30": "USD 5.30", "USD 0,80–1,05": "USD 0.80–1.05", "80 %": "80%", "USD 2,50": "USD 2.50", "USD 3,50": "USD 3.50", "USD 0,50–0,80": "USD 0.50–0.80", "75 %": "75%", "USD 1–1,75": "USD 1–1.75", "85 %": "85%", "En Colombia: $14.000 y $17.000 pesos.": "In Colombia: COP 14,000 and 17,000.", "Zonas turísticas y centros comerciales.": "Tourist areas and shopping malls.", "Bares, eventos y ciudades grandes.": "Bars, events and big cities.", "6 litros<small>16 vasos</small>": "6 liters<small>16 cups</small>", "Con <span class=\"mk\">3 vasos</span> ya pagaste la bolsa entera": "<span class=\"mk\">3 cups</span> pay for the whole bag", "<i style=\"background:var(--ink)\"></i>3 vasos pagan la bolsa": "<i style=\"background:var(--ink)\"></i>3 cups pay for the bag", "<i style=\"background:var(--mango)\"></i>13 vasos quedan": "<i style=\"background:var(--mango)\"></i>13 cups are yours", "De cada bolsa de 6 litros salen 16 vasos de 12 onzas. Te quedan unos USD 58 por bolsa en Latinoamérica, USD 30 en Asia y USD 164 en Estados Unidos y Australia.": "Each 6-liter bag makes sixteen 12 oz cups. You keep about USD 58 per bag in Latin America, USD 30 in Asia and USD 164 in the US and Australia.", "Empezar por tu cuenta <span class=\"mk\">sale caro</span>": "Starting on your own <span class=\"mk\">costs you</span>", "El mismo punto y la misma máquina. Lo que cambia es lo que sabes antes de gastar.": "Same stand, same machine. What changes is what you know before you spend.", "Por tu cuenta<span>Meses de prueba y error</span>": "On your own<span>Months of trial and error</span>", "Compras la máquina que te ofrecieron, no la que tu punto necesita.": "You buy the machine you were offered, not the one your stand needs.", "Pones el precio al ojo y no sabes cuánto te queda por vaso.": "You guess your prices and don’t know what each cup leaves you.", "Pasan meses antes de saber cuánto vendes de verdad.": "Months go by before you know what you really sell.", "Con el curso<span>Claro desde antes de abrir</span>": "With the course<span>Clear before you open</span>", "Sabes qué máquina comprar, nueva o usada, y cómo importarla.": "You know which machine to buy, new or used, and how to import it.", "Sacas el costo y el precio de cada vaso antes de invertir.": "You work out the cost and price of every cup before you invest.", "Controlas caja e inventario desde el primer día.": "You track cash and inventory from day one.", "Ahora haz la cuenta con tus números": "Now run the numbers with yours", "Vasos vendidos al día": "Cups sold per day", "Precio por vaso": "Price per cup", "Costo por vaso": "Cost per cup", "Cuenta con 26 días abiertos al mes. No incluye arriendo, personal ni impuestos, y no es una promesa de ingresos.": "Based on 26 open days a month. Rent, staff and taxes aren’t included, and this isn’t an income promise.", "Tu punto, un mes": "Your stand, one month", "Vasos al mes": "Cups per month", "Ventas": "Sales", "Costo de los vasos": "Cost of the cups", "Queda al mes": "Left each month", "Para quién es este curso": "Who this course is for", "Es para ti si:": "It’s for you if:", "Quieres un negocio propio, pero no sabes cuál deja plata de verdad.": "You want your own business but don’t know which one really makes money.", "Te frena invertir sin conocer los números antes.": "Investing without seeing the numbers first holds you back.", "Ya tienes un local o vendes comida y buscas un producto que deje más.": "You already have a shop or sell food and want a product that earns more.", "[Video de venta: Danilo en el local]": "[Sales video: Danilo at the stand]", "[2 a 3 min]": "[2 to 3 min]", "Del primer número a la apertura": "From the first number to opening day", "Diez módulos en lecciones cortas, de 5 a 10 minutos, con plantillas para aplicar el mismo día.": "Ten modules in short lessons of 5 to 10 minutes, with templates you can apply the same day.", "Antes de invertir": "Before you invest", "Abrir y operar": "Open and run", "Crecer": "Grow", "Los números reales": "The real numbers", "Cuánto cuesta un vaso, cuánto deja y cómo calcularlo en tu ciudad.": "What a cup costs, what it makes and how to calculate it in your city.", "Formato y ubicación": "Format and location", "Local, carrito, isla en centro comercial o eventos: cuál te conviene.": "Shop, cart, mall kiosk or events: which one suits you.", "Máquinas": "Machines", "Cuál comprar, nueva o usada, y cómo importarla a tu país.": "Which one to buy, new or used, and how to import it to your country.", "Insumos": "Supplies", "Tipos de bases, proveedores y almacenamiento.": "Types of bases, suppliers and storage.", "Menú y precios": "Menu and prices", "Tamaños, combos, con y sin licor.": "Sizes, combos, with and without alcohol.", "Montaje y permisos": "Setup and permits", "Trámites, diseño del punto, vasos y marca.": "Paperwork, stand design, cups and branding.", "Operación y personal": "Operations and staff", "Apertura y cierre, inventario y control de caja.": "Opening and closing, inventory and cash control.", "Marketing local": "Local marketing", "Lanzamiento, redes, eventos y domicilios.": "Launch, social media, events and delivery.", "Manejarlo a distancia": "Running it remotely", "Cámaras, reportes y caja con OmniPOS.": "Cameras, reports and cash register with OmniPOS.", "Escalar": "Scaling", "Segundo punto, eventos y un operador con canon mensual.": "A second stand, events and an operator on a monthly fee.", "20 cupos al precio más bajo que tendrá el curso": "20 spots at the lowest price this course will ever have", "Los fundadores entran primero y reciben los módulos a medida que salen.": "Founders get in first and receive the modules as they’re released.", "USD 200<small>menos que en el lanzamiento</small>": "USD 200<small>less than at launch</small>", "Pago único. Después del lanzamiento: USD 297.": "One-time payment. After launch: USD 297.", "Los 10 módulos en video": "All 10 video modules", "Calculadora de rentabilidad y lista de montaje": "Profit calculator and setup checklist", "Guía de importación de máquinas": "Machine import guide", "Acceso de por vida": "Lifetime access", "[Promoción de OmniPOS para estudiantes: definir]": "[OmniPOS student offer: to be defined]", "Reservar mi cupo de fundador": "Reserve my founder spot", "[Enlace de pago de Hotmart] Garantía de 7 días": "[Hotmart payment link] 7-day guarantee", "Cupos de fundador": "Founder spots", "Son 20 y no se reabren.": "There are 20, and they won’t reopen.", "Lo que todos preguntan": "What everyone asks", "¿El curso incluye la receta?<i aria-hidden=\"true\">+</i>": "Does the course include the recipe?<i aria-hidden=\"true\">+</i>", "No. El curso enseña a montar y operar el negocio. La receta Fórmula 85, con la que fabricas tu propia mezcla y bajas todavía más el costo, se entrega aparte y solo por solicitud.": "No. The course teaches you to set up and run the business. The Fórmula 85 recipe, which lets you make your own mix and lower your cost even more, is delivered separately and only on request.", "¿Necesito experiencia?<i aria-hidden=\"true\">+</i>": "Do I need experience?<i aria-hidden=\"true\">+</i>", "No. El curso empieza desde cero.": "No. The course starts from zero.", "¿Sirve en mi país?<i aria-hidden=\"true\">+</i>": "Does it work in my country?<i aria-hidden=\"true\">+</i>", "Sí. El sistema funciona igual en Latinoamérica, Asia, Estados Unidos y Australia, y el módulo de máquinas explica cómo importarlas a tu país.": "Yes. The system works the same in Latin America, Asia, the US and Australia, and the machines module explains how to import them to your country.", "¿Cuándo recibo los módulos?<i aria-hidden=\"true\">+</i>": "When do I get the modules?<i aria-hidden=\"true\">+</i>", "El módulo 1 al comprar. Los demás, dos por semana.": "Module 1 right after you buy. The rest, two per week.", "Empieza por los números": "Start with the numbers", "Hecho en Colombia, vendido al mundo": "Made in Colombia, sold worldwide"}, ATTR={"Toppings, marca y cobro": "Toppings, branding and getting paid", "Mapa mundial con los países donde está la marca y los mercados posibles": "World map with the countries where the brand is and possible markets", "Acercar": "Zoom in", "Alejar": "Zoom out", "Cerrar": "Close", "Países": "Countries", "El primer puesto de granizados en la calle, de noche, en 2019": "The first street slush stand, at night, in 2019", "Danilo sonriendo junto a una máquina de granizados con toppings": "Danilo smiling next to a slush machine with toppings", "Ver el video de presentación de Danilo": "Watch Danilo’s introduction video", "Danilo hablando a la cámara": "Danilo talking to the camera", "Paradise Cocktails: insumos, granizados y los países donde está la marca": "Paradise Cocktails: supplies, slushes and the countries where the brand is", "Logo de The Paradise Cocktails": "The Paradise Cocktails logo", "Idioma": "Language", "Secciones": "Sections", "El negocio, de la mezcla al vaso": "The business, from mix to cup", "Danilo recostado en el mostrador, junto a dos máquinas de granizado": "Danilo leaning on the counter next to two slush machines", "Bolsa transparente de 6 litros llena de mezcla de granizado": "Clear 6-liter bag full of slush mix", "De 16 vasos, 3 pagan la bolsa y 13 quedan": "Of 16 cups, 3 pay for the bag and 13 are yours", "Mercado de partida": "Starting market", "Reproducir el video de venta": "Play the sales video", "Vaso de granizado de mango servido, con la máquina al fondo": "A served cup of mango slush with the machine behind it"};
   var norm=function(x){return x.replace(/\s+/g,' ').trim()};
   var texts=[], attrs=[], missing={};
   for(var key in EN) missing[key]=1;
@@ -1046,6 +1221,176 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
       });
     },{once:true});
   });
+})();
+</script>
+<script>
+(function(){
+  'use strict';
+  var all=function(r,q){return Array.prototype.slice.call(r.querySelectorAll(q))};
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cl=function(v,a,b){return v<a?a:v>b?b:v};
+  var ease=function(t){return 1-Math.pow(1-t,3)};
+
+  /* ---------- 6-7: toppings, marca y cobro sobre el último cuadro ---------- */
+  var sec=document.getElementById('venta');
+  if(sec){
+    var stage=sec.querySelector('.sale-stage'), fr=sec.querySelector('.sale-fr'), dim=sec.querySelector('.sale-dim'),
+        cds=all(sec,'.cdy'), st=sec.querySelector('.sticker'), pay=sec.querySelector('.pay'), bar=pay.querySelector('.pay-bar i'),
+        usd=document.getElementById('sale-usd'), nEl=document.getElementById('sale-n'), chips=all(sec,'.chip'),
+        sbs=all(sec,'.sb').map(function(el){return {el:el,a:+el.dataset.a,b:+el.dataset.b}});
+    var CX=866, s=1, ox=0, oy=0, W=0, H=0, lastN=-1;
+    /* cada dulce: punto de aterrizaje sobre el granizado (coordenadas del cuadro 1280×854) */
+    var seed=7, rnd=function(){seed=(seed*9301+49297)%233280;return seed/233280};
+    var drops=cds.map(function(el,i){
+      var lx=742+rnd()*240, ly=248+Math.abs(lx-866)*.32+rnd()*34;
+      return {el:el,x:lx,y:ly,x0:lx+(rnd()-.5)*160,d:.06+i*.016,r:(rnd()-.5)*540,rz:(rnd()-.5)*50,sc:.8+rnd()*.45};
+    });
+    function layout(){
+      W=stage.clientWidth; H=stage.clientHeight;
+      var port=W/H<1;
+      s=port?Math.max(W/1280,H*.8/854):Math.max(W/1280,H/854);
+      var fw=1280*s, fh=854*s;
+      var want=port?W*.5:Math.max(W*.68,W-260);
+      ox=cl(want-CX*s,W-fw,0);
+      oy=port?H-fh:(H-fh)/2;
+      fr.style.transform='translate('+ox+'px,'+oy+'px) scale('+s+')';
+    }
+    function prog(){
+      var r=sec.getBoundingClientRect(), span=sec.offsetHeight-stage.offsetHeight;
+      return span>0?cl(-r.top/span,0,1):0;
+    }
+    function frame(){
+      var p=reduce?1:prog();
+      drops.forEach(function(d){
+        var t=cl((p-d.d)/.2,0,1), e=t<1?t*t:1, bounce=t>=1?0:0;
+        var y=-260+(d.y+260)*e, x=d.x0+(d.x-d.x0)*ease(t);
+        d.el.style.opacity=t>0?1:0;
+        d.el.style.transform='translate('+(x-23)+'px,'+(y-23+bounce)+'px) rotate('+(d.rz+d.r*(1-ease(t)))+'deg) scale('+d.sc+')';
+      });
+      var ts=cl((p-.3)/.12,0,1), es=ease(ts);
+      st.style.opacity=ts>0?Math.min(1,ts*2):0;
+      st.style.transform='perspective(600px) rotateY(-14deg) scale('+(1.7-.7*es)+') rotate('+(-8+8*es)+'deg)';
+      var tb=cl((p-.5)/.1,0,1);
+      dim.style.opacity=tb;
+      var tp=cl((p-.54)/.1,0,1), ep=ease(tp);
+      pay.style.opacity=tp; pay.style.transform='translateY('+(40*(1-ep))+'px) scale('+(.96+.04*ep)+')';
+      var tc=cl((p-.6)/.34,0,1), n=Math.round(50*tc);
+      if(n!==lastN){ lastN=n; nEl.textContent=n; var v=n*3.5; usd.textContent=(v%1?v.toFixed(2):String(v)).replace('.',document.documentElement.lang==='en'?'.':','); bar.style.width=(n*2)+'%'; }
+      chips.forEach(function(c,i){
+        var t=cl((p-.6-i*.08)/.12,0,1);
+        var cx=ox+(CX-150+i*62)*s, cy=oy+(470+(i%2)*60)*s;
+        c.style.opacity=t>0&&t<1?(t<.2?t*5:(1-t)*1.25):0;
+        c.style.transform='translate('+cx+'px,'+(cy-t*140)+'px)';
+      });
+      sbs.forEach(function(b){ b.el.classList.toggle('on',p>=b.a&&p<b.b) });
+    }
+    var ticking=false;
+    function req(){ if(!ticking){ ticking=true; requestAnimationFrame(function(){ ticking=false; frame() }) } }
+    layout(); frame();
+    addEventListener('scroll',req,{passive:true});
+    addEventListener('resize',function(){ layout(); frame() });
+  }
+
+  /* ---------- Mapa: países donde está la marca ---------- */
+  var map=document.querySelector('[data-map]');
+  if(map){
+    var box=map.querySelector('.map-svg'), card=map.querySelector('.map-card'), chips2=all(document,'.map-chips [data-c]');
+    var REAL={CO:1,EC:1,AU:1}, POT={US:1,MX:1,PE:1,TH:1};
+    var PTS={CO:[[292.9,269.6],[290.5,267]],EC:[[282,287.6]],AU:[[874.9,409]]};
+    var svg=null, vb={x:0,y:0,w:1000,h:500}, anim=0, sel=null;
+    function setVB(){ if(svg) svg.setAttribute('viewBox',vb.x+' '+vb.y+' '+vb.w+' '+vb.h) }
+    function clampVB(){ vb.w=cl(vb.w,1000/8,1000); vb.h=vb.w/2; vb.x=cl(vb.x,0,1000-vb.w); vb.y=cl(vb.y,0,500-vb.h) }
+    function aspect(){ var r=box.clientWidth/box.clientHeight||2; return r }
+    function goTo(t,smooth){
+      cancelAnimationFrame(anim);
+      var f={x:vb.x,y:vb.y,w:vb.w}, t0=performance.now();
+      if(!smooth||reduce){ vb.x=t.x;vb.y=t.y;vb.w=t.w;clampVB();setVB();return }
+      (function tick(now){ var k=Math.min(1,(now-t0)/600), e=1-Math.pow(1-k,4);
+        vb.x=f.x+(t.x-f.x)*e; vb.y=f.y+(t.y-f.y)*e; vb.w=f.w+(t.w-f.w)*e; clampVB(); setVB();
+        if(k<1) anim=requestAnimationFrame(tick) })(t0);
+    }
+    function zoomAt(z,cx,cy,smooth){ var w=cl(vb.w/z,125,1000); goTo({x:cx-w/2,y:cy-w/4,w:w},smooth) }
+    function focus(c){
+      var el=svg&&svg.querySelector('[data-c="'+c+'"]'); if(!el) return;
+      var b=el.getBBox(); if(c==='US'){b={x:150,y:120,width:190,height:110}} if(c==='AU'){b={x:800,y:320,width:115,height:110}}
+      var w=cl(Math.max(b.width*2.6,b.height*5.2),150,1000);
+      var narrow=box.clientWidth<640;
+      goTo({x:b.x+b.width/2-w/2-(narrow?0:w*.17),y:b.y+b.height/2-w/4+(narrow?w*.12:0),w:w},true);
+    }
+    function choose(c){
+      sel=c;
+      if(svg) all(svg,'path.sel').forEach(function(p){p.classList.remove('sel')});
+      var el=svg&&svg.querySelector('[data-c="'+c+'"]'); if(el) el.classList.add('sel');
+      all(card,'.mc').forEach(function(a){a.hidden=a.dataset.for!==c});
+      card.hidden=false;
+      chips2.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.c===c))});
+      focus(c);
+    }
+    function close(){ card.hidden=true; sel=null; if(svg) all(svg,'path.sel').forEach(function(p){p.classList.remove('sel')}); chips2.forEach(function(b){b.setAttribute('aria-pressed','false')}); goTo({x:0,y:0,w:1000},true) }
+    function build(txt){
+      box.innerHTML=txt; svg=box.querySelector('svg');
+      svg.setAttribute('preserveAspectRatio','xMidYMid slice');
+      svg.setAttribute('aria-hidden','true');
+      all(svg,'path[data-c]').forEach(function(p){ var c=p.dataset.c; if(REAL[c]) p.classList.add('real'); else if(POT[c]) p.classList.add('pot'); });
+      var g=svg.querySelector('g'), NS='http://www.w3.org/2000/svg';
+      Object.keys(PTS).forEach(function(c){ PTS[c].forEach(function(xy,i){
+        if(i===0){ var q=document.createElementNS(NS,'circle'); q.setAttribute('cx',xy[0]);q.setAttribute('cy',xy[1]);q.setAttribute('r',3);q.setAttribute('class','pulse'); g.appendChild(q) }
+        var k=document.createElementNS(NS,'circle'); k.setAttribute('cx',xy[0]);k.setAttribute('cy',xy[1]);k.setAttribute('r',2.6);k.setAttribute('class','pt'); g.appendChild(k);
+      })});
+      /* en móvil arranca en las Américas, donde está la historia */
+      if(box.clientWidth<640) vb={x:120,y:120,w:430,h:215};
+      clampVB(); setVB();
+      /* arrastrar, pellizcar y tocar */
+      var pts=new Map(), drag=null, moved=false, pinch=null;
+      function toWorld(px,py){ var r=box.getBoundingClientRect(), sc=Math.max(r.width/vb.w,r.height/vb.h), offx=(r.width-vb.w*sc)/2, offy=(r.height-vb.h*sc)/2; return {x:vb.x+(px-r.left-offx)/sc,y:vb.y+(py-r.top-offy)/sc,sc:sc} }
+      svg.addEventListener('pointerdown',function(e){ pts.set(e.pointerId,e); svg.setPointerCapture(e.pointerId); moved=false;
+        if(pts.size===1){ drag={x:e.clientX,y:e.clientY,vx:vb.x,vy:vb.y,c:e.target.dataset&&e.target.dataset.c}; map.classList.add('drag') }
+        if(pts.size===2){ var a=Array.from(pts.values()); pinch={d:Math.hypot(a[0].clientX-a[1].clientX,a[0].clientY-a[1].clientY),w:vb.w}; drag=null } });
+      svg.addEventListener('pointermove',function(e){ if(!pts.has(e.pointerId)) return; pts.set(e.pointerId,e);
+        if(pinch&&pts.size===2){ var a=Array.from(pts.values()), d=Math.hypot(a[0].clientX-a[1].clientX,a[0].clientY-a[1].clientY), m=toWorld((a[0].clientX+a[1].clientX)/2,(a[0].clientY+a[1].clientY)/2), w=cl(pinch.w*pinch.d/d,125,1000); vb.x=m.x-(m.x-vb.x)*w/vb.w; vb.y=m.y-(m.y-vb.y)*w/vb.w; vb.w=w; clampVB(); setVB(); moved=true; return }
+        if(!drag) return; var sc=toWorld(0,0).sc, dx=e.clientX-drag.x, dy=e.clientY-drag.y;
+        if(Math.abs(dx)+Math.abs(dy)>6) moved=true;
+        if(moved){ cancelAnimationFrame(anim); vb.x=drag.vx-dx/sc; vb.y=drag.vy-dy/sc; clampVB(); setVB() } });
+      function up(e){ var tap=drag&&!moved&&pts.size===1; var c=drag&&drag.c; pts.delete(e.pointerId); if(pts.size<2) pinch=null; if(!pts.size){ drag=null; map.classList.remove('drag') }
+        if(tap&&c&&(REAL[c]||POT[c])) choose(c) }
+      svg.addEventListener('pointerup',up); svg.addEventListener('pointercancel',up);
+      svg.addEventListener('wheel',function(e){ if(!e.ctrlKey&&!e.metaKey&&!map.matches(':hover')) return; e.preventDefault(); var m=toWorld(e.clientX,e.clientY), z=e.deltaY<0?1.25:.8, w=cl(vb.w/z,125,1000); vb.x=m.x-(m.x-vb.x)*w/vb.w; vb.y=m.y-(m.y-vb.y)*w/vb.w; vb.w=w; clampVB(); setVB() },{passive:false});
+      if(sel) choose(sel);
+    }
+    map.querySelector('[data-z="in"]').addEventListener('click',function(){ zoomAt(1.6,vb.x+vb.w/2,vb.y+vb.h/2,true) });
+    map.querySelector('[data-z="out"]').addEventListener('click',function(){ zoomAt(1/1.6,vb.x+vb.w/2,vb.y+vb.h/2,true) });
+    map.querySelector('[data-z="reset"]').addEventListener('click',close);
+    card.querySelector('.x').addEventListener('click',close);
+    chips2.forEach(function(b){ b.addEventListener('click',function(){ choose(b.dataset.c) }) });
+    all(card,'[data-use]').forEach(function(b){ b.addEventListener('click',function(){
+      var t=document.querySelector('[data-mk="'+b.dataset.use+'"]'); if(t) t.click();
+      var c=document.getElementById('calculadora'); if(c) c.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+    })});
+    var loaded=false;
+    function load(){ if(loaded) return; loaded=true; fetch('f/mapa.svg').then(function(r){return r.text()}).then(build).catch(function(){ loaded=false }) }
+    if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){ if(es.some(function(x){return x.isIntersecting})){ load(); io.disconnect() } },{rootMargin:'600px'}); io.observe(map) } else load();
+  }
+
+  /* ---------- Entradas escalonadas y números que cuentan ---------- */
+  var groups=[['.band .col > .h2, .band .col > .lede, .band .col > h2.disp',0],['.tks .tk',1],['.vs > div',1],['.bagrow > *',1],['.who .split > *',1],['.offer > *',1],['.faq details',1],['.mod li, #temario li',1],['.map, .map-chips',0],['.tn figure',1],['.ctl, #calculadora .tk',1]];
+  if(!reduce&&'IntersectionObserver' in window){
+    var seen=new Set();
+    groups.forEach(function(g){ all(document,g[0]).forEach(function(el){
+      if(seen.has(el)||el.closest('#escena')||el.closest('#venta')) return; seen.add(el);
+      var i=0; if(g[1]){ var sib=el.parentNode?Array.prototype.indexOf.call(el.parentNode.children,el):0; i=Math.min(sib,6) }
+      el.style.setProperty('--i',i); el.classList.add('rv');
+    })});
+    var ro=new IntersectionObserver(function(es){ es.forEach(function(x){ if(x.isIntersecting){ x.target.classList.add('in'); ro.unobserve(x.target); count(x.target) } }) },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    seen.forEach(function(el){ ro.observe(el) });
+  } else all(document,'.tks .tk').forEach(function(el){ el.classList.add('in') });
+  function count(el){
+    all(el,'.tot dd').forEach(function(dd){
+      var txt=dd.textContent, m=txt.match(/\d+/); if(!m) return; var end=+m[0], t0=performance.now();
+      (function tick(now){ var k=Math.min(1,(now-t0)/1100), v=Math.round(end*(1-Math.pow(1-k,3)));
+        if(dd.textContent.replace(/\d+/,'#')!==txt.replace(/\d+/,'#')) return;
+        dd.textContent=txt.replace(/\d+/,String(v)); if(k<1) requestAnimationFrame(tick); else dd.textContent=txt })(t0);
+    });
+  }
 })();
 </script>
 

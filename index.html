@@ -355,7 +355,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 .yt .cap{position:absolute;left:24px;right:24px;bottom:20px;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;color:#F6F9FB;font-weight:600;text-align:left}
 .yt .cap b{font-size:clamp(17px,2.2vw,22px)}
 .yt .cap span{font-size:14px;background:rgba(1,21,34,.75);padding:6px 10px;border-radius:8px;white-space:nowrap}
-.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.yt iframe,.yt>div{position:absolute;inset:0;width:100%;height:100%;border:0}
 .vidcta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:26px}
 @media (max-width:600px){.yt .play{width:72px;height:72px;margin:-36px 0 0 -36px}.yt .play::before{border-width:13px 0 13px 22px;margin-left:5px}.yt .cap{left:14px;right:14px;bottom:12px}.yt{border-radius:16px}}
 .paybtn{display:flex;justify-content:center;width:100%;margin-top:22px}
@@ -996,7 +996,24 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 })();
 </script>
 <script>
-(function(){document.querySelectorAll('.yt[data-yt]').forEach(function(b){b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.getAttribute('data-yt')+'?autoplay=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0';f.title='Video de presentación · Fórmula 85';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;b.innerHTML='';b.appendChild(f);b.style.cursor='default'},{once:true})})})();
+(function(){
+  var api=null;
+  function loadApi(cb){ if(window.YT&&YT.Player) return cb(); var prev=window.onYouTubeIframeAPIReady; window.onYouTubeIframeAPIReady=function(){ if(prev) prev(); cb() }; if(!api){ api=document.createElement('script'); api.src='https://www.youtube.com/iframe_api'; document.head.appendChild(api) } }
+  function noCaptions(p){ try{ p.unloadModule('captions'); p.unloadModule('cc') }catch(e){} }
+  document.querySelectorAll('.yt[data-yt]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var id=b.getAttribute('data-yt'), d=document.createElement('div'); d.id='ytp-'+id;
+      b.innerHTML=''; b.appendChild(d); b.style.cursor='default'; b.removeAttribute('aria-label');
+      loadApi(function(){
+        new YT.Player(d.id,{videoId:id,host:'https://www.youtube-nocookie.com',width:'100%',height:'100%',
+          playerVars:{autoplay:1,rel:0,modestbranding:1,playsinline:1,cc_load_policy:0,iv_load_policy:3,controls:1,fs:1,hl:'es'},
+          events:{onReady:function(e){ noCaptions(e.target); e.target.playVideo() },
+                  onStateChange:function(e){ if(e.data===1) noCaptions(e.target) },
+                  onApiChange:function(e){ noCaptions(e.target) }}});
+      });
+    },{once:true});
+  });
+})();
 </script>
 
 </body>

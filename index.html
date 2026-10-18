@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Fórmula 85 · Monta tu negocio de granizados</title>
+<meta name="description" content="Aprende a montar un punto de granizados con los números reales de un negocio que lleva 7 años vendiendo. 20 cupos de fundador a USD 97.">
+<meta name="theme-color" content="#011522">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230C2233'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='900' font-size='30' text-anchor='middle' fill='%23FFA51F'%3E85%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fórmula 85 · Monta tu negocio de granizados">
+<meta property="og:description" content="Aprende a montar un punto de granizados con los números reales de un negocio que lleva 7 años vendiendo. 20 cupos de fundador a USD 97.">
+<meta property="og:image" content="https://laformula85.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Píxel de Meta: va aquí -->
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: la película oscura abre la página; debajo, todo es claro y alineado a la izquierda: un titular grande con su
+   párrafo y, al lado, algo real que lo prueba (una foto, un tiquete de caja, un cupón). Bandas planas de color de fruta. */
+:root{
+  color-scheme:light;
+  --ink:#0C2233; --paper:#FFFFFF; --ice:#EDF3F7; --mango:#FFA51F; --berry:#D92F57; --scene:#011522;
+  --soft:#51606C; --rule:#D3DDE4; --on-dark:#F6F9FB; --on-dark-soft:#A9B8C3;
+  --display:'Bricolage Grotesque','Arial Narrow','Helvetica Neue',Arial,sans-serif;
+  --body:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --hdr:60px; --gut:clamp(20px,4.5vw,48px); --top:env(safe-area-inset-top,0px); --max:1160px;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p,ul,ol,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--berry);outline-offset:3px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gut)}
+.disp{font-family:var(--display);font-weight:800;line-height:.98;letter-spacing:-.03em;text-wrap:balance}
+/* Trazo de marcador bajo la frase que importa */
+.mk{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 24' preserveAspectRatio='none'%3E%3Cpath d='M5 14 C 52 6, 98 19, 152 11 S 252 7, 295 13' fill='none' stroke='%23FFA51F' stroke-width='17' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat 50% 92%/100% .44em;padding-inline:.06em;margin-inline:-.06em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 24px;border-radius:12px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);font:700 16px/1.2 var(--body);text-decoration:none;cursor:pointer;transition:transform .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn.sun{background:var(--mango);border-color:var(--mango);color:var(--ink)}
+.btn.line{background:transparent;border-color:currentColor;color:inherit}
+
+/* Barra superior */
+.hdr{position:sticky;top:var(--top);z-index:30;height:var(--hdr);background:var(--scene);color:var(--on-dark)}
+.hdr .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.03em;text-decoration:none;white-space:nowrap}
+.logo b{color:var(--mango)}
+.nav{display:flex;gap:26px;font-size:15px;font-weight:500}
+.nav a{text-decoration:none;color:var(--on-dark-soft)}
+.nav a:hover{color:var(--on-dark)}
+.hdr .btn{min-height:40px;padding:9px 16px;font-size:15px}
+.right{display:flex;align-items:center;gap:12px}
+.lang{display:inline-flex;border:2px solid rgba(246,249,251,.55);border-radius:10px;padding:2px}
+.lang button{border:0;background:transparent;color:var(--on-dark);font:700 14px/1 var(--body);letter-spacing:.04em;padding:8px 11px;border-radius:7px;cursor:pointer;min-width:40px}
+.lang button[aria-pressed="true"]{background:var(--on-dark);color:var(--ink)}
+@media (max-width:420px){.hdr .btn{padding:9px 12px;font-size:14px}.lang button{padding:8px 9px;min-width:34px}.logo{font-size:20px}}
+@media (max-width:760px){.nav{display:none}}
+
+/* Película ligada al scroll: lienzo fijo; el texto narra cada paso a la izquierda (arriba en vertical) */
+.track{position:relative;background:var(--scene);color:var(--on-dark)}
+.stage{position:relative;overflow:hidden;background:var(--scene)}
+#seq,.veil,.hint,.tl,.pin{display:none}
+.ov{padding-block:36px}
+.ov .wrap{display:flex;flex-direction:column;align-items:flex-start}
+.inner{display:flex;flex-direction:column;align-items:flex-start;gap:22px;max-width:560px}
+.tagline{font-weight:600;font-size:15px;color:var(--mango)}
+.ov-hero h1{font-size:clamp(40px,5.6vw,82px)}
+.stage .mk{background-size:100% .15em;background-position:50% 100%;padding-bottom:.1em}
+.lead{font-size:clamp(16px,1.5vw,19px);color:var(--on-dark-soft);max-width:470px}
+.row{display:flex;flex-wrap:wrap;gap:12px 14px}
+.beat .inner{max-width:min(470px,38vw);gap:18px}
+.step{display:flex;align-items:center;gap:12px;font-weight:600;font-size:16px}
+.step b{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--mango);color:var(--ink);font:800 17px/1 var(--display)}
+.say{font-size:clamp(42px,5.8vw,86px)}
+.say .ln{display:block;overflow:hidden;padding-block:.08em .12em;margin-block:-.08em -.12em}
+.say .ln i{display:block;font-style:normal}
+.say .sm{display:block;font-family:var(--body);font-weight:500;font-size:.3em;line-height:1.3;letter-spacing:0;color:var(--on-dark-soft);padding-bottom:.5em}
+.say .num{display:block;font-size:1.16em;color:var(--mango)}
+.sub{font-size:clamp(16px,1.5vw,19px);color:var(--on-dark-soft);max-width:400px}
+.pct{white-space:nowrap;font-family:var(--display);font-weight:800;font-size:clamp(110px,18vw,240px);line-height:.8;letter-spacing:-.05em;color:var(--mango);font-variant-numeric:tabular-nums}
+.ov-final h2{font-size:clamp(28px,3.4vw,48px);max-width:520px}
+.small{font-size:14px;line-height:1.5}
+.ov-final .small{color:var(--on-dark-soft);max-width:440px}
+
+.js .track{height:620vh}
+.js .stage{position:sticky;top:calc(var(--top) + var(--hdr));height:calc(100vh - var(--hdr));height:calc(100svh - var(--hdr) - var(--top))}
+.js #seq{display:block;position:absolute;inset:0;width:100%;height:100%}
+.js .veil{display:block;position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(1,21,34,.97) 0%,rgba(1,21,34,.97) 33%,rgba(1,21,34,0) 49%)}
+.stage::after{content:'';position:absolute;left:0;right:0;bottom:0;height:110px;pointer-events:none;background:linear-gradient(rgba(1,21,34,0),rgba(1,21,34,.92))}
+.js .ov{position:absolute;left:0;right:0;top:0;bottom:56px;padding-block:0;display:flex;align-items:center;will-change:opacity,transform}
+.js .ov .wrap{width:100%}
+.js .ov:not(.ov-hero){opacity:0;visibility:hidden}
+.js .say .ln i,.js .fade{will-change:transform,opacity}
+
+/* Etiquetas que señalan algo dentro de la imagen */
+.js .pin{display:block;position:absolute;left:0;top:0;z-index:2;pointer-events:none;opacity:0;visibility:hidden;will-change:transform,opacity}
+.pin .dot{position:absolute;left:-6px;top:-6px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:3px solid var(--mango)}
+.pin .stem{position:absolute;left:-1px;top:8px;width:2px;height:34px;background:var(--paper);transform-origin:top}
+.pin .lbl{position:absolute;top:42px;left:0;white-space:nowrap;font:600 14px/1 var(--body);color:var(--ink);background:var(--paper);padding:10px 14px;border-radius:10px}
+
+/* Línea de tiempo: el hilo que une los cinco pasos */
+.js .tl{display:grid;position:absolute;z-index:2;left:0;right:0;bottom:18px;max-width:var(--max);margin-inline:auto;padding-inline:var(--gut);grid-template-columns:repeat(5,1fr);gap:10px;pointer-events:none;font:600 13px/1 var(--body);color:var(--on-dark-soft)}
+.tl li{display:flex;flex-direction:column;gap:9px;min-width:0;opacity:.55;transition:opacity .3s ease}
+.tl li.on,.tl li.done{opacity:1}
+.tl li.on{color:var(--on-dark)}
+.tl .bar{height:3px;border-radius:2px;background:rgba(255,255,255,.2);overflow:hidden}
+.tl .bar i{display:block;height:100%;background:var(--mango);transform:scaleX(0);transform-origin:left}
+.tl span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.js .hint{display:block;position:absolute;z-index:2;right:var(--gut);bottom:64px;font:600 13px/1 var(--body);color:var(--on-dark);pointer-events:none}
+@media (max-aspect-ratio:1/1){
+  .js .veil{background:linear-gradient(180deg,rgba(1,21,34,.96) 0%,rgba(1,21,34,.8) 22%,rgba(1,21,34,0) 40%)}
+  .js .ov{align-items:flex-start;padding-top:clamp(18px,4vh,48px)}
+  .ov-hero h1{font-size:clamp(38px,9.6vw,76px)}
+  .beat .inner{max-width:560px;gap:12px}
+  .say{font-size:clamp(42px,11vw,84px)}
+  .pct{font-size:clamp(100px,28vw,220px)}
+  .tl{font-size:12px;gap:6px}
+  .tl li:not(.on) span{visibility:hidden}
+  .tl li.on span{overflow:visible}
+  .js .hint{display:none}
+}
+
+/* Bandas */
+.band{padding-block:clamp(72px,9vw,128px);overflow:hidden}
+.band.ice{background:var(--ice)}
+.band.sun{background:var(--mango)}
+.band.night{background:var(--scene);color:var(--on-dark)}
+.h2{font-size:clamp(34px,4.7vw,64px)}
+.lede{font-size:clamp(17px,1.5vw,20px);color:var(--soft);max-width:54ch}
+.night .lede{color:var(--on-dark-soft)}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:clamp(32px,5vw,76px);align-items:center}
+.split.top{align-items:start}
+.col{display:flex;flex-direction:column;gap:22px;min-width:0}
+.photo{display:block;width:100%;height:auto;border-radius:22px;background:var(--scene);object-fit:cover}
+.todo{font:600 13px/1.4 var(--mono)}
+
+/* Quién enseña */
+.who .ph{aspect-ratio:4/5;max-width:420px;width:100%;border-radius:22px;border:2px dashed var(--rule);background:var(--ice);display:flex;align-items:flex-end;padding:20px;color:var(--soft)}
+.who .me{aspect-ratio:4/5;max-width:420px}
+.who .big{font-size:clamp(30px,3.9vw,52px)}
+.sign{font-weight:700}
+.biz{margin:12px 0 0;display:flex;flex-direction:column;gap:14px}
+.bizph{aspect-ratio:3/2;width:100%;border-radius:18px;border:2px dashed var(--rule);background:var(--ice);display:flex;align-items:flex-end;padding:16px;color:var(--soft)}
+.biz figcaption{display:flex;align-items:center;gap:14px;font-size:15px;color:var(--soft)}
+.biz figcaption b{display:block;color:var(--ink)}
+.bizimg{display:block;width:100%;height:auto;border-radius:18px;box-shadow:0 18px 40px -18px rgba(12,34,51,.45)}
+.bizlogo{flex:none;width:72px;height:72px;border-radius:50%;background:#0C2233;padding:5px;object-fit:contain}
+.logo-slot{flex:none;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;border:2px dashed var(--rule);background:var(--ice);font-size:10px;color:var(--soft)}
+.sign span{display:block;font-weight:400;color:var(--soft)}
+
+/* Tiquetes de caja */
+.tks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:28px 24px;align-items:start;margin-top:clamp(32px,4vw,52px)}
+.tk{filter:drop-shadow(0 16px 18px rgba(12,34,51,.16));min-width:0}
+.tks .tk:nth-child(1){transform:rotate(-1.4deg)}
+.tks .tk:nth-child(2){transform:rotate(1.1deg);margin-top:26px}
+.tks .tk:nth-child(3){transform:rotate(-.6deg);margin-top:10px}
+.tk>div{background:var(--paper);padding:24px 20px 34px;font:500 13.5px/1.5 var(--mono);-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%}
+.tk h3{font:600 15px/1.3 var(--mono);padding-bottom:12px;border-bottom:1px dashed var(--ink);margin-bottom:10px}
+.tk dl{display:flex;flex-direction:column;gap:6px}
+.tk dl div{display:flex;justify-content:space-between;gap:12px}
+.tk dd{text-align:right;white-space:nowrap}
+.tk .tot{margin-top:12px;padding-top:12px;border-top:1px dashed var(--ink);align-items:baseline}
+.tk .tot dt{font-weight:600}
+.tk .tot dd{font:800 clamp(44px,5vw,60px)/.9 var(--display);letter-spacing:-.03em}
+.tk p{margin-top:12px;color:var(--soft);font-size:13px}
+
+/* La bolsa */
+.bagrow{margin-top:clamp(56px,7vw,96px)}
+.tks{padding:6px 4px}
+.bagph{position:relative;max-width:440px}
+.bagph img{aspect-ratio:5/6}
+.stk{position:absolute;display:grid;place-items:center;text-align:center;width:118px;aspect-ratio:1;border-radius:50%;background:var(--berry);color:#fff;font:800 24px/.95 var(--display);letter-spacing:-.02em;transform:rotate(-10deg)}
+.stk small{display:block;font:600 12px/1.2 var(--body);letter-spacing:0;margin-top:4px}
+.bagph .stk{right:-10px;top:-22px}
+.h3{font-size:clamp(28px,3.4vw,46px)}
+.cups{display:grid;grid-template-columns:repeat(8,auto);justify-content:start;gap:10px 9px;color:var(--mango)}
+.cups svg{width:clamp(24px,2.8vw,32px);height:auto;aspect-ratio:24/34;fill:currentColor}
+.cups .c{color:var(--ink)}
+.key{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:15px;font-weight:600}
+.key i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:8px}
+
+/* Por tu cuenta o con el curso */
+.vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px;margin-top:clamp(36px,5vw,60px);align-items:stretch}
+.vs>div{border-radius:22px;padding:clamp(24px,3.4vw,40px);display:flex;flex-direction:column;gap:20px;min-width:0}
+.vs .alone{background:var(--ice)}
+.vs .with{background:var(--ink);color:var(--on-dark)}
+.vs h3{font:800 clamp(24px,2.6vw,32px)/1.05 var(--display);letter-spacing:-.02em}
+.vs h3 span{display:block;font:500 15px/1.4 var(--body);letter-spacing:0;margin-top:8px;color:var(--soft)}
+.vs .with h3 span{color:var(--on-dark-soft)}
+.marks{display:flex;flex-direction:column;gap:16px}
+.marks li{display:flex;gap:14px;min-width:0}
+.marks svg{flex:none;margin-top:3px}
+
+/* Calculadora */
+.ctl{display:flex;flex-direction:column;gap:28px;min-width:0}
+.seg{display:inline-flex;flex-wrap:wrap;align-self:flex-start;background:rgba(12,34,51,.14);border-radius:12px;padding:4px;max-width:100%}
+.seg button{border:0;background:transparent;color:var(--ink);font:600 15px/1 var(--body);padding:11px 16px;border-radius:9px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.fld{display:flex;flex-direction:column;gap:10px;min-width:0}
+.fld label{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-weight:600}
+.fld output{font:800 34px/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.fld input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;cursor:pointer;margin:0}
+.fld input[type=range]::-webkit-slider-runnable-track{height:6px;background:rgba(12,34,51,.25);border-radius:3px}
+.fld input[type=range]::-moz-range-track{height:6px;background:rgba(12,34,51,.25);border-radius:3px}
+.fld input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;margin-top:-11px;border-radius:50%;background:var(--ink);border:4px solid var(--paper)}
+.fld input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--ink);border:4px solid var(--paper)}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:16px}
+.money{display:flex;align-items:center;gap:10px;background:var(--paper);border-radius:12px;padding:10px 14px}
+.money span{font:600 13px/1 var(--mono);color:var(--soft)}
+.money input{flex:1;min-width:0;width:100%;border:0;background:transparent;color:var(--ink);font:800 28px/1.1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums;outline:0}
+.sun .small{max-width:46ch}
+.sun .tk{max-width:440px;width:100%;justify-self:center;transform:rotate(1.2deg)}
+.sun .tk .tot dd{font-size:clamp(40px,4.6vw,56px)}
+
+/* Video */
+.player{position:relative;aspect-ratio:3/2;max-width:100%;border-radius:22px;overflow:hidden;background:var(--scene)}
+.player img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.chips{position:absolute;top:14px;left:14px;right:14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+.chips span{background:var(--paper);color:var(--ink);padding:8px 12px;border-radius:9px}
+.play{position:absolute;inset:0;margin:auto;width:88px;height:88px;border-radius:50%;border:0;background:var(--paper);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .15s ease}
+.play:hover{transform:scale(1.06)}
+
+/* Temario */
+.syl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(28px,4vw,56px);margin-top:clamp(36px,5vw,60px);align-items:start}
+.syl h3{font:800 clamp(22px,2.3vw,28px)/1.1 var(--display);letter-spacing:-.02em;padding-bottom:16px;border-bottom:3px solid var(--ink)}
+.syl li{display:grid;grid-template-columns:40px 1fr;gap:10px;padding-block:18px;border-bottom:1px solid var(--rule)}
+.syl li b{font:800 20px/1.3 var(--display);color:var(--berry)}
+.syl h4{font-size:18px;line-height:1.3;font-weight:700}
+.syl p{color:var(--soft);font-size:16px;margin-top:2px}
+
+/* Precio: un cupón con su colilla */
+.offer{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:clamp(32px,5vw,64px);align-items:center}
+@media (max-width:900px){.offer{grid-template-columns:1fr}}
+.coupon{position:relative;display:grid;grid-template-columns:1fr minmax(0,200px);background:var(--paper);color:var(--ink);border-radius:22px;min-width:0}
+.coupon .main{padding:clamp(24px,3.4vw,40px);display:flex;flex-direction:column;gap:24px;min-width:0}
+.coupon .stub{position:relative;border-left:2px dashed var(--rule);padding:clamp(24px,3vw,36px) 22px;display:flex;flex-direction:column;gap:16px;justify-content:center}
+.coupon .stub::before,.coupon .stub::after{content:'';position:absolute;left:-13px;width:24px;height:24px;border-radius:50%;background:var(--scene)}
+.coupon .stub::before{top:-12px}
+.coupon .stub::after{bottom:-12px}
+.amt{font:800 clamp(72px,9vw,112px)/.85 var(--display);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.amt small{font:600 .2em/1 var(--mono);letter-spacing:0;margin-right:.5em;vertical-align:.9em}
+.seats{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.seats i{display:grid;place-items:center;aspect-ratio:1;border-radius:8px;background:var(--ice);font:600 12px/1 var(--mono);font-style:normal}
+.coupon .btn{width:100%}
+.night .stk{position:static;background:var(--mango);color:var(--ink);transform:rotate(7deg);width:132px;align-self:flex-start}
+@media (max-width:620px){
+  .coupon{grid-template-columns:1fr}
+  .coupon .stub{border-left:0;border-top:2px dashed var(--rule)}
+  .coupon .stub::before,.coupon .stub::after{top:-13px;bottom:auto}
+  .coupon .stub::before{left:-12px}
+  .coupon .stub::after{left:auto;right:-12px}
+  .seats{grid-template-columns:repeat(10,1fr)}
+}
+
+/* Preguntas */
+.faq details{border-bottom:1px solid var(--rule)}
+.faq details:first-child{border-top:3px solid var(--ink)}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-block:22px;cursor:pointer;list-style:none;font-weight:700;font-size:clamp(18px,1.8vw,21px)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;font:400 28px/1 var(--body);font-style:normal;transition:transform .2s ease}
+.faq details[open] summary i{transform:rotate(45deg)}
+.faq p{color:var(--soft);padding-bottom:24px;max-width:60ch}
+
+/* Cierre */
+.band.end{padding-block:0}
+.end .split{gap:0 40px}
+.end .col{padding-block:clamp(64px,9vw,128px);align-items:flex-start;gap:28px}
+.end h2{font-size:clamp(42px,6.4vw,92px)}
+.end img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:70% 50%}
+.foot{background:var(--scene);color:var(--on-dark-soft);border-top:1px solid rgba(255,255,255,.14);padding-block:24px 32px;font-size:14px}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
+@media (prefers-reduced-motion:reduce){.btn,.play,.tl li,.faq summary i{transition:none}}
+
+/* Auditoría tipográfica: escala más calmada (~1.25) y titulares que no se amontonan */
+.ov-hero h1{font-size:clamp(38px,4.7vw,68px)}
+.say{font-size:clamp(38px,4.9vw,72px)}
+.say .num{white-space:nowrap}
+.pct{font-size:clamp(96px,14vw,200px)}
+.h2{font-size:clamp(30px,3.7vw,52px);max-width:22ch}
+.h3{font-size:clamp(25px,2.8vw,38px)}
+.who .big{font-size:clamp(26px,2.9vw,40px);max-width:24ch}
+.offer .h2{font-size:clamp(30px,3.3vw,46px)}
+.end h2{font-size:clamp(38px,5.2vw,74px)}
+.lede{line-height:1.6}
+.tks{grid-template-columns:repeat(auto-fit,minmax(min(100%,214px),1fr))}
+@media (max-width:900px){.tk>div{font-size:12.5px;padding:22px 16px 32px}.tk h3{font-size:14px}}
+/* Quién: foto fija al lado, imagen del negocio debajo */
+.who .split{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:start}
+.who .me{position:sticky;top:calc(var(--hdr) + 24px);grid-row:1/3}
+.who .biz{grid-column:2;margin:0}
+@media (max-width:999px){.who .me{position:static;grid-row:auto}.who .biz{grid-column:1/-1}.who .bizimg{border-radius:22px}}
+@media (max-width:639px){.who .split{grid-template-columns:1fr}.who .biz{grid-column:auto}}
+@media (max-aspect-ratio:1/1){
+  .ov-hero h1{font-size:clamp(34px,6.4vw,58px)}
+  .say{font-size:clamp(36px,7.2vw,60px)}
+  .pct{font-size:clamp(88px,20vw,170px)}
+  .ov-hero .lead{font-size:16px}
+}
+@media (max-width:480px) and (max-aspect-ratio:1/1){.ov-hero .btn.line{display:none}}
+
+/* Movimiento con sentido: los tiquetes se imprimen, los vasos se llenan, el precio baja */
+@keyframes f85print{from{clip-path:inset(-40px -40px 100% -40px)}to{clip-path:inset(-40px -40px -80px -40px)}}
+@keyframes f85feed{from{transform:translateY(-18px)}to{transform:none}}
+@keyframes f85pop{0%{opacity:.14;transform:scale(.55)}70%{opacity:1;transform:scale(1.12)}100%{opacity:1;transform:none}}
+.mo .tks .tk{clip-path:inset(-40px -40px 100% -40px)}
+.mo .tks .tk.in{animation:f85print 1s cubic-bezier(.25,.7,.2,1) forwards}
+.mo .tks .tk.in>div{animation:f85feed 1s cubic-bezier(.25,.7,.2,1) both}
+.mo .tks .tk:nth-child(2).in,.mo .tks .tk:nth-child(2).in>div{animation-delay:.18s}
+.mo .tks .tk:nth-child(3).in,.mo .tks .tk:nth-child(3).in>div{animation-delay:.36s}
+.mo .cups svg{opacity:.14;transform:scale(.55)}
+.mo .cups.in svg{animation:f85pop .42s cubic-bezier(.3,.8,.3,1) forwards;animation-delay:calc(var(--i) * 70ms + var(--g) * 260ms)}
+
+/* Auditoría final */
+.seg{display:inline-grid;grid-template-columns:repeat(3,auto)}
+.seg button{line-height:1.15}
+.swipe{display:none}
+@media (max-width:639px){
+  .seg{display:grid;grid-template-columns:repeat(3,1fr);align-self:stretch}
+  .seg button{font-size:14px;padding:10px 8px}
+  .swipe{display:block;margin-top:24px;font-size:14px;font-weight:600;color:var(--soft)}
+  .tks{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(var(--gut) * -1);padding:16px var(--gut) 40px;margin-top:8px;scrollbar-width:none}
+  .tks::-webkit-scrollbar{display:none}
+  .tks .tk{flex:0 0 82%;scroll-snap-align:center}
+  .tks .tk:nth-child(n){margin-top:0}
+}
+
+/* Formulario de fundadores */
+.leadf{display:flex;flex-direction:column;gap:14px}
+.leadf label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;min-width:0}
+.leadf input{font:500 17px/1.3 var(--body);color:var(--ink);background:var(--ice);border:2px solid transparent;border-radius:10px;padding:12px 14px;width:100%;min-width:0}
+.leadf input:focus{outline:0;border-color:var(--ink);background:var(--paper)}
+.leadf .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:480px){.leadf .two{grid-template-columns:1fr}}
+.leadf .btn{margin-top:6px}
+.leadf #lead-msg{color:var(--soft)}
+.night .coupon .leadf label,.night .coupon .leadf label span{color:var(--ink)}
+.night .coupon .leadf #lead-msg{color:var(--soft)}
+.night .coupon .leadf.ok #lead-msg{color:var(--ink)}
+.leadf.ok #lead-msg{color:var(--ink);font-weight:600;font-size:16px}
+.vidsec .wrap{max-width:1040px}
+.vidsec .h2{margin-bottom:10px}
+.yt{position:relative;display:block;width:100%;aspect-ratio:16/9;border:0;padding:0;margin-top:28px;border-radius:22px;overflow:hidden;background:#011522;cursor:pointer;box-shadow:0 24px 60px rgba(1,21,34,.28)}
+.yt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.yt:hover img{transform:scale(1.03)}
+.yt::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(1,21,34,0) 45%,rgba(1,21,34,.7))}
+.yt .play{position:absolute;left:50%;top:50%;width:92px;height:92px;margin:-46px 0 0 -46px;border-radius:50%;background:#FFA51F;z-index:2;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .2s ease}
+.yt .play::before{content:"";margin-left:7px;border-style:solid;border-width:17px 0 17px 28px;border-color:transparent transparent transparent #011522}
+.yt:hover .play{transform:scale(1.08)}
+.yt .cap{position:absolute;left:24px;right:24px;bottom:20px;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;color:#F6F9FB;font-weight:600;text-align:left}
+.yt .cap b{font-size:clamp(17px,2.2vw,22px)}
+.yt .cap span{font-size:14px;background:rgba(1,21,34,.75);padding:6px 10px;border-radius:8px;white-space:nowrap}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vidcta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:26px}
+@media (max-width:600px){.yt .play{width:72px;height:72px;margin:-36px 0 0 -36px}.yt .play::before{border-width:13px 0 13px 22px;margin-left:5px}.yt .cap{left:14px;right:14px;bottom:12px}.yt{border-radius:16px}}
+.paybtn{display:flex;justify-content:center;width:100%;margin-top:22px}
+.altlead{margin-top:26px;padding-top:22px;border-top:1px solid rgba(12,34,51,.14)}
+.altlead .wa{display:inline-flex;align-items:center;gap:10px;justify-content:center;width:100%}
+</style>
+
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="#escena">Fórmula<b>85</b></a>
+    <nav class="nav" aria-label="Secciones"><a href="#numeros">Los números</a><a href="#calculadora">Calculadora</a><a href="#temario">Temario</a><a href="#precio">Precio</a></nav>
+    <div class="right"><div class="lang" role="group" aria-label="Idioma"><button type="button" data-lang="es" aria-pressed="true">ES</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+    <a class="btn sun" href="#precio">Reservar cupo</a></div>
+  </div>
+</header>
+
+<section class="track" id="escena" aria-label="El negocio, de la mezcla al vaso">
+  <div class="stage">
+    <canvas id="seq" aria-hidden="true"></canvas>
+    <div class="veil"></div>
+
+    <div class="ov ov-hero" data-a="0" data-b="0.065">
+      <div class="wrap"><div class="inner">
+        <p class="tagline">Curso online en preventa</p>
+        <h1 class="disp">Monta un negocio que deja <span class="mk">80 %</span> en cada vaso</h1>
+        <p class="lead">Aprende a abrir tu punto de granizados paso a paso, con los números de uno que lleva 7 años abierto, sin pagar los errores de empezar solo.</p>
+        <div class="row">
+          <a class="btn sun" href="#precio">Reservar mi cupo por USD 97</a>
+          <a class="btn line" href="#temario">Ver el temario</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="ov beat" data-a="0.085" data-b="0.316">
+      <div class="wrap"><div class="inner">
+        <div class="step fade"><b>1</b>La mezcla</div>
+        <p class="say disp"><span class="ln"><i>Una bolsa.</i></span><span class="ln"><i>16 vasos.</i></span></p>
+        <p class="sub fade">Seis litros de mezcla entran líquidos a la máquina. De cada bolsa salen 16 vasos de 12 onzas.</p>
+      </div></div>
+    </div>
+
+    <div class="ov beat" data-a="0.32" data-b="0.468">
+      <div class="wrap"><div class="inner">
+        <div class="step fade"><b>2</b>La máquina</div>
+        <p class="say disp"><span class="ln"><i>Ella hace</i></span><span class="ln"><i>el trabajo.</i></span></p>
+        <p class="sub fade">Bate, enfría y mantiene el granizado listo todo el día. Tú solo sirves.</p>
+      </div></div>
+    </div>
+
+    <div class="ov beat" data-a="0.472" data-b="0.662">
+      <div class="wrap"><div class="inner">
+        <div class="step fade"><b>3</b>El servicio</div>
+        <p class="say disp"><span class="ln"><i>Servir toma</i></span><span class="ln"><i>segundos.</i></span></p>
+        <p class="sub fade">Sin cocina y sin preparar nada en el momento: vaso, palanca y listo.</p>
+      </div></div>
+    </div>
+
+    <div class="ov beat" data-a="0.666" data-b="0.754">
+      <div class="wrap"><div class="inner">
+        <div class="step fade"><b>4</b>El costo</div>
+        <p class="say disp"><span class="ln"><i><span class="sm">Servirlo te cuesta menos de</span></i></span><span class="ln"><i><span class="num">USD 2</span></i></span></p>
+        <p class="sub fade">El vaso completo, en cualquier mercado.</p>
+      </div></div>
+    </div>
+
+    <div class="ov beat" data-a="0.758" data-b="0.868">
+      <div class="wrap"><div class="inner">
+        <div class="step fade"><b>5</b>La venta</div>
+        <p class="say disp"><span class="ln"><i><span class="sm">Y lo vendes en</span></i></span><span class="ln"><i><span class="num">USD 2,50 a 15</span></i></span></p>
+        <p class="sub fade">Ese mismo vaso, según dónde estés.</p>
+      </div></div>
+    </div>
+
+    <div class="ov ov-final" data-a="0.874" data-b="1.1">
+      <div class="wrap"><div class="inner">
+        <div class="pct"><span id="pct">80</span> %</div>
+        <h2 class="disp">queda en cada vaso, en promedio</h2>
+        <p class="small">Antes de arriendo, personal y servicios. En el curso aprendes a hacer la cuenta completa.</p>
+        <a class="btn sun" href="#precio">Quiero aprender el negocio</a>
+      </div></div>
+    </div>
+
+    <div class="pin" data-seg="a g" data-a="0.15" data-b="0.215" data-x="0.36" data-y="0.30"><i class="dot"></i><i class="stem"></i><span class="lbl">6 litros de mezcla lista</span></div>
+    <div class="pin" data-seg="b" data-a="0.36" data-b="0.455" data-x="0.605" data-y="0.37"><i class="dot"></i><i class="stem"></i><span class="lbl">Los rodillos baten y enfrían</span></div>
+    <div class="pin" data-seg="d" data-a="0.70" data-b="0.752" data-x="0.445" data-y="0.70"><i class="dot"></i><i class="stem"></i><span class="lbl">12 onzas, recién servido</span></div>
+
+    <div class="hint" aria-hidden="true">Desliza para ver cómo funciona ↓</div>
+    <ol class="tl" aria-hidden="true">
+      <li><div class="bar"><i></i></div><span>La mezcla</span></li>
+      <li><div class="bar"><i></i></div><span>La máquina</span></li>
+      <li><div class="bar"><i></i></div><span>El servicio</span></li>
+      <li><div class="bar"><i></i></div><span>El costo</span></li>
+      <li><div class="bar"><i></i></div><span>La venta</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band vidsec" id="historia">
+  <div class="wrap">
+    <h2 class="disp h2">De un puesto en la calle a vivir de esto</h2>
+    <p class="lede">Te cuento en 6 minutos cómo empecé con una máquina alquilada, qué me costó años entender y qué vas a aprender en el curso.</p>
+    <button class="yt" type="button" data-yt="p9Em1C52uZY" aria-label="Ver el video de presentación de Danilo">
+      <img src="f/video-poster.webp" width="1280" height="720" loading="lazy" alt="Danilo hablando a la cámara">
+      <span class="play" aria-hidden="true"></span>
+      <span class="cap"><b>Mi historia y el método</b><span>6:26</span></span>
+    </button>
+    <div class="vidcta"><a class="btn sun" href="#precio">Reservar mi cupo por USD 97</a></div>
+  </div>
+</section>
+
+<section class="band who" id="quien">
+  <div class="wrap split top">
+    <img class="photo me" src="f/danilo.webp" width="960" height="1200" loading="lazy" alt="Danilo recostado en el mostrador, junto a dos máquinas de granizado">
+    <div class="col">
+      <p class="disp big">Llevo 7 años vendiendo granizados. En un día normal salen 40 a 50 vasos; en uno bueno, 150.</p>
+      <p class="lede">Abrí Paradise Cocktails en Colombia y sigue abierto. Hoy lo dirijo a distancia. Mi error más caro fue no medir desde el inicio cuánto vendía de verdad. En el curso te muestro el sistema tal como lo uso, para que no lo pagues tú.</p>
+      <p class="sign">Danilo<span>Fundador de Paradise Cocktails</span></p>
+    </div>
+    <figure class="biz">
+        <img class="bizimg" src="f/paradise.webp" width="1536" height="1024" loading="lazy" alt="Paradise Cocktails: insumos, granizados y los países donde está la marca">
+        <figcaption><img class="bizlogo" src="f/paradise-logo.webp" width="240" height="240" alt="Logo de The Paradise Cocktails"><span><b>The Paradise Cocktails</b>Mi marca: el punto que abrí en Colombia y la materia prima que hoy distribuyo desde Medellín</span></figcaption>
+      </figure>
+  </div>
+</section>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="f85cup" viewBox="0 0 24 34"><rect x="13.4" y="0" width="1.9" height="10" rx=".9" transform="rotate(12 14.3 5)"/><path d="M4.4 13a7.6 6.6 0 0 1 15.2 0z"/><path d="M5 14.4h14L17.2 33H6.8z"/></symbol></svg>
+
+<section class="band ice" id="numeros">
+  <div class="wrap">
+    <div class="col" style="max-width:780px">
+      <h2 class="disp h2">Cuánto deja un vaso, según dónde vendas</h2>
+      <p class="lede">Tres tiquetes, uno por mercado. Son precios de referencia: el costo cambia en cada país, pero suele quedarse en ese rango. Falta restar arriendo, personal y servicios.</p>
+    </div>
+    <p class="swipe">Desliza para ver los tres mercados</p>
+    <div class="tks">
+      <div class="tk"><div>
+        <h3>Latinoamérica</h3>
+        <dl>
+          <div><dt>Vaso de 12 oz</dt><dd>USD 4,40</dd></div>
+          <div><dt>Vaso de 16 oz</dt><dd>USD 5,30</dd></div>
+          <div><dt>Te cuesta</dt><dd>USD 0,80–1,05</dd></div>
+          <div class="tot"><dt>Te queda</dt><dd>80 %</dd></div>
+        </dl>
+        <p>En Colombia: $14.000 y $17.000 pesos.</p>
+      </div></div>
+      <div class="tk"><div>
+        <h3>Asia</h3>
+        <dl>
+          <div><dt>Vaso de 12 oz</dt><dd>USD 2,50</dd></div>
+          <div><dt>Vaso de 16 oz</dt><dd>USD 3,50</dd></div>
+          <div><dt>Te cuesta</dt><dd>USD 0,50–0,80</dd></div>
+          <div class="tot"><dt>Te queda</dt><dd>75 %</dd></div>
+        </dl>
+        <p>Zonas turísticas y centros comerciales.</p>
+      </div></div>
+      <div class="tk"><div>
+        <h3>EE. UU. y Australia</h3>
+        <dl>
+          <div><dt>Vaso de 12 oz</dt><dd>USD 12</dd></div>
+          <div><dt>Vaso de 16 oz</dt><dd>USD 15</dd></div>
+          <div><dt>Te cuesta</dt><dd>USD 1–1,75</dd></div>
+          <div class="tot"><dt>Te queda</dt><dd>85 %</dd></div>
+        </dl>
+        <p>Bares, eventos y ciudades grandes.</p>
+      </div></div>
+    </div>
+
+    <div class="split bagrow">
+      <div class="bagph">
+        <img class="photo" src="f/bolsa.webp" width="640" height="768" loading="lazy" alt="Bolsa transparente de 6 litros llena de mezcla de granizado">
+        <div class="stk"><span>6 litros<small>16 vasos</small></span></div>
+      </div>
+      <div class="col">
+        <h3 class="disp h3">Con <span class="mk">3 vasos</span> ya pagaste la bolsa entera</h3>
+        <div class="cups" role="img" aria-label="De 16 vasos, 3 pagan la bolsa y 13 quedan"><svg aria-hidden="true" class="c" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" class="c" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" class="c" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg><svg aria-hidden="true" viewBox="0 0 24 34"><use href="#f85cup"/></svg></div>
+        <div class="key"><span><i style="background:var(--ink)"></i>3 vasos pagan la bolsa</span><span><i style="background:var(--mango)"></i>13 vasos quedan</span></div>
+        <p class="lede">De cada bolsa de 6 litros salen 16 vasos de 12 onzas. Te quedan unos USD 58 por bolsa en Latinoamérica, USD 30 en Asia y USD 164 en Estados Unidos y Australia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="porque">
+  <div class="wrap">
+    <div class="col" style="max-width:780px">
+      <h2 class="disp h2">Empezar por tu cuenta <span class="mk">sale caro</span></h2>
+      <p class="lede">El mismo punto y la misma máquina. Lo que cambia es lo que sabes antes de gastar.</p>
+    </div>
+    <div class="vs">
+      <div class="alone">
+        <h3>Por tu cuenta<span>Meses de prueba y error</span></h3>
+        <ul class="marks">
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D92F57" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Compras la máquina que te ofrecieron, no la que tu punto necesita.</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D92F57" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Pones el precio al ojo y no sabes cuánto te queda por vaso.</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D92F57" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Pasan meses antes de saber cuánto vendes de verdad.</span></li>
+        </ul>
+      </div>
+      <div class="with">
+        <h3>Con el curso<span>Claro desde antes de abrir</span></h3>
+        <ul class="marks">
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFA51F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Sabes qué máquina comprar, nueva o usada, y cómo importarla.</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFA51F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Sacas el costo y el precio de cada vaso antes de invertir.</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFA51F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Controlas caja e inventario desde el primer día.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band sun" id="calculadora">
+  <div class="wrap split">
+    <div class="ctl">
+      <h2 class="disp h2">Ahora haz la cuenta con tus números</h2>
+      <div class="seg" role="group" aria-label="Mercado de partida"><button type="button" data-mk="lat" aria-pressed="true">Latinoamérica</button><button type="button" data-mk="asia" aria-pressed="false">Asia</button><button type="button" data-mk="usa" aria-pressed="false">EE. UU. y Australia</button></div>
+      <div class="fld"><label for="c-vasos"><span>Vasos vendidos al día</span> <output id="o-vasos" for="c-vasos">40</output></label><input id="c-vasos" type="range" min="20" max="200" step="5" value="40"></div>
+      <div class="pair">
+        <div class="fld"><label for="c-precio"><span>Precio por vaso</span></label><div class="money"><span>USD</span><input id="c-precio" type="text" inputmode="decimal" autocomplete="off" value="4,40"></div></div>
+        <div class="fld"><label for="c-costo"><span>Costo por vaso</span></label><div class="money"><span>USD</span><input id="c-costo" type="text" inputmode="decimal" autocomplete="off" value="0,80"></div></div>
+      </div>
+      <p class="small">Cuenta con 26 días abiertos al mes. No incluye arriendo, personal ni impuestos, y no es una promesa de ingresos.</p>
+    </div>
+    <div class="tk" aria-live="polite"><div>
+      <h3>Tu punto, un mes</h3>
+      <dl>
+        <div><dt>Vasos al mes</dt><dd id="r-vasos">1.040</dd></div>
+        <div><dt>Ventas</dt><dd id="r-ventas">USD 4.576</dd></div>
+        <div><dt>Costo de los vasos</dt><dd id="r-costo">USD 832</dd></div>
+        <div class="tot"><dt>Queda al mes</dt><dd id="r-margen">USD 3.744</dd></div>
+      </dl>
+    </div></div>
+  </div>
+</section>
+
+<section class="band" id="video">
+  <div class="wrap split">
+    <div class="col">
+      <h2 class="disp h2">Para quién es este curso</h2>
+      <p class="lede">Es para ti si:</p>
+      <ul class="marks">
+        <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Quieres un negocio propio, pero no sabes cuál deja plata de verdad.</span></li>
+        <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Te frena invertir sin conocer los números antes.</span></li>
+        <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Ya tienes un local o vendes comida y buscas un producto que deje más.</span></li>
+      </ul>
+    </div>
+    <div class="player">
+      <img src="f/servir.webp" width="1280" height="853" loading="lazy" alt="Un granizado de mango recién servido en la máquina">
+    </div>
+  </div>
+</section>
+
+<section class="band ice" id="temario">
+  <div class="wrap">
+    <div class="col" style="max-width:780px">
+      <h2 class="disp h2">Del primer número a la apertura</h2>
+      <p class="lede">Diez módulos en lecciones cortas, de 5 a 10 minutos, con plantillas para aplicar el mismo día.</p>
+    </div>
+    <div class="syl">
+      <div>
+        <h3>Antes de invertir</h3>
+        <ol>
+          <li><b>01</b><div><h4>Los números reales</h4><p>Cuánto cuesta un vaso, cuánto deja y cómo calcularlo en tu ciudad.</p></div></li>
+          <li><b>02</b><div><h4>Formato y ubicación</h4><p>Local, carrito, isla en centro comercial o eventos: cuál te conviene.</p></div></li>
+          <li><b>03</b><div><h4>Máquinas</h4><p>Cuál comprar, nueva o usada, y cómo importarla a tu país.</p></div></li>
+          <li><b>04</b><div><h4>Insumos</h4><p>Tipos de bases, proveedores y almacenamiento.</p></div></li>
+          <li><b>05</b><div><h4>Menú y precios</h4><p>Tamaños, combos, con y sin licor.</p></div></li>
+        </ol>
+      </div>
+      <div>
+        <h3>Abrir y operar</h3>
+        <ol>
+          <li><b>06</b><div><h4>Montaje y permisos</h4><p>Trámites, diseño del punto, vasos y marca.</p></div></li>
+          <li><b>07</b><div><h4>Operación y personal</h4><p>Apertura y cierre, inventario y control de caja.</p></div></li>
+          <li><b>08</b><div><h4>Marketing local</h4><p>Lanzamiento, redes, eventos y domicilios.</p></div></li>
+        </ol>
+      </div>
+      <div>
+        <h3>Crecer</h3>
+        <ol>
+          <li><b>09</b><div><h4>Manejarlo a distancia</h4><p>Cámaras, reportes y caja con OmniPOS.</p></div></li>
+          <li><b>10</b><div><h4>Escalar</h4><p>Segundo punto, eventos y un operador con canon mensual.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band night" id="precio">
+  <div class="wrap offer">
+    <div class="col">
+      <h2 class="disp h2">20 cupos al precio más bajo que tendrá el curso</h2>
+      <p class="lede">Los fundadores entran primero y reciben los módulos a medida que salen.</p>
+      <div class="stk"><span>USD 200<small>menos que en el lanzamiento</small></span></div>
+    </div>
+    <div class="coupon">
+      <div class="main">
+        <div>
+          <div class="amt"><small>USD</small>97</div>
+          <p class="small" style="margin-top:14px;color:var(--soft)">Pago único. Después del lanzamiento: USD 297.</p>
+        </div>
+        <ul class="marks">
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Los 10 módulos en video</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Calculadora de rentabilidad y lista de montaje</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Guía de importación de máquinas</span></li>
+          <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0C2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Acceso de por vida</span></li>
+        </ul>
+        <a class="btn sun paybtn" href="https://pay.hotmart.com/M107996446Q?off=3aeqy27x" target="_blank" rel="noopener">Pagar mi cupo de fundador</a>
+        <p class="small" style="margin-top:12px">Pago seguro con Hotmart: tarjeta, PayPal y medios locales. Garantía de 7 días.</p>
+        <div class="altlead"><p style="font-weight:600;margin:0 0 12px">¿Tienes dudas antes de pagar?</p>
+        <a class="btn line wa" href="https://wa.me/573244953100?text=Hola%20Danilo%2C%20vi%20la%20p%C3%A1gina%20de%20F%C3%B3rmula%2085%20y%20tengo%20una%20pregunta%20sobre%20el%20curso." target="_blank" rel="noopener"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg><span>Escríbeme por WhatsApp</span></a>
+        <p class="small" style="margin-top:10px">Te respondo personalmente.</p></div>
+      </div>
+      <div class="stub">
+        <p style="font-weight:700">Cupos de fundador</p>
+        <div class="seats" aria-hidden="true"><i>01</i><i>02</i><i>03</i><i>04</i><i>05</i><i>06</i><i>07</i><i>08</i><i>09</i><i>10</i><i>11</i><i>12</i><i>13</i><i>14</i><i>15</i><i>16</i><i>17</i><i>18</i><i>19</i><i>20</i></div>
+        <p class="small" style="color:var(--soft)">Son 20 y no se reabren.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="preguntas">
+  <div class="wrap split top">
+    <h2 class="disp h2">Lo que todos preguntan</h2>
+    <div class="faq">
+      <details open><summary>¿El curso incluye la receta?<i aria-hidden="true">+</i></summary><p>No. El curso enseña a montar y operar el negocio. La receta Fórmula 85, con la que fabricas tu propia mezcla y bajas todavía más el costo, se entrega aparte y solo por solicitud.</p></details>
+      <details><summary>¿Necesito experiencia?<i aria-hidden="true">+</i></summary><p>No. El curso empieza desde cero.</p></details>
+      <details><summary>¿Sirve en mi país?<i aria-hidden="true">+</i></summary><p>Sí. El sistema funciona igual en Latinoamérica, Asia, Estados Unidos y Australia, y el módulo de máquinas explica cómo importarlas a tu país.</p></details>
+      <details><summary>¿Cuándo recibo los módulos?<i aria-hidden="true">+</i></summary><p>El módulo 1 al comprar. Los demás, dos por semana.</p></details>
+      <details><summary>¿Y si no es para mí?<i aria-hidden="true">+</i></summary><p>Tienes 7 días de garantía. Si el curso no te sirve, pides el reembolso desde Hotmart y te devuelven el 100 %.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="band night end">
+  <div class="wrap split">
+    <div class="col">
+      <h2 class="disp">Empieza por los números</h2>
+      <a class="btn sun" href="#precio">Reservar mi cupo por USD 97</a>
+    </div>
+    <img src="f/e49.webp" width="1280" height="853" loading="lazy" alt="Vaso de granizado de mango servido, con la máquina al fondo">
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap"><span>© Fórmula 85</span><span>Hecho en Colombia, vendido al mundo</span></div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var root=document.documentElement;
+  var track=document.getElementById('escena'), stage=track.querySelector('.stage'), canvas=document.getElementById('seq');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var clamp=function(x,a,b){return Math.min(b,Math.max(a,x))};
+  var sm=function(a,b,x){x=clamp((x-a)/(b-a),0,1);return x*x*(3-2*x)};
+  var lerp=function(a,b,t){return a+(b-a)*t};
+  var all=function(el,q){return [].slice.call(el.querySelectorAll(q))};
+
+  /* ---------- Narración: cada bloque entra línea por línea y sale completo, siguiendo el scroll ---------- */
+  var ovs=all(stage,'.ov').map(function(el){return {el:el,a:+el.dataset.a,b:+el.dataset.b,k:'',lines:all(el,'.ln i'),soft:all(el,'.fade')}});
+  var pctEl=document.getElementById('pct'), hint=stage.querySelector('.hint'), lastPct=-1;
+  var tl=all(stage,'.tl li').map(function(li){return {li:li,bar:li.querySelector('.bar i'),v:-1,c:''}});
+  var TLR=[[.04,.32],[.32,.47],[.47,.664],[.664,.756],[.756,.87]];
+  function overlays(p){
+    for(var i=0;i<ovs.length;i++){
+      var o=ovs[i], first=o.a<=0;
+      var fi=first?1:sm(o.a,o.a+.014,p), fo=o.b>=1?1:1-sm(o.b-.022,o.b,p), op=Math.round(fi*fo*100)/100;
+      var q=first?1:clamp((p-o.a)/.075,0,1), key=op+'|'+q.toFixed(3)+'|'+fo.toFixed(2);
+      if(key===o.k) continue; o.k=key;
+      o.el.style.opacity=op; o.el.style.visibility=op<.01?'hidden':'visible';
+      o.el.style.transform='translate3d(0,'+(-(1-fo)*26).toFixed(1)+'px,0)';
+      if(first) continue;
+      if(!o.lines.length){ o.el.style.transform='translate3d(0,'+((1-sm(o.a,o.a+.035,p))*30-(1-fo)*26).toFixed(1)+'px,0)'; continue }
+      for(var k=0;k<o.lines.length;k++){
+        var t=sm(o.a+.008+k*.014,o.a+.04+k*.014,p);
+        o.lines[k].style.transform='translate3d(0,'+((1-t)*112).toFixed(1)+'%,0)';
+      }
+      for(var j=0;j<o.soft.length;j++){
+        var s=sm(o.a+.004+j*.03,o.a+.03+j*.03,p);
+        o.soft[j].style.opacity=s.toFixed(2); o.soft[j].style.transform='translate3d(0,'+((1-s)*14).toFixed(1)+'px,0)';
+      }
+    }
+    var n=Math.round(80*sm(.876,.95,p));
+    if(n!==lastPct){lastPct=n;pctEl.textContent=n}
+    if(hint) hint.style.opacity=(1-sm(.008,.035,p)).toFixed(2);
+    for(var m=0;m<tl.length;m++){
+      var r=TLR[m], v=Math.round(clamp((p-r[0])/(r[1]-r[0]),0,1)*200)/200, c=v>=1?'done':v>0?'on':'';
+      if(v!==tl[m].v){tl[m].v=v;tl[m].bar.style.transform='scaleX('+v+')'}
+      if(c!==tl[m].c){tl[m].c=c;tl[m].li.className=c}
+    }
+  }
+
+  /* ---------- Película: fotogramas reales dibujados según el scroll ----------
+     Cada tramo es un clip (archivos f/<d>NN.webp) entre p0 y p1 del recorrido. L y P dicen qué parte de la imagen
+     debe quedar a la vista (x, y, ancho, alto en 0-1) al empezar y al terminar el tramo, en horizontal y en vertical;
+     z es en qué parte del tramo ocurre ese cambio de encuadre. En vertical, el quinto valor indica bajo qué texto
+     queda la imagen: 0 portada, 1 narración, 2 cierre. */
+  function buildSeq(){
+    var ctx=canvas.getContext('2d',{alpha:false}); if(!ctx) throw new Error('2d');
+    var BG='#011522', BG0='rgba(1,21,34,0)', IW=3, IH=2;
+    var WIDE=[.27,.02,.46,.92], MID=[.12,0,.66,.98], NEAR=[.22,0,.50,.90], END=[.40,.05,.50,.92], WM=[.460,.275,.340,.681], WB=[.10,.02,.72,.94];
+    var pW=[.20,0,.60,.94], pMid=[.08,0,.74,.98], pNear=[.26,0,.42,.90], pEnd=[.46,.06,.42,.90], pWM=[.408,.26,.444,.696], pWB=[.095,.02,.73,.94];
+    var SEG=[
+      {d:'p',n:1,p0:0,p1:.028, L:[WIDE,WIDE], P:[pW.concat(0),pW.concat(0)]},
+      {d:'a',bl:1,n:49,p0:.04,p1:.20, z:[0,.16], L:[WM,WB], P:[pWM.concat(0),pWB.concat(1)]},
+      {d:'g',bl:1,n:49,p0:.20,p1:.314, z:[.8,1], L:[WB,WM], P:[pWB.concat(1),pWM.concat(1)]},
+      {d:'b',bl:1,n:49,p0:.326,p1:.47, L:[WIDE,WIDE], P:[pW.concat(1),pW.concat(1)]},
+      {d:'c',n:49,p0:.47,p1:.57, L:[WIDE,MID], P:[pW.concat(1),pMid.concat(1)]},
+      {d:'d',n:65,ord:(function(){var o=[];for(var i=0;i<65;i++) if(i<42||i>54) o.push(i);return o})(),p0:.57,p1:.756, z:[0,.5], L:[MID,NEAR], P:[pMid.concat(1),pNear.concat(1)]},
+      {d:'e',bl:1,n:49,p0:.756,p1:.87, L:[NEAR,END], P:[pNear.concat(1),pEnd.concat(2)]}
+    ];
+    var PINS=all(stage,'.pin').map(function(el){return {el:el,seg:el.dataset.seg.split(' '),a:+el.dataset.a,b:+el.dataset.b,x:+el.dataset.x,y:+el.dataset.y,stem:el.querySelector('.stem'),lbl:el.querySelector('.lbl'),k:''}});
+    var imgs=SEG.map(function(s){return new Array(s.n)}), W=0,H=0,dpr=1, sig='', dirty=true, tops=[.5,.34,.5];
+    function url(s,i){ return 'f/'+s.d+(i<9?'0':'')+(i+1)+'.webp' }
+    /* Carga por pasadas: primero un fotograma de cada tramo, luego uno de cada ocho, de cada cuatro, de cada dos y el resto */
+    var queue=[], seen={}, active=0;
+    [1e9,8,4,2,1].forEach(function(step){
+      SEG.forEach(function(s,si){ for(var i=0;i<s.n;i+=step){ var id=si+'_'+i; if(!seen[id]){seen[id]=1;queue.push([si,i])} } });
+    });
+    function pump(){
+      while(active<8&&queue.length){
+        (function(q){
+          var im=new Image(); active++;
+          im.onload=function(){ var ok=function(){ imgs[q[0]][q[1]]=im; active--; dirty=true; pump() }; if(im.decode) im.decode().then(ok,ok); else ok() };
+          im.onerror=function(){ active--; pump() };
+          im.src=url(SEG[q[0]],q[1]);
+        })(queue.shift());
+      }
+    }
+    pump();
+    function nearest(si,i){
+      var a=imgs[si]; if(a[i]) return a[i];
+      for(var d=1;d<a.length;d++){ if(i-d>=0&&a[i-d]) return a[i-d]; if(i+d<a.length&&a[i+d]) return a[i+d] }
+      return null;
+    }
+    function mix(a,b,t){ var o=[]; for(var i=0;i<a.length;i++) o.push(lerp(a[i],b[i],t)); return o }
+    function pv(f){ var o=f.slice(0,4); o[4]=tops[f[4]]; return o }
+    function box(s,u){ var e=s.z?sm(s.z[0],s.z[1],u):u*u*(3-2*u); return W>=H?mix(s.L[0],s.L[1],e):mix(pv(s.P[0]),pv(s.P[1]),e) }
+    function place(f){
+      var ax,ay,aw,ah;
+      if(W>=H){ ax=W*.47; aw=W*.52; ay=H*.03; ah=H*.86 }
+      else { ax=0; aw=W; ay=H*f[4]; ah=H*.925-ay }
+      var w=Math.min(aw/f[2], ah/f[3]*IW/IH), h=w*IH/IW;
+      return [ax+aw/2-(f[0]+f[2]/2)*w, ay+ah/2-(f[1]+f[3]/2)*h, w, h];
+    }
+    function band(x0,y0,x1,y1,rx,ry,rw,rh){
+      var g=ctx.createLinearGradient(x0,y0,x1,y1); g.addColorStop(0,BG); g.addColorStop(1,BG0);
+      ctx.fillStyle=g; ctx.fillRect(rx,ry,rw,rh);
+    }
+    function paint(im,f,alpha){
+      if(!im) return;
+      var r=place(f), x=r[0],y=r[1],w=r[2],h=r[3], m=Math.min(w,h)*.16;
+      ctx.globalAlpha=alpha; ctx.drawImage(im,x,y,w,h);
+      if(x>-1) band(x,0,x+m,0, x-1,y-1,m+1,h+2);
+      if(x+w<W+1) band(x+w,0,x+w-m,0, x+w-m,y-1,m+1,h+2);
+      if(y>-1) band(0,y,0,y+m, x-1,y-1,w+2,m+1);
+      if(y+h<H+1) band(0,y+h,0,y+h-m, x-1,y+h-m,w+2,m+1);
+      ctx.globalAlpha=1;
+    }
+    function pins(p,s,u){
+      for(var i=0;i<PINS.length;i++){
+        var t=PINS[i], on=t.seg.indexOf(s.d)>-1, v=on?sm(t.a,t.a+.02,p)*(1-sm(t.b-.02,t.b,p)):0;
+        var key=v.toFixed(2); if(v>0){ var r=place(box(s,u)), x=r[0]+t.x*r[2], y=r[1]+t.y*r[3]; key+='|'+x.toFixed(0)+'|'+y.toFixed(0) }
+        if(key===t.k) continue; t.k=key;
+        t.el.style.opacity=v.toFixed(2); t.el.style.visibility=v<.01?'hidden':'visible';
+        if(v>0){
+          var half=t.lbl.offsetWidth/2, sh=clamp(x,half+12,W-half-12)-x;
+          t.el.style.transform='translate3d('+x.toFixed(1)+'px,'+y.toFixed(1)+'px,0)';
+          t.stem.style.transform='scaleY('+v.toFixed(2)+')';
+          t.lbl.style.transform='translate3d('+(sh-half).toFixed(1)+'px,'+((1-v)*-10).toFixed(1)+'px,0)';
+        }
+      }
+    }
+    function resize(){
+      W=stage.clientWidth; H=stage.clientHeight; dpr=Math.min(window.devicePixelRatio||1,W>900?1.5:2);
+      canvas.width=Math.round(W*dpr); canvas.height=Math.round(H*dpr); dirty=true;
+      var bot=function(q){ var m=0; all(stage,q).forEach(function(n){ var r=n.offsetParent; m=Math.max(m,n.offsetTop+n.offsetHeight+(r&&r!==stage?r.offsetTop:0)) }); return clamp((m+18)/H,.2,.62) };
+      tops=[bot('.ov-hero .inner'),bot('.beat .inner'),bot('.ov-final .inner')];
+      PINS.forEach(function(t){t.k=''});
+    }
+    function update(p){
+      /* Tramo actual; entre dos tramos separados, fundido del último fotograma de uno al primero del otro, cada cual con su encuadre */
+      var si=0, u=0, fade=0;
+      for(var k=0;k<SEG.length;k++){
+        var s=SEG[k], nx=SEG[k+1];
+        if(p<=s.p1||!nx){ si=k; u=clamp((p-s.p0)/(s.p1-s.p0),0,1); break }
+        if(p<nx.p0){ si=k; u=1; fade=(p-s.p1)/(nx.p0-s.p1); break }
+      }
+      var s0=SEG[si], ord=s0.ord, cnt=ord?ord.length:s0.n, fi=u*(cnt-1), k0=Math.floor(fi), ft=fi-k0,
+          i0=ord?ord[k0]:k0, i1=ord?ord[Math.min(k0+1,cnt-1)]:Math.min(k0+1,cnt-1), jump=i1-i0>1;
+      pins(p,fade>.5?SEG[si+1]:s0,fade>.5?0:u);
+      var key=si+':'+i0+':'+fade.toFixed(3)+':'+u.toFixed(3);
+      if(key===sig&&!dirty) return; sig=key; dirty=false;
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+      ctx.fillStyle=BG; ctx.fillRect(0,0,W,H);
+      var bx=box(s0,u), a0=nearest(si,i0);
+      paint(a0,bx,1);
+      if((s0.bl||jump)&&ft>.02&&i1!==i0){ var a1=imgs[si][i1]; if(a1&&a1!==a0) paint(a1,bx,jump?ft*ft*(3-2*ft):ft) }
+      if(fade>0) paint(nearest(si+1,0),box(SEG[si+1],0),fade*fade*(3-2*fade));
+    }
+    resize();
+    return {update:update,resize:resize};
+  }
+
+  var world=null;
+  try{ world=buildSeq() }catch(e){ root.classList.add('noseq') }
+
+  /* ---------- Bucle: el scroll manda, con un suavizado corto ---------- */
+  var stickTop=0;
+  function measure(){ stickTop=parseFloat(getComputedStyle(stage).top)||0; if(world) world.resize() }
+  function readP(){ var r=track.getBoundingClientRect(), travel=r.height-stage.offsetHeight; return travel>0?clamp((stickTop-r.top)/travel,0,1):0 }
+  var cur=0, last=0, running=false;
+  function frame(now){
+    if(!running) return;
+    var dt=Math.min(.05,(now-last)/1000); last=now;
+    var target=readP();
+    cur=reduce?target:cur+(target-cur)*(1-Math.exp(-dt*15));
+    if(Math.abs(target-cur)<.0003) cur=target;
+    overlays(cur);
+    if(world) world.update(cur);
+    requestAnimationFrame(frame);
+  }
+  function start(){ if(running) return; running=true; last=performance.now(); requestAnimationFrame(frame) }
+  measure(); cur=readP(); overlays(cur); if(world) world.update(cur);
+  window.addEventListener('resize',measure);
+  window.addEventListener('orientationchange',function(){setTimeout(measure,250)});
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(measure);
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ if(es[0].isIntersecting) start(); else running=false },{rootMargin:'120px'}).observe(track);
+  } else start();
+
+
+  /* ---------- Movimiento en secciones (una sola vez, solo si el usuario no pidió menos movimiento) ---------- */
+  (function(){
+    if(reduce||!('IntersectionObserver' in window)) return;
+    root.classList.add('mo');
+    all(document,'.cups').forEach(function(c){ all(c,'svg').forEach(function(v,i){ v.style.setProperty('--i',i); v.style.setProperty('--g',v.classList.contains('c')?0:1) }) });
+    var amt=document.querySelector('.coupon .amt'), tn=null;
+    if(amt) for(var i=amt.childNodes.length-1;i>=0;i--){ if(amt.childNodes[i].nodeType===3&&/\d/.test(amt.childNodes[i].nodeValue)){ tn=amt.childNodes[i]; break } }
+    function priceDrop(){
+      if(!tn) return; var t0=null, from=297, to=97;
+      tn.nodeValue=String(from);
+      function step(t){ if(t0===null) t0=t; var k=Math.min(1,(t-t0)/1300), e=1-Math.pow(1-k,3);
+        tn.nodeValue=String(Math.round(from+(to-from)*e)); if(k<1) requestAnimationFrame(step) }
+      setTimeout(function(){ requestAnimationFrame(step) },250);
+    }
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){
+      if(!e.isIntersecting) return; io.unobserve(e.target);
+      if(e.target.classList.contains('coupon')) priceDrop(); else if(e.target.classList.contains('tks')) all(e.target,'.tk').forEach(function(t){t.classList.add('in')}); else e.target.classList.add('in');
+    }) },{threshold:.2});
+    all(document,'.tks, .cups, .coupon').forEach(function(el){ io.observe(el) });
+  })();
+
+
+  /* ---------- Formulario de fundadores (Netlify Forms) ---------- */
+  (function(){
+    var f=document.getElementById('lead'); if(!f) return;
+    var msg=document.getElementById('lead-msg');
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var en=(document.documentElement.lang==='en'), b=f.querySelector('button');
+      f.querySelector('[name=idioma]').value=en?'en':'es';
+      b.disabled=true;
+      var body=new URLSearchParams(new FormData(f)).toString();
+      fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body})
+        .then(function(r){ if(!r.ok) throw 0;
+          var n=(f.nombre.value||'').trim().split(' ')[0];
+          all(f,'label,.two,button').forEach(function(el){el.hidden=true});
+          f.classList.add('ok');
+          msg.textContent=en?('Done'+(n?', '+n:'')+'. Got your details. I’ll message you on WhatsApp very soon.'):('Listo'+(n?', '+n:'')+'. Recibí tus datos. Te escribo por WhatsApp muy pronto.');
+          try{ if(window.fbq) fbq('track','Lead') }catch(x){}
+        })
+        .catch(function(){ b.disabled=false; msg.textContent=en?'It didn’t go through. Please try again in a moment.':'No se pudo enviar. Intenta de nuevo en un momento.' });
+    });
+  })();
+
+  /* ---------- Calculadora ---------- */
+  var $=function(id){return document.getElementById(id)};
+  var lang='es';
+  var fmt=function(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,lang==='en'?',':'.')};
+  var dec=function(v,l){ var x=Math.round(v*100)/100, t=(x%1===0)?String(x):x.toFixed(2); return l==='en'?t:t.replace('.',',') };
+  var MK={lat:[4.4,.8],asia:[2.5,.65],usa:[12,1.75]};
+  function num(str,l){ str=String(str).replace(/\s/g,''); l=l||lang;
+    if(l==='en') str=str.replace(/,/g,''); else if(str.indexOf(',')>-1) str=str.replace(/\./g,'').replace(',','.');
+    return parseFloat(str.replace(/[^0-9.]/g,'')) }
+  function calc(){
+    var v=+$('c-vasos').value, pr=num($('c-precio').value), cu=num($('c-costo').value), d=26;
+    $('o-vasos').textContent=v; $('r-vasos').textContent=fmt(v*d);
+    var ok=pr>0&&cu>=0&&isFinite(pr)&&isFinite(cu);
+    $('r-ventas').textContent=ok?'USD '+fmt(v*pr*d):'—';
+    $('r-costo').textContent=ok?'USD '+fmt(v*cu*d):'—';
+    $('r-margen').textContent=ok?'USD '+fmt(v*(pr-cu)*d):'—';
+  }
+  var mkBtns=all(document,'[data-mk]');
+  mkBtns.forEach(function(b){b.addEventListener('click',function(){
+    var k=MK[b.getAttribute('data-mk')]; $('c-precio').value=dec(k[0],lang); $('c-costo').value=dec(k[1],lang);
+    mkBtns.forEach(function(x){x.setAttribute('aria-pressed',String(x===b))}); calc();
+  })});
+  ['c-vasos','c-precio','c-costo'].forEach(function(id){$(id).addEventListener('input',calc)});
+
+  /* ---------- Idioma: español por defecto; inglés para quien lo elija o tenga el navegador en otro idioma ---------- */
+  var EN={"¿Tienes dudas antes de pagar?": "Questions before paying?", "Escríbeme por WhatsApp": "Message me on WhatsApp", "Te respondo personalmente.": "I reply personally.", "De un puesto en la calle a vivir de esto": "From a street stand to living off it", "Te cuento en 6 minutos cómo empecé con una máquina alquilada, qué me costó años entender y qué vas a aprender en el curso.": "In 6 minutes I tell you how I started with a rented machine, what took me years to figure out, and what you’ll learn in the course. (Video in Spanish.)", "Mi historia y el método": "My story and the method", "Pagar mi cupo de fundador": "Pay for my founder spot", "Pago seguro con Hotmart: tarjeta, PayPal y medios locales. Garantía de 7 días.": "Secure checkout with Hotmart: card, PayPal and local methods. 7-day guarantee.", "¿Tienes dudas antes de pagar? Déjame tu WhatsApp": "Questions before paying? Leave me your WhatsApp", "Quiero que me escribas": "Message me", "Te escribo personalmente por WhatsApp para resolver tus dudas.": "I’ll message you personally on WhatsApp to answer your questions.", "Tu nombre": "Your name", "WhatsApp, con el indicativo de tu país": "WhatsApp, with your country code", "Correo": "Email", "País": "Country", "Apartar mi cupo de fundador": "Save my founder spot", "Apartarlo no tiene costo. Cuando abra el pago te escribo primero por WhatsApp para que tomes tu cupo a USD 97, con garantía de 7 días.": "Saving it is free. When payment opens, I’ll message you first on WhatsApp so you can take your spot at USD 97, with a 7-day guarantee.", "¿Y si no es para mí?<i aria-hidden=\"true\">+</i>": "What if it’s not for me?<i aria-hidden=\"true\">+</i>", "Tienes 7 días de garantía. Si el curso no te sirve, pides el reembolso desde Hotmart y te devuelven el 100 %.": "You have a 7-day guarantee. If the course isn’t for you, request a refund through Hotmart and get 100% back.", "Desliza para ver los tres mercados": "Swipe to see all three markets", "Los números": "Numbers", "Calculadora": "Calculator", "Temario": "Curriculum", "Precio": "Pricing", "Reservar cupo": "Reserve a spot", "Curso online en preventa": "Online course, founders’ presale", "Monta un negocio que deja <span class=\"mk\">80 %</span> en cada vaso": "Start a business that keeps <span class=\"mk\">80%</span> of every cup", "Aprende a abrir tu punto de granizados paso a paso, con los números de uno que lleva 7 años abierto, sin pagar los errores de empezar solo.": "Learn to open your own slush stand step by step, with the real numbers of someone who has kept one open for 7 years, without paying for the mistakes of starting alone.", "Reservar mi cupo por USD 97": "Reserve my spot for USD 97", "Ver el temario": "See the curriculum", "<b>1</b>La mezcla": "<b>1</b>The mix", "Una bolsa.": "One bag.", "16 vasos.": "16 cups.", "Seis litros de mezcla entran líquidos a la máquina. De cada bolsa salen 16 vasos de 12 onzas.": "Six liters of mix go into the machine as liquid. Each bag makes sixteen 12 oz cups.", "<b>2</b>La máquina": "<b>2</b>The machine", "Ella hace": "It does", "el trabajo.": "the work.", "Bate, enfría y mantiene el granizado listo todo el día. Tú solo sirves.": "It churns, chills and keeps the slush ready all day. You just serve.", "<b>3</b>El servicio": "<b>3</b>Serving", "Servir toma": "Serving takes", "segundos.": "seconds.", "Sin cocina y sin preparar nada en el momento: vaso, palanca y listo.": "No kitchen and no prep on the spot: cup, lever, done.", "<b>4</b>El costo": "<b>4</b>The cost", "<span class=\"sm\">Servirlo te cuesta menos de</span>": "<span class=\"sm\">Each cup costs you less than</span>", "El vaso completo, en cualquier mercado.": "The full cup, in any market.", "<b>5</b>La venta": "<b>5</b>The sale", "<span class=\"sm\">Y lo vendes en</span>": "<span class=\"sm\">And you sell it for</span>", "<span class=\"num\">USD 2,50 a 15</span>": "<span class=\"num\">USD 2.50 to 15</span>", "Ese mismo vaso, según dónde estés.": "The same cup, depending on where you are.", "queda en cada vaso, en promedio": "stays in every cup, on average", "Antes de arriendo, personal y servicios. En el curso aprendes a hacer la cuenta completa.": "Before rent, staff and utilities. The course shows you how to run the full numbers.", "Quiero aprender el negocio": "I want to learn the business", "6 litros de mezcla lista": "6 liters of ready mix", "Los rodillos baten y enfrían": "The augers churn and chill", "12 onzas, recién servido": "12 oz, freshly served", "Desliza para ver cómo funciona ↓": "Scroll to see how it works ↓", "La mezcla": "The mix", "La máquina": "The machine", "El servicio": "Serving", "El costo": "The cost", "La venta": "The sale", "Llevo 7 años vendiendo granizados. En un día normal salen 40 a 50 vasos; en uno bueno, 150.": "I’ve been selling slush for 7 years. On a normal day we sell 40 to 50 cups; on a good one, 150.", "Abrí Paradise Cocktails en Colombia y sigue abierto. Hoy lo dirijo a distancia. Mi error más caro fue no medir desde el inicio cuánto vendía de verdad. En el curso te muestro el sistema tal como lo uso, para que no lo pagues tú.": "I opened Paradise Cocktails in Colombia and it’s still open. Today I run it remotely. My most expensive mistake was not tracking from day one how much I really sold. In the course I show you the system exactly as I use it, so you don’t pay for that mistake.", "Danilo<span>Fundador de Paradise Cocktails</span>": "Danilo<span>Founder of Paradise Cocktails</span>", "[Foto de Paradise Cocktails]": "[Paradise Cocktails photo]", "<b>The Paradise Cocktails</b>Mi marca: el punto que abrí en Colombia y la materia prima que hoy distribuyo desde Medellín": "<b>The Paradise Cocktails</b>My brand: the stand I opened in Colombia and the supplies I now distribute from Medellín", "Cuánto deja un vaso, según dónde vendas": "What one cup makes, depending on where you sell", "Tres tiquetes, uno por mercado. Son precios de referencia: el costo cambia en cada país, pero suele quedarse en ese rango. Falta restar arriendo, personal y servicios.": "Three receipts, one per market. These are reference prices: costs change by country but tend to stay in this range. Rent, staff and utilities aren’t subtracted yet.", "Latinoamérica": "Latin America", "Asia": "Asia", "EE. UU. y Australia": "US & Australia", "Vaso de 12 oz": "12 oz cup", "Vaso de 16 oz": "16 oz cup", "Te cuesta": "Your cost", "Te queda": "You keep", "USD 4,40": "USD 4.40", "USD 5,30": "USD 5.30", "USD 0,80–1,05": "USD 0.80–1.05", "80 %": "80%", "USD 2,50": "USD 2.50", "USD 3,50": "USD 3.50", "USD 0,50–0,80": "USD 0.50–0.80", "75 %": "75%", "USD 1–1,75": "USD 1–1.75", "85 %": "85%", "En Colombia: $14.000 y $17.000 pesos.": "In Colombia: COP 14,000 and 17,000.", "Zonas turísticas y centros comerciales.": "Tourist areas and shopping malls.", "Bares, eventos y ciudades grandes.": "Bars, events and big cities.", "6 litros<small>16 vasos</small>": "6 liters<small>16 cups</small>", "Con <span class=\"mk\">3 vasos</span> ya pagaste la bolsa entera": "<span class=\"mk\">3 cups</span> pay for the whole bag", "<i style=\"background:var(--ink)\"></i>3 vasos pagan la bolsa": "<i style=\"background:var(--ink)\"></i>3 cups pay for the bag", "<i style=\"background:var(--mango)\"></i>13 vasos quedan": "<i style=\"background:var(--mango)\"></i>13 cups are yours", "De cada bolsa de 6 litros salen 16 vasos de 12 onzas. Te quedan unos USD 58 por bolsa en Latinoamérica, USD 30 en Asia y USD 164 en Estados Unidos y Australia.": "Each 6-liter bag makes sixteen 12 oz cups. You keep about USD 58 per bag in Latin America, USD 30 in Asia and USD 164 in the US and Australia.", "Empezar por tu cuenta <span class=\"mk\">sale caro</span>": "Starting on your own <span class=\"mk\">costs you</span>", "El mismo punto y la misma máquina. Lo que cambia es lo que sabes antes de gastar.": "Same stand, same machine. What changes is what you know before you spend.", "Por tu cuenta<span>Meses de prueba y error</span>": "On your own<span>Months of trial and error</span>", "Compras la máquina que te ofrecieron, no la que tu punto necesita.": "You buy the machine you were offered, not the one your stand needs.", "Pones el precio al ojo y no sabes cuánto te queda por vaso.": "You guess your prices and don’t know what each cup leaves you.", "Pasan meses antes de saber cuánto vendes de verdad.": "Months go by before you know what you really sell.", "Con el curso<span>Claro desde antes de abrir</span>": "With the course<span>Clear before you open</span>", "Sabes qué máquina comprar, nueva o usada, y cómo importarla.": "You know which machine to buy, new or used, and how to import it.", "Sacas el costo y el precio de cada vaso antes de invertir.": "You work out the cost and price of every cup before you invest.", "Controlas caja e inventario desde el primer día.": "You track cash and inventory from day one.", "Ahora haz la cuenta con tus números": "Now run the numbers with yours", "Vasos vendidos al día": "Cups sold per day", "Precio por vaso": "Price per cup", "Costo por vaso": "Cost per cup", "Cuenta con 26 días abiertos al mes. No incluye arriendo, personal ni impuestos, y no es una promesa de ingresos.": "Based on 26 open days a month. Rent, staff and taxes aren’t included, and this isn’t an income promise.", "Tu punto, un mes": "Your stand, one month", "Vasos al mes": "Cups per month", "Ventas": "Sales", "Costo de los vasos": "Cost of the cups", "Queda al mes": "Left each month", "Para quién es este curso": "Who this course is for", "Es para ti si:": "It’s for you if:", "Quieres un negocio propio, pero no sabes cuál deja plata de verdad.": "You want your own business but don’t know which one really makes money.", "Te frena invertir sin conocer los números antes.": "Investing without seeing the numbers first holds you back.", "Ya tienes un local o vendes comida y buscas un producto que deje más.": "You already have a shop or sell food and want a product that earns more.", "[Video de venta: Danilo en el local]": "[Sales video: Danilo at the stand]", "[2 a 3 min]": "[2 to 3 min]", "Del primer número a la apertura": "From the first number to opening day", "Diez módulos en lecciones cortas, de 5 a 10 minutos, con plantillas para aplicar el mismo día.": "Ten modules in short lessons of 5 to 10 minutes, with templates you can apply the same day.", "Antes de invertir": "Before you invest", "Abrir y operar": "Open and run", "Crecer": "Grow", "Los números reales": "The real numbers", "Cuánto cuesta un vaso, cuánto deja y cómo calcularlo en tu ciudad.": "What a cup costs, what it makes and how to calculate it in your city.", "Formato y ubicación": "Format and location", "Local, carrito, isla en centro comercial o eventos: cuál te conviene.": "Shop, cart, mall kiosk or events: which one suits you.", "Máquinas": "Machines", "Cuál comprar, nueva o usada, y cómo importarla a tu país.": "Which one to buy, new or used, and how to import it to your country.", "Insumos": "Supplies", "Tipos de bases, proveedores y almacenamiento.": "Types of bases, suppliers and storage.", "Menú y precios": "Menu and prices", "Tamaños, combos, con y sin licor.": "Sizes, combos, with and without alcohol.", "Montaje y permisos": "Setup and permits", "Trámites, diseño del punto, vasos y marca.": "Paperwork, stand design, cups and branding.", "Operación y personal": "Operations and staff", "Apertura y cierre, inventario y control de caja.": "Opening and closing, inventory and cash control.", "Marketing local": "Local marketing", "Lanzamiento, redes, eventos y domicilios.": "Launch, social media, events and delivery.", "Manejarlo a distancia": "Running it remotely", "Cámaras, reportes y caja con OmniPOS.": "Cameras, reports and cash register with OmniPOS.", "Escalar": "Scaling", "Segundo punto, eventos y un operador con canon mensual.": "A second stand, events and an operator on a monthly fee.", "20 cupos al precio más bajo que tendrá el curso": "20 spots at the lowest price this course will ever have", "Los fundadores entran primero y reciben los módulos a medida que salen.": "Founders get in first and receive the modules as they’re released.", "USD 200<small>menos que en el lanzamiento</small>": "USD 200<small>less than at launch</small>", "Pago único. Después del lanzamiento: USD 297.": "One-time payment. After launch: USD 297.", "Los 10 módulos en video": "All 10 video modules", "Calculadora de rentabilidad y lista de montaje": "Profit calculator and setup checklist", "Guía de importación de máquinas": "Machine import guide", "Acceso de por vida": "Lifetime access", "[Promoción de OmniPOS para estudiantes: definir]": "[OmniPOS student offer: to be defined]", "Reservar mi cupo de fundador": "Reserve my founder spot", "[Enlace de pago de Hotmart] Garantía de 7 días": "[Hotmart payment link] 7-day guarantee", "Cupos de fundador": "Founder spots", "Son 20 y no se reabren.": "There are 20, and they won’t reopen.", "Lo que todos preguntan": "What everyone asks", "¿El curso incluye la receta?<i aria-hidden=\"true\">+</i>": "Does the course include the recipe?<i aria-hidden=\"true\">+</i>", "No. El curso enseña a montar y operar el negocio. La receta Fórmula 85, con la que fabricas tu propia mezcla y bajas todavía más el costo, se entrega aparte y solo por solicitud.": "No. The course teaches you to set up and run the business. The Fórmula 85 recipe, which lets you make your own mix and lower your cost even more, is delivered separately and only on request.", "¿Necesito experiencia?<i aria-hidden=\"true\">+</i>": "Do I need experience?<i aria-hidden=\"true\">+</i>", "No. El curso empieza desde cero.": "No. The course starts from zero.", "¿Sirve en mi país?<i aria-hidden=\"true\">+</i>": "Does it work in my country?<i aria-hidden=\"true\">+</i>", "Sí. El sistema funciona igual en Latinoamérica, Asia, Estados Unidos y Australia, y el módulo de máquinas explica cómo importarlas a tu país.": "Yes. The system works the same in Latin America, Asia, the US and Australia, and the machines module explains how to import them to your country.", "¿Cuándo recibo los módulos?<i aria-hidden=\"true\">+</i>": "When do I get the modules?<i aria-hidden=\"true\">+</i>", "El módulo 1 al comprar. Los demás, dos por semana.": "Module 1 right after you buy. The rest, two per week.", "Empieza por los números": "Start with the numbers", "Hecho en Colombia, vendido al mundo": "Made in Colombia, sold worldwide"}, ATTR={"Ver el video de presentación de Danilo": "Watch Danilo’s introduction video", "Danilo hablando a la cámara": "Danilo talking to the camera", "Paradise Cocktails: insumos, granizados y los países donde está la marca": "Paradise Cocktails: supplies, slushes and the countries where the brand is", "Logo de The Paradise Cocktails": "The Paradise Cocktails logo", "Idioma": "Language", "Secciones": "Sections", "El negocio, de la mezcla al vaso": "The business, from mix to cup", "Danilo recostado en el mostrador, junto a dos máquinas de granizado": "Danilo leaning on the counter next to two slush machines", "Bolsa transparente de 6 litros llena de mezcla de granizado": "Clear 6-liter bag full of slush mix", "De 16 vasos, 3 pagan la bolsa y 13 quedan": "Of 16 cups, 3 pay for the bag and 13 are yours", "Mercado de partida": "Starting market", "Reproducir el video de venta": "Play the sales video", "Vaso de granizado de mango servido, con la máquina al fondo": "A served cup of mango slush with the machine behind it"};
+  var norm=function(x){return x.replace(/\s+/g,' ').trim()};
+  var texts=[], attrs=[], missing={};
+  for(var key in EN) missing[key]=1;
+  (function walk(el){
+    for(var c=el.firstElementChild;c;c=c.nextElementSibling){
+      var t=c.tagName.toLowerCase(); if(t==='script'||t==='style'||t==='svg') continue;
+      var k=norm(c.innerHTML);
+      if(EN.hasOwnProperty(k)){ texts.push([c,c.innerHTML,EN[k]]); delete missing[k]; continue }
+      walk(c);
+    }
+  })(document.body);
+  all(document,'[alt],[aria-label]').forEach(function(el){ ['alt','aria-label'].forEach(function(a){ var v=el.getAttribute(a); if(v&&ATTR.hasOwnProperty(v)) attrs.push([el,a,v,ATTR[v]]) }) });
+  window.__i18nMissing=Object.keys(missing);
+  var langBtns=all(document,'[data-lang]');
+  function setLang(l,save){
+    if(l!=='en') l='es';
+    var prev=lang; lang=l;
+    texts.forEach(function(x){ var v=l==='en'?x[2]:x[1]; if(x[0].innerHTML!==v) x[0].innerHTML=v });
+    attrs.forEach(function(x){ x[0].setAttribute(x[1],l==='en'?x[3]:x[2]) });
+    root.lang=l;
+    document.title=l==='en'?'Fórmula 85 · Start your slush business':'Fórmula 85 · Monta tu negocio de granizados';
+    langBtns.forEach(function(b){ b.setAttribute('aria-pressed',String(b.getAttribute('data-lang')===l)) });
+    if(prev!==l) ['c-precio','c-costo'].forEach(function(id){ var el=$(id), v=num(el.value,prev); if(isFinite(v)) el.value=dec(v,l) });
+    calc(); measure();
+    if(save){ try{ localStorage.setItem('f85-lang',l) }catch(e){} }
+  }
+  langBtns.forEach(function(b){ b.addEventListener('click',function(){ setLang(b.getAttribute('data-lang'),true) }) });
+  var initLang=null, h=(location.hash||'').toLowerCase();
+  if(h==='#en'||h==='#es') initLang=h.slice(1);
+  if(!initLang){ try{ initLang=localStorage.getItem('f85-lang') }catch(e){} }
+  if(!initLang) initLang=/^es\b/i.test(navigator.language||'es')?'es':'en';
+  setLang(initLang,false);
+  calc();
+})();
+</script>
+<script>
+(function(){document.querySelectorAll('.yt[data-yt]').forEach(function(b){b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.getAttribute('data-yt')+'?autoplay=1&rel=0&modestbranding=1&playsinline=1&cc_load_policy=0';f.title='Video de presentación · Fórmula 85';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;b.innerHTML='';b.appendChild(f);b.style.cursor='default'},{once:true})})})();
+</script>
+
+</body>
+</html>

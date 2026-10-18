@@ -60,7 +60,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 .lang button{border:0;background:transparent;color:var(--on-dark);font:700 14px/1 var(--body);letter-spacing:.04em;padding:8px 11px;border-radius:7px;cursor:pointer;min-width:40px}
 .lang button[aria-pressed="true"]{background:var(--on-dark);color:var(--ink)}
 @media (max-width:420px){.hdr .btn{padding:9px 12px;font-size:14px}.lang button{padding:8px 9px;min-width:34px}.logo{font-size:20px}}
-@media (max-width:760px){.nav{display:none}}
+@media (max-width:900px){.nav{display:none}}
 
 /* Película ligada al scroll: lienzo fijo; el texto narra cada paso a la izquierda (arriba en vertical) */
 .track{position:relative;background:var(--scene);color:var(--on-dark)}
@@ -739,6 +739,16 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 .n-mapwide .mp-go{justify-self:stretch;text-align:center;text-decoration:none;min-height:50px;border-radius:999px;background:var(--mango);margin-top:4px}
 .n-mapwide .mp-go:hover{color:var(--ink);transform:translateY(-1px)}
 @media (max-width:900px){.n-mapwide .n-mapbox{grid-template-columns:1fr}.n-mapwide .map{height:min(70vw,420px);min-height:300px}}
+
+/* El video ocupa exactamente una pantalla en cualquier dispositivo: título, texto, video y botón visibles a la vez */
+#historia{min-height:calc(100vh - var(--hdr));min-height:calc(100svh - var(--hdr) - var(--top));display:flex;align-items:center;padding-block:clamp(20px,4vh,56px)}
+#historia .wrap{width:100%}
+#historia .h2{font-size:clamp(28px,min(3.7vw,5.2vh),52px)}
+#historia .lede{font-size:clamp(15px,min(1.5vw,2.3vh),20px);margin-top:clamp(6px,1.2vh,14px)}
+#historia .yt{margin-top:clamp(14px,2.6vh,28px);width:min(100%,calc((100svh - var(--hdr) - var(--top) - var(--vres,370px)) * 1.7778))}
+#historia .vidcta{margin-top:clamp(14px,2.4vh,26px)}
+@media (max-width:760px){#historia{--vres:330px}}
+@media (max-height:560px){#historia .lede{display:none}}
 </style>
 
 <script>document.documentElement.classList.add('js')</script>
